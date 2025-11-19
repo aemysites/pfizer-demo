@@ -1,0 +1,138 @@
+.locator-map-toggle-knob,
+.locator-map-toggle-btn-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.locator-map-toggle-button.hidden {
+  display: none;
+}
+
+.locator-map-toggle-btn {
+  position: relative;
+  width: 190px;
+  height: 40px;
+  padding: 4px;
+  overflow: hidden;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.locator-map-toggle-btn.locator-map-toggle-btn-pill,
+.locator-map-toggle-btn.locator-map-toggle-btn-pill > .locator-map-toggle-btn-bg {
+  border-radius: 100px;
+}
+
+.locator-map-toggle-btn.locator-map-toggle-btn-rect {
+  border-radius: var(--corner-round-xl);
+}
+
+.locator-map-toggle-checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.locator-map-toggle-knob {
+  z-index: 2;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.locator-map-toggle-btn-bg {
+  width: 100%;
+  background-color: var(--button-color-primary-bg);
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+/* Button 10 */
+.locator-map-toggle-knob::before,
+.locator-map-toggle-knob .locator-map-toggle-opt1,
+.locator-map-toggle-knob .locator-map-toggle-opt2 {
+  position: absolute;
+  top: 4px;
+  width: 67px;
+  height: 24px;
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 32px;
+  transition: 0.3s ease all;
+}
+
+.locator-map-toggle-knob::before {
+  content: '';
+  left: 4px;
+  background-color: var(--color-surface-global-neutral-white-abs);
+}
+
+.locator-map-toggle-knob .locator-map-toggle-opt1 {
+  left: 4px;
+  color: var(--button-color-primary-bg);
+  z-index: 1;
+
+  svg {
+    fill: var(--button-color-primary-bg);
+    width: 14px;
+    height: 22px;
+    padding: 1px 5px;
+  }
+}
+
+.locator-map-toggle-knob .locator-map-toggle-opt2 {
+  svg {
+    width: 18px;
+    height: 18px;
+    padding: 3px;
+  }
+}
+
+.locator-map-toggle-knob .locator-map-toggle-opt1,
+.locator-map-toggle-knob .locator-map-toggle-opt2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--size-4);
+  font: var(--lib-core--button-m-font);
+}
+
+.locator-map-toggle-checkbox:checked + .locator-map-toggle-knob .locator-map-toggle-opt1 {
+  color: var(--button-color-outline-core-reversed-default);
+
+  svg {
+    fill: var(--button-color-outline-core-reversed-default);
+  }
+}
+
+.locator-map-toggle-checkbox + .locator-map-toggle-knob .locator-map-toggle-opt2 {
+  color: var(--button-color-outline-core-reversed-default);
+
+  svg {
+    fill: var(--button-color-outline-core-reversed-default);
+  }
+}
+
+.locator-map-toggle-checkbox:checked + .locator-map-toggle-knob::before {
+  left: 95px;
+  background-color: var(--color-surface-global-neutral-white-abs);
+}
+
+.locator-map-toggle-checkbox:checked + .locator-map-toggle-knob .locator-map-toggle-opt2 {
+  color: var(--button-color-primary-bg);
+
+  svg {
+    fill: var(--button-color-primary-bg);
+  }
+}
+
+.locator-map-toggle-checkbox:checked ~ .locator-map-toggle-btn-bg {
+  background-color: var(--button-color-primary-bg);
+}

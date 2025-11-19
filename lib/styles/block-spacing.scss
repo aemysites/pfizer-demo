@@ -1,0 +1,46 @@
+// block-spacing.scss
+
+@import '../styles/figma/figma-mixin';
+
+/* standard spacing rules */
+
+.block .standard-block-content-spacing {
+  .kicker {
+    margin-top: 0;
+    margin-bottom: var(--lib-core--spacing-1x);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+  }
+
+  p,
+  dl,
+  ol,
+  ul {
+    margin-top: 0;
+  }
+
+  .button-container {
+    margin-top: 0;
+    margin-bottom: var(--lib-core--spacing-5x);
+  }
+
+  p + .button-container {
+    padding-top: var(--lib-core--spacing-4x);
+  }
+
+  & > *:last-child,
+  & > *:last-child *:last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+.default-content-wrapper ul {
+  padding-inline-start: var(--lib-core--spacing-10x);
+}

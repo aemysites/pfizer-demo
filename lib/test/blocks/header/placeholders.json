@@ -1,0 +1,10 @@
+{
+  "total": 2,
+  "offset": 0,
+  "limit": 2,
+  "data": [
+    { "Key": "show-header-language-selector", "Text": "false" },
+    { "Key": "show-header-skip-to-content", "Text": "true" }
+  ],
+  ":type": "sheet"
+}

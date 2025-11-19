@@ -1,0 +1,33 @@
+{
+  "card": {
+    "type": "Cards",
+    "description": "This is a Cards block description",
+    "schema": {
+      "classes": ["image", "button-link-icon", "icon", "number", "eyebrow", "text", "splitter"],
+      "cardIdentifier": {
+        "selector": "selectRow:card_identifier",
+        "target": "innerHTML",
+        "optional": true
+      },
+      "heading": {
+        "selector": "selectRow:heading",
+        "target": "innerHTML"
+      },
+      "body": {
+        "selector": "selectRow:body",
+        "target": "innerHTML",
+        "optional": true
+      },
+      "cta": {
+        "selector": "selectRow:cta",
+        "target": "innerHTML",
+        "optional": true
+      },
+      "disclaimer": {
+        "selector": "selectRow:disclaimer",
+        "target": "innerHTML",
+        "optional": true
+      }
+    }
+  }
+}

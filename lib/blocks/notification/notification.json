@@ -1,0 +1,29 @@
+{
+  "notification": {
+    "description": "Notification component",
+    "schema": {
+      "classes": [],
+      "contentAtoms": true,
+      "notificationIcon": {
+        "selector": ".notification-before-render--icon",
+        "target": "innerHTML",
+        "description": "Hero block picture"
+      },
+      "notificationTitle": {
+        "selector": ".notification-before-render--title",
+        "target": "textContent",
+        "description": "Hero block placeholder icon"
+      },
+      "notificationBody": {
+        "selector": ".notification-before-render--body",
+        "target": "textContent",
+        "description": "Hero block placeholder title"
+      },
+      "notificationDismiss": {
+        "selector": ".notification-before-render--dismiss",
+        "target": "textContent",
+        "description": "Hero block placeholder body"
+      }
+    }
+  }
+}

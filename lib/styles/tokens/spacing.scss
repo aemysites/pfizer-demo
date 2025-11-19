@@ -1,0 +1,31 @@
+:root {
+  $size-base-unit: 4px;
+
+  --lib-core--spacing-1x: #{$size-base-unit * 1};
+  --lib-core--spacing-2x: #{$size-base-unit * 2};
+  --lib-core--spacing-3x: #{$size-base-unit * 3};
+  --lib-core--spacing-4x: #{$size-base-unit * 4};
+  --lib-core--spacing-5x: #{$size-base-unit * 5};
+  --lib-core--spacing-6x: #{$size-base-unit * 6};
+  --lib-core--spacing-7x: #{$size-base-unit * 7};
+  --lib-core--spacing-8x: #{$size-base-unit * 8};
+  --lib-core--spacing-9x: #{$size-base-unit * 9};
+  --lib-core--spacing-10x: #{$size-base-unit * 10};
+  --lib-core--spacing-11x: #{$size-base-unit * 11};
+  --lib-core--spacing-12x: #{$size-base-unit * 12};
+  --lib-core--spacing-13x: #{$size-base-unit * 13};
+  --lib-core--spacing-14x: #{$size-base-unit * 14};
+  --lib-core--spacing-15x: #{$size-base-unit * 15};
+  --lib-core--spacing-16x: #{$size-base-unit * 16};
+  --lib-core--spacing-17x: #{$size-base-unit * 17};
+  --lib-core--spacing-18x: #{$size-base-unit * 18};
+  --lib-core--spacing-19x: #{$size-base-unit * 19};
+  --lib-core--spacing-20x: #{$size-base-unit * 20};
+  --lib-core--spacing-21x: #{$size-base-unit * 21};
+  --lib-core--spacing-22x: #{$size-base-unit * 22};
+  --lib-core--spacing-23x: #{$size-base-unit * 23};
+  --lib-core--spacing-24x: #{$size-base-unit * 24};
+
+  --lib-core--spacing-half: #{$size-base-unit * 0.5};
+  --lib-core--spacing-smallest: #{$size-base-unit * 0.25};
+}

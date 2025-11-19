@@ -1,0 +1,4 @@
+/* This is just an example file while testing with Gabi, see drafts/copay-poc-v2 */
+.core-form.example-copay {
+  --core-form--multistep-section-label: rgb(52, 52, 154);
+}

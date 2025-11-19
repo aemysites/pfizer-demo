@@ -1,0 +1,9 @@
+{
+  "smartcapture": [
+    {
+      "selector": "li a",
+      "smName": "footer-link",
+      "event": "click"
+    }
+  ]
+}

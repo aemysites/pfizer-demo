@@ -1,0 +1,44 @@
+.core-card-grid-container.brand {
+  background-color: var(--surface-color-branded-core-tinted);
+}
+
+.core-card-grid-container .core-card-grid-container-inside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-40);
+}
+
+@media (min-width: 1024px) {
+  .core-card-grid-container .core-card-grid-container-inside {
+    /* Tablet styles here */
+    gap: var(--size-48);
+  }
+}
+
+.core-card-grid-container .core-text .atoms-content p {
+  margin-bottom: 0;
+}
+
+.core-card-grid-container .core-text .atoms-headline {
+  font: var(--lib-core--headline-m-light-font);
+}
+
+.core-card-grid-container .atoms-disclaimer {
+  font: var(--lib-core--body-s-font);
+  color: var(--text-color-global-neutral-secondary);
+}
+
+.core-card-grid-container .core-card h2 {
+  margin-bottom: var(--size-8);
+}
+
+.core-card-grid-container .core-card.button-link-icon .core-card-bottom .button-container {
+  margin-top: var(--size-24);
+}
+
+@media (min-width: 1024px) {
+  .core-card-grid-container .core-card.button-link-icon .core-card-bottom .button-container {
+    /* Tablet styles here */
+    margin-top: var(--size-80);
+  }
+}

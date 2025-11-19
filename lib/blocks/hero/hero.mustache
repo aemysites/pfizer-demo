@@ -1,0 +1,132 @@
+{{ #homepage }}
+<div class="core-hero-inside block-inside hero-block-content-spacing">
+  <div class="core-hero-content hero-banner">
+    <!-- Begin core-hero-new-banner-img -->
+    <div class="core-hero-new-banner-img">
+      <span class="image-wrapper">
+        {{ #picture }}
+        {{ picture }}
+        {{ /picture }}
+      </span>
+      <!-- Begin core-hero-new-body-content -->
+      <div class="core-hero-new-body-content">
+        {{ #splitContent }}
+        <div class="core-hero-body-split-content">
+          <div class="content-left">
+            {{ eyebrow }}
+            {{ headline }}
+            {{ buttons }}
+          </div>
+          <div class="content-right">
+            {{ content }}
+            {{#disclaimer}}
+            <div class="core-hero-body-disclaimer">{{ disclaimer }}</div>
+            {{/disclaimer}}
+          </div>
+        </div>
+        {{ /splitContent }}
+        {{ ^splitContent }}
+        {{ eyebrow }}
+        {{ headline }}
+        {{ content }}
+        {{ buttons }}
+        {{#disclaimer}}
+        <div class="core-hero-body-disclaimer">{{ disclaimer }}</div>
+        {{/disclaimer}}
+        {{ /splitContent }}
+      </div>
+      <!-- End core-hero-new-body-content -->
+    </div>
+    <!-- End core-hero-new-banner-img -->
+    {{ #show_placeholder }}
+    <div class="core-hero-placeholder">
+      {{ #placeholderSlot }}
+      <div class="core-hero-placeholder-slot">
+        {{ placeholderSlot }}
+      </div>
+      {{ /placeholderSlot }}
+
+      {{ ^placeholderSlot }}
+      <div class="core-hero-placeholder-title">
+        {{ placeholderIcon }}
+        {{ placeholderTitle }}
+      </div>
+      <div class="core-hero-placeholder-body">
+        {{ placeholderBody }}
+        {{#placeholderDisclaimer}}
+        <div class="core-hero-placeholder-disclaimer">
+          {{ placeholderDisclaimer }}
+        </div>
+        {{/placeholderDisclaimer}}
+      </div>
+      {{ /placeholderSlot }}
+    </div>
+    {{ /show_placeholder }}
+  </div>
+</div>
+{{ /homepage }}
+
+{{! ////////////////////////////////////////////////////////////////////// }}
+
+{{ #interior }}
+<div class="core-hero-inside block-inside hero-block-content-spacing">
+  <div class="core-hero-content hero-banner">
+    <!-- Begin core-hero-new-banner-img -->
+    <div class="core-hero-new-banner-img">
+      <span class="image-wrapper">
+        {{ #picture }}
+        {{ picture }}
+        {{ /picture }}
+      </span>
+      <!-- Begin core-hero-new-body-content -->
+      <div class="core-hero-new-body-content">
+        {{ #splitContent }}
+        <div class="core-hero-body-split-content">
+          <div class="content-left">
+            {{ eyebrow }}
+            {{ headline }}
+            {{ buttons }}
+          </div>
+          <div class="content-right">
+            {{ content }}
+            {{#disclaimer}}
+            <div class="core-hero-body-disclaimer">{{ disclaimer }}</div>
+            {{/disclaimer}}
+          </div>
+        </div>
+        {{ /splitContent }}
+        {{ ^splitContent }}
+        {{ eyebrow }}
+        {{ headline }}
+        {{ content }}
+        {{ buttons }}
+        {{#disclaimer}}
+        <div class="core-hero-body-disclaimer">{{ disclaimer }}</div>
+        {{/disclaimer}}
+        {{ /splitContent }}
+      </div>
+      <!-- End core-hero-new-body-content -->
+    </div>
+    {{ #show_locator }}
+    <div class="core-hero-body-locator">
+      <p class="core-hero-body-locator-title">{{ locatorTitle }}</p>
+      <div class="core-hero-body-locator-form-wrapper">
+        <div class="core-hero-body-locator-dropdown"></div>
+        <label>{{ locatorInputPlaceholder }}</label>
+        <p class="core-hero-body-locator-error-message hidden">{{ locatorInputErrorMessage }}</p>
+        <div class="core-hero-body-locator-submit">
+          <p>
+            <em><a href="{{ locatorSubmitUrl }}"><span class="icon icon-lib-map-pin"></span>{{ locatorSubmitText }}</a></em>
+          </p>
+        </div>
+      </div>
+    </div>
+    {{/show_locator}}
+    <!-- End core-hero-new-banner-img -->
+
+    {{! <<<<< NOT SHOWING PLACEHOLDER IN INTERIOR   >>>> }}
+  </div>
+</div>
+{{ /interior }}
+
+{{! +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ }}

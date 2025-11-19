@@ -1,0 +1,43 @@
+/* .core-carousel */
+.core-carousel {
+  --core-carousel--title-font: var(--lib-core--title-l-font);
+  --core-carousel--title-color: var(--surface-color-branded-core-seed);
+  --core-carousel--card-box-shadow: var(--elevation-top-center-s-shadow);
+  --core-carousel--card-border-radius: var(--corner-round-lg);
+}
+
+.core-carousel .core-carousel-title {
+  font: var(--core-carousel--title-font);
+  color: var(--core-carousel--title-color);
+}
+
+.core-carousel .core-carousel-card {
+  box-shadow: var(--core-carousel--card-box-shadow);
+  border-radius: var(--core-carousel--card-border-radius);
+  padding: var(--size-24);
+}
+
+.core-carousel .core-carousel-disclaimer-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: var(--size-24);
+  gap: var(--size-8);
+}
+
+@media (min-width: 1024px) {
+  .core-carousel .core-carousel-disclaimer-container {
+    /* Tablet styles here */
+    flex-direction: row;
+    gap: var(--size-24);
+  }
+}
+
+.core-carousel .core-carousel-disclaimer-container p {
+  margin: 0;
+}
+
+.core-carousel .core-carousel-card h2 {
+  font: var(--lib-core--title-m-font);
+  color: var(--surface-color-branded-core-seed);
+}

@@ -1,0 +1,10 @@
+{
+  "text": {
+    "type": "text",
+    "description": "text block",
+    "schema": {
+      "classes": ["bottom-disclaimer", "embedded-content", "table-additional-info"],
+      "contentAtoms": true
+    }
+  }
+}

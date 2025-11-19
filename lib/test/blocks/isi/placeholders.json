@@ -1,0 +1,14 @@
+{
+  "total": 22,
+  "offset": 0,
+  "limit": 22,
+  "data": [
+    { "Key": "isi collapse", "Text": "Collapse" },
+    { "Key": "isi collapsed", "Text": "Collapsed" },
+    { "Key": "isi expand", "Text": "Find Out More" },
+    { "Key": "isi expanded", "Text": "Fully Expanded" },
+    { "Key": "isi fallback title", "Text": "Important Safety Information" },
+    { "Key": "isi partial", "Text": "Partially Expanded" }
+  ],
+  ":type": "sheet"
+}

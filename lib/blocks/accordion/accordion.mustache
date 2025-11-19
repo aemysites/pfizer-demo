@@ -1,0 +1,14 @@
+ <div class="core-accordion-outside-wrapper">
+  <div class="core-accordion-inside block-inside">
+    {{ #accordionCollection }}
+    <details class="core-accordion-item">
+      <summary tabindex="0" class="core-accordion-item-label" aria-controls="accordion-item-{{ index }}" aria-expanded="false"role="button">
+        {{ header }} <span class="icon icon-lib-mat-expand-more"> </span>
+      </summary>
+      <div id="accordion-item-{{ index }}" class="core-accordion-item-body atoms-content atoms-content-accordion">
+        {{ content }}
+      </div>
+    </details>
+    {{ /accordionCollection }}
+  </div>
+</div>

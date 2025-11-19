@@ -1,0 +1,63 @@
+{{ #contentAtoms.headline }}
+  <div class="video-headline">
+    {{ contentAtoms.headline }}
+  </div>
+{{ /contentAtoms.headline }}
+
+<div class="video-container">
+  {{ #isVideo }}
+    {{ poster }}
+  {{ /isVideo }}
+
+  <video-js
+        id="{{ id }}"
+        data-account="{{ account_id }}"
+        data-player="{{ player_id }}"
+        data-video-id="{{ video_id }}"
+        data-embed="default"
+
+        {{ #loop }}
+          loop="true"
+        {{ /loop }}
+
+        preload="true"
+        class="vjs-fluid"
+
+        {{ #autoplay }}
+          autoplay
+          muted="true"
+        {{ /autoplay }}
+
+        poster="{{ posterImg }}"
+        {{ #title }}
+        title="{{ . }}"
+        {{ /title }}
+        controls
+    >
+    </video-js>
+    {{ #error }}
+    <div class="block-error">
+        <span class="icon icon-lib-mat-error-round"></span>
+        <div class="block-error-message">{{ . }}</div>
+    </div>
+    {{ /error }}
+</div>
+
+{{ #contentAtoms.content }}
+  <div class="bottom-atoms">
+    {{ contentAtoms.content }}
+  </div>
+{{ /contentAtoms.content }}
+
+
+{{ #contentAtoms.buttons }}
+  <div class="bottom-atoms">
+    {{ contentAtoms.buttons }}
+  </div>
+{{ /contentAtoms.buttons }}
+
+{{ #contentAtoms.disclaimer }}
+  <div class="bottom-atoms">
+    {{ contentAtoms.disclaimer }}
+  </div>
+{{ /contentAtoms.disclaimer }}

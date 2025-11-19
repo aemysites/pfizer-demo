@@ -1,0 +1,9 @@
+{
+  "isi": {
+    "name": "isi",
+    "description": "Important Safety Information block",
+    "schema": {
+      "classes": []
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.core-gateway-list h2 {
+  font: var(--lib-core--title-s-font);
+  margin-top: 0;
+  margin-bottom: var(--size-24);
+}
+
+@media (min-width: 1024px) {
+  .core-gateway-list h2 {
+    /* Tablet styles here */
+    font: var(--lib-core--title-m-font);
+    margin-bottom: var(--size-32);
+  }
+}
+
+.core-gateway-list .core-gateway-list-button-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-32);
+}
+
+@media (min-width: 1024px) {
+  .core-gateway-list .core-gateway-list-button-group {
+    /* Tablet styles here */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: var(--size-48);
+    margin-left: -16px;
+  }
+}
+
+.core-gateway-list .core-gateway-list-button {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  justify-content: space-between;
+  gap: var(--size-16);
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .core-gateway-list .core-gateway-list-button {
+    /* Tablet styles here */
+    padding: var(--size-16);
+  }
+
+  .core-gateway-list .core-gateway-list-button:focus, .core-gateway-list .core-gateway-list-button:hover {
+    border-radius: var(--corner-round-m);
+    box-shadow: var(--elevation-center-m-shadow);
+  }
+}
+
+.core-gateway-list .core-gateway-list-button-left-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.core-gateway-list .core-gateway-list-button-header {
+  font: var(--lib-core--label-m-font);
+  color: var(--surface-color-branded-core-seed);
+}
+
+.core-gateway-list .core-gateway-list-button-body {
+  font: var(--lib-core--body-s-font);
+  color: var(--text-color-neutral-primary);
+}
+
+.core-gateway-list .core-gateway-list-button-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 12px;
+  border: 2px solid var(--surface-color-branded-core-seed);
+  box-sizing: border-box;
+}
+
+.core-gateway-list .core-gateway-list-button .core-gateway-list-button-icon .icon {
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  fill: var(--surface-color-branded-core-seed);
+}

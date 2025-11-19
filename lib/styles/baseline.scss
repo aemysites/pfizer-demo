@@ -1,0 +1,31 @@
+body {
+  font-size: var(--lib-core--body-font-size, var(--lib-core--typography-default-font-size));
+  font-family: var(--lib-core--body-font-family, var(--lib-core--font-family-primary));
+  color: var(--lib-core--body-font-color, var(--lib-core--color-on-background));
+  line-height: var(--lib-core--body-line-height, var(--lib-core--typography-default-line-height));
+  text-decoration: var(--lib-core--body-text-decoration, var(--lib-core--typography-default-text-decoration));
+  font-weight: var(--lib-core--body-font-weight, var(--lib-core--typography-default-text-weight));
+}
+
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote {
+  padding: 0;
+}
+
+main ol {
+  padding: revert;
+}
+
+main img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+* {
+  font-synthesis-weight: none !important;
+}

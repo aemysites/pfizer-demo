@@ -1,0 +1,22 @@
+{
+	"total": 3,
+	"offset": 0,
+	"limit": 3,
+	"data": [{
+		"Key": "launch-library",
+		"Text": "AppMeasurement"
+	}, {
+		"Key": "launch-production-url",
+		"Text": "production"
+	}, {
+		"Key": "launch-non-production-url",
+		"Text": "nonprod"
+	},
+	{ "Key": "isi collapse", "Text": "Collapse" },
+    { "Key": "isi collapsed", "Text": "Collapsed" },
+    { "Key": "isi expand", "Text": "Find Out More" },
+    { "Key": "isi expanded", "Text": "Fully Expanded" },
+    { "Key": "isi fallback title", "Text": "Important Safety Information" },
+    { "Key": "isi partial", "Text": "Partially Expanded" }],
+	":type": "sheet"
+}
