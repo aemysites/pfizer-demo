@@ -1,0 +1,13 @@
+{
+  "icons": {
+    "name": "Icons block",
+    "description": "This is just a wrapping block to icons block",
+    "schema": {
+      "classes": [],
+      "initialHtml": {
+        "selector": ":scope > div",
+        "target": "innerHTML"
+      }
+    }
+  }
+}

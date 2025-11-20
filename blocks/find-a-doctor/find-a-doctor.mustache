@@ -1,0 +1,291 @@
+{!     <div class="find-a-doctor-poc">
+{!       <h2>Find a Doctor POC Block</h2>
+
+{!         {{!-- ++++++ show #doctors ++++++ --}}
+{!       <div class="doctors-by-name">
+{!         <h3>Doctors by Names</h3>   
+
+{!         <small>this.doctorSearch.searchByName('Smith')</small>
+        
+{!         <div class="doctors-by-name-container">
+{!           {{#doctors}}
+{!           <div class="doctor-card">
+
+{!             <div class="doctor-header">
+{!               <h4>{{name.fullName}}</h4>
+{!               <p class="title">{{name.title}}</p>
+{!             </div>
+            
+{!             <div class="doctor-info">
+{!               <p class="rating">Average Rating: {{avgRating}}</p>
+{!               {{#acceptsNewPatients}}
+{!               <p class="accepts-patients">Accepting New Patients</p>
+{!               {{/acceptsNewPatients}}
+{!               <p class="brief-bio">{{briefBio}}</p>
+{!               <p class="bio">{{bio}}</p>
+{!             </div>
+
+{!             <div class="specialties">
+{!               <h4>Specialties:</h4>
+{!               {{#specialties}}
+{!               <p>{{name}} {{#subSpecialty}}- {{subSpecialty}}{{/subSpecialty}}</p>
+{!               {{/specialties}}
+{!             </div>
+
+{!             <div class="practices">
+{!               <h4>Practice Locations:</h4>
+{!               {{#practices}}
+{!               <div class="practice">
+{!                 <p class="practice-name">{{name}}</p>
+{!                 <p class="address">{{formattedAddress}}</p>
+{!                 <p class="contact">
+{!                   Phone: {{phone}}<br>
+{!                   Email: {{email}}<br>
+{!                   Website: {{website}}
+{!                 </p>
+{!               </div>
+{!               {{/practices}}
+{!             </div>
+{!           </div>
+{!           {{/doctors}}
+{!         </div>
+{!       </div>
+
+{!      {{!-- ++++++ show #cardiologists ++++++ --}}
+{!       <div class="cardiologists-by-name">
+{!         <h3>Cardiologists by Name</h3>
+
+{!         <small>this.doctorSearch.searchBySpecialty('Cardiology')</small>
+
+{!         <div class="cardiologists-by-name-container">
+{!           {{#cardiologists}}
+{!           <div class="doctor-card">
+
+{!             <div class="doctor-header">
+{!               <h4>{{name.fullName}}</h4>
+{!               <p class="title">{{name.title}}</p>
+{!             </div>
+            
+{!             <div class="doctor-info">
+{!               <p class="rating">Average Rating: {{avgRating}}</p>
+{!               {{#acceptsNewPatients}}
+{!               <p class="accepts-patients">Accepting New Patients</p>
+{!               {{/acceptsNewPatients}}
+{!               <p class="brief-bio">{{briefBio}}</p>
+{!               <p class="bio">{{bio}}</p>
+{!             </div>
+
+{!             <div class="specialties">
+{!               <h4>Specialties:</h4>
+{!               {{#specialties}}
+{!               <p>{{name}} {{#subSpecialty}}- {{subSpecialty}}{{/subSpecialty}}</p>
+{!               {{/specialties}}
+{!             </div>
+
+{!             <div class="practices">
+{!               <h4>Practice Locations:</h4>
+{!               {{#practices}}
+{!               <div class="practice">
+{!                 <p class="practice-name">{{name}}</p>
+{!                 <p class="address">{{formattedAddress}}</p>
+{!                 <p class="contact">
+{!                   Phone: {{phone}}<br>
+{!                   Email: {{email}}<br>
+{!                   Website: {{website}}
+{!                 </p>
+{!               </div>
+{!               {{/practices}}
+{!             </div>
+{!           </div>
+{!           {{/cardiologists}}
+{!         </div>
+{!       </div>
+
+{!     {{!-- ++++++ show #localDoctorsExampleOne ++++++ --}}
+{!     <div class="local-doctors-by-location">
+{!       <h3>Local Doctors By Location '10001'</h3>
+
+{!       <small>this.doctorSearch.searchByLocation('10001')</small>
+
+{!       <div class="local-doctors-container">
+{!         {{#localDoctorsExampleOne}}
+{!         <div class="doctor-card">
+{!           <div class="doctor-header">
+{!             <h4>{{name.fullName}}</h4>
+{!             <p class="title">{{name.title}}</p>
+{!           </div>
+
+{!           <div class="doctor-info">
+{!             <p class="rating">Average Rating: {{avgRating}}</p>
+{!             {{#acceptsNewPatients}}
+{!             <p class="accepts-patients">Accepting New Patients</p>
+{!             {{/acceptsNewPatients}}
+{!             <p class="brief-bio">{{briefBio}}</p>
+{!             <p class="bio">{{bio}}</p>
+{!           </div>
+
+{!           <div class="awards">
+{!             <h4>Awards:</h4>
+{!             {{#awards}}
+{!             <p>{{name}} - {{institution}} ({{year}})</p>
+{!             {{/awards}}
+{!           </div>
+
+{!           <div class="certifications">
+{!             <h4>Certifications:</h4>
+{!             {{#certifications}}
+{!             <p>{{specialty}}{{#subSpecialty}} - {{subSpecialty}}{{/subSpecialty}}</p>
+{!             <p>{{certifyingBody}} ({{yearAchieved}})</p>
+{!             {{/certifications}}
+{!           </div>
+
+{!           <div class="education">
+{!             <h4>Education:</h4>
+{!             {{#education}}
+{!             <p>{{type}} - {{institution}} ({{graduationYear}})</p>
+{!             <p>Focus: {{focus}}</p>
+{!             {{/education}}
+{!           </div>
+
+{!           <div class="specialties">
+{!             <h4>Specialties:</h4>
+{!             {{#specialties}}
+{!             <p>{{name}}{{#subSpecialty}} - {{subSpecialty}}{{/subSpecialty}}</p>
+{!             {{/specialties}}
+{!           </div>
+
+{!           <div class="practices">
+{!             <h4>Practice Locations:</h4>
+{!             {{#practices}}
+{!             <div class="practice">
+{!               <p class="practice-name">{{name}}</p>
+{!               <p class="address">{{formattedAddress}}</p>
+{!               <p class="contact">
+{!                 Phone: {{phone}}<br>
+{!                 Email: {{email}}<br>
+{!                 Website: {{website}}
+{!               </p>
+{!               {{#acceptsNewPatients}}
+{!               <p class="accepts-patients">Accepting New Patients at this Location</p>
+{!               {{/acceptsNewPatients}}
+{!             </div>
+{!             {{/practices}}
+{!           </div>
+
+{!           <div class="virtual-visits">
+{!             <h4>Virtual Visits:</h4>
+{!             {{#virtualVisits}}
+{!             {{#available}}
+{!             <p>Available via {{platform}}</p>
+{!             {{#acceptingNew}}
+{!             <p>Accepting New Virtual Patients</p>
+{!             {{/acceptingNew}}
+{!             {{/available}}
+{!             {{/virtualVisits}}
+{!           </div>
+
+{!         </div>
+{!         {{/localDoctorsExampleOne}}
+{!       </div>
+
+{!     </div>
+
+
+{!     {{!-- ++++++ show #localDoctorsExampleTwo ++++++ --}}
+{!     <div class="local-doctors-by-location">
+{!       <h3>Local Doctors By Location '94143'</h3>
+
+{!       <small>this.doctorSearch.searchByLocation('94143')</small>
+
+{!       <div class="local-doctors-container">
+{!         {{#localDoctorsExampleTwo}}
+{!         <div class="doctor-card">
+{!           <div class="doctor-header">
+{!             <h4>{{name.fullName}}</h4>
+{!             <p class="title">{{name.title}}</p>
+{!           </div>
+
+{!           <div class="doctor-info">
+{!             <p class="rating">Average Rating: {{avgRating}}</p>
+{!             {{#acceptsNewPatients}}
+{!             <p class="accepts-patients">Accepting New Patients</p>
+{!             {{/acceptsNewPatients}}
+{!             <p class="brief-bio">{{briefBio}}</p>
+{!             <p class="bio">{{bio}}</p>
+{!           </div>
+
+{!           <div class="awards">
+{!             <h4>Awards:</h4>
+{!             {{#awards}}
+{!             <p>{{name}} - {{institution}} ({{year}})</p>
+{!             {{/awards}}
+{!           </div>
+
+{!           <div class="certifications">
+{!             <h4>Certifications:</h4>
+{!             {{#certifications}}
+{!             <p>{{specialty}}{{#subSpecialty}} - {{subSpecialty}}{{/subSpecialty}}</p>
+{!             <p>{{certifyingBody}} ({{yearAchieved}})</p>
+{!             {{/certifications}}
+{!           </div>
+
+{!           <div class="education">
+{!             <h4>Education:</h4>
+{!             {{#education}}
+{!             <p>{{type}} - {{institution}} ({{graduationYear}})</p>
+{!             <p>Focus: {{focus}}</p>
+{!             {{/education}}
+{!           </div>
+
+{!           <div class="specialties">
+{!             <h4>Specialties:</h4>
+{!             {{#specialties}}
+{!             <p>{{name}}{{#subSpecialty}} - {{subSpecialty}}{{/subSpecialty}}</p>
+{!             {{/specialties}}
+{!           </div>
+
+{!           <div class="practices">
+{!             <h4>Practice Locations:</h4>
+{!             {{#practices}}
+{!             <div class="practice">
+{!               <p class="practice-name">{{name}}</p>
+{!               <p class="address">{{formattedAddress}}</p>
+{!               <p class="contact">
+{!                 Phone: {{phone}}<br>
+{!                 Email: {{email}}<br>
+{!                 Website: {{website}}
+{!               </p>
+{!               {{#acceptsNewPatients}}
+{!               <p class="accepts-patients">Accepting New Patients at this Location</p>
+{!               {{/acceptsNewPatients}}
+{!             </div>
+{!             {{/practices}}
+{!           </div>
+
+{!           <div class="virtual-visits">
+{!             <h4>Virtual Visits:</h4>
+{!             {{#virtualVisits}}
+{!             {{#available}}
+{!             <p>Available via {{platform}}</p>
+{!             {{#acceptingNew}}
+{!             <p>Accepting New Virtual Patients</p>
+{!             {{/acceptingNew}}
+{!             {{/available}}
+{!             {{/virtualVisits}}
+{!           </div>
+
+{!         </div>
+{!         {{/localDoctorsExampleTwo}}
+{!       </div>
+
+{!     </div> 
+
+{!     {{!-- ++++++ show #fullMockData ++++++ --}}
+{!     <div class="full-mock-data">
+{!       <h3>Full Mock Data</h3>
+{!       <div class="full-mock-data-container">
+{!         <pre><code>{{fullMockData}}</code></pre>
+{!       </div>
+{!     </div>
+
+{! </div>

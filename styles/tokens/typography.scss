@@ -1,0 +1,193 @@
+@use './responsive.scss' as *;
+
+:root {
+  $typography-base-unit: 16px;
+
+  /* default */
+  --lib-core--typography-base-unit-font-size: #{$typography-base-unit};
+  --lib-core--typography-default-font-size: #{$typography-base-unit * 1};
+  --lib-core--typography-default-line-height: calc(var(--lib-core--typography-default-font-size) * 1.25);
+  --lib-core--typography-default-text-decoration: none;
+  --lib-core--typography-default-text-weight: 400;
+
+  /* callout */
+  --lib-core--typography-callout-font-size: #{$typography-base-unit * 1.85};
+  --lib-core--typography-callout-line-height: calc(var(--lib-core--typography-callout-font-size) * 1);
+  --lib-core--typography-callout-text-weight: 500;
+
+  /* heading-mid */
+  --lib-core--typography-heading-mid-font-size: #{$typography-base-unit * 1.25};
+  --lib-core--typography-heading-mid-line-height: calc(var(--lib-core--typography-heading-mid-font-size) * 1.2);
+  --lib-core--typography-heading-mid-text-weight: 500;
+
+  /* smaller */
+  --lib-core--typography-smaller-font-size: #{$typography-base-unit};
+  --lib-core--typography-smaller-line-height: calc(var(--lib-core--typography-smaller-font-size) * 1.25);
+
+  /* smallest */
+  --lib-core--typography-smallest-font-size: #{$typography-base-unit * 0.875};
+  --lib-core--typography-smallest-line-height: calc(var(--lib-core--typography-smallest-font-size) * 1.25);
+
+  /* heading sizes */
+  $heading-one: 64px;
+  $heading-two: 56px;
+  $heading-three: 48px;
+  $heading-four: 36px;
+  $heading-five: 32px;
+  $heading-six: 24px;
+  $heading-seven: 20px;
+
+  --lib-core--typography-heading-1-alt-font-size: #{$heading-one};
+  --lib-core--typography-heading-2-alt-font-size: #{$heading-two};
+  --lib-core--typography-heading-3-alt-font-size: #{$heading-three};
+  --lib-core--typography-heading-4-alt-font-size: #{$heading-four};
+  --lib-core--typography-heading-5-alt-font-size: #{$heading-five};
+  --lib-core--typography-heading-6-alt-font-size: #{$heading-six};
+  --lib-core--typography-heading-7-alt-font-size: #{$heading-seven};
+
+  /* heading - (medium, medium, small) === (desktop, tablet, mobile)*/
+  @include desktop {
+    /* display: large | medium | small */
+    --lib-core--font-size-display-large-medium-small: #{$heading-one};
+
+    /* title: large | medium | medium */
+    --lib-core--font-size-title-large-medium-medium: #{$heading-five};
+    --lib-core--line-height-title-large-medium-medium: var(--lib-core--typography-heading-display-line-height2);
+
+    /* title: medium | medium | small */
+    --lib-core--font-size-title-medium-medium-small: #{$heading-six};
+    --lib-core--line-height-title-medium-medium-small: var(--lib-core--typography-heading-display-line-height2);
+
+    /* title: medium | medium | medium */
+    --lib-core--font-size-title-medium-medium-medium: #{$heading-six};
+    --lib-core--line-height-title-medium-medium-medium: var(--lib-core--typography-heading-display-line-height2);
+
+    /* title: small | small | small */
+    --lib-core--font-size-title-small-small-small: #{$heading-seven};
+    --lib-core--line-height-title-small-small-small: var(--lib-core--typography-heading-display-line-height2);
+
+    /* headline: large | medium | medium */
+    --lib-core--font-size-headline-large-medium-medium: #{$heading-three};
+    --lib-core--line-height-headline-medium-medium-small: var(--lib-core--typography-heading-headline-line-height);
+
+    /* headline: medium | medium | small */
+    --lib-core--font-size-headline-medium-medium-small: #{$heading-four};
+    --lib-core--line-height-headline-medium-medium-small: var(--lib-core--typography-heading-display-line-height);
+
+    /* headline: large | medium | small */
+    --lib-core--font-size-headline-large-medium-small: #{$heading-three};
+    --lib-core--line-height-headline-large-medium-small: var(--lib-core--typography-heading-display-line-height);
+
+    /* headline: small | small | small */
+    --lib-core--font-size-headline-small-small-small: #{$heading-five};
+    --lib-core--line-height-headline-small-small-small: var(--lib-core--typography-heading-display-line-height);
+  }
+  @include tablet {
+    /* display: large | medium | small */
+    --lib-core--font-size-display-large-medium-small: #{$heading-two};
+
+    /* title: large | medium | medium */
+    --lib-core--font-size-title-large-medium-medium: #{$heading-six};
+    --lib-core--line-height-title-large-medium-medium: var(--lib-core--typography-heading-display-line-height2);
+
+    /* title: medium | medium | small */
+    --lib-core--font-size-title-medium-medium-small: #{$heading-six};
+    --lib-core--line-height-title-medium-medium-small: var(--lib-core--typography-heading-display-line-height2);
+
+    /* title: medium | medium | medium */
+    --lib-core--font-size-title-medium-medium-medium: #{$heading-six};
+    --lib-core--line-height-title-medium-medium-medium: var(--lib-core--typography-heading-display-line-height2);
+
+    /* title: small | small | small */
+    --lib-core--font-size-title-small-small-small: #{$heading-seven};
+    --lib-core--line-height-title-small-small-small: var(--lib-core--typography-heading-display-line-height2);
+
+    /* headline: large | medium | medium */
+    --lib-core--font-size-headline-large-medium-medium: #{$heading-four};
+    --lib-core--line-height-headline-large-medium-medium: var(--lib-core--typography-heading-headline-line-height);
+
+    /* headline: medium | medium | small */
+    --lib-core--font-size-headline-medium-medium-small: #{$heading-four};
+    --lib-core--line-height-headline-medium-medium-small: var(--lib-core--typography-heading-display-line-height);
+
+    /* headline: large | medium | small */
+    --lib-core--font-size-headline-large-medium-small: #{$heading-four};
+    --lib-core--line-height-headline-large-medium-small: var(--lib-core--typography-heading-display-line-height);
+
+    /* headline: small | small | small */
+    --lib-core--font-size-headline-small-small-small: #{$heading-five};
+    --lib-core--line-height-headline-small-small-small: var(--lib-core--typography-heading-display-line-height);
+  }
+  @include mobile {
+    /* display: large | medium | small */
+    --lib-core--font-size-display-large-medium-small: #{$heading-three};
+
+    /* title: large | medium | medium */
+    --lib-core--font-size-title-large-medium-medium: #{$heading-six};
+    --lib-core--line-height-title-large-medium-medium: var(--lib-core--typography-heading-display-line-height2);
+
+    /* title: medium | medium | small */
+    --lib-core--font-size-title-medium-medium-small: #{$heading-seven};
+    --lib-core--line-height-title-medium-medium-small: var(--lib-core--typography-heading-display-line-height2);
+
+    /* title: medium | medium | medium */
+    --lib-core--font-size-title-medium-medium-medium: #{$heading-six};
+    --lib-core--line-height-title-medium-medium-medium: var(--lib-core--typography-heading-display-line-height2);
+
+    /* title: small | small | small */
+    --lib-core--font-size-title-small-small-small: #{$heading-seven};
+    --lib-core--line-height-title-small-small-small: var(--lib-core--typography-heading-display-line-height2);
+
+    /* headline: large | medium | medium */
+    --lib-core--font-size-headline-large-medium-medium: #{$heading-four};
+    --lib-core--line-height-headline-large-medium-medium: var(--lib-core--typography-heading-headline-line-height);
+
+    /* headline: medium | medium | small */
+    --lib-core--font-size-headline-medium-medium-small: #{$heading-five};
+    --lib-core--line-height-headline-medium-medium-small: var(--lib-core--typography-heading-display-line-height);
+
+    /* headline: large | medium | small */
+    --lib-core--font-size-headline-large-medium-small: #{$heading-five};
+    --lib-core--line-height-headline-large-medium-small: var(--lib-core--typography-heading-display-line-height);
+
+    /* headline: small | small | small */
+    --lib-core--font-size-headline-small-small-small: #{$heading-five};
+    --lib-core--line-height-headline-small-small-small: var(--lib-core--typography-heading-display-line-height);
+  }
+
+  --lib-core--typography-heading-display-line-height: 120%;
+  --lib-core--typography-heading-display-line-height2: 125%;
+  --lib-core--typography-heading-display-text-decoration: none;
+  --lib-core--typography-heading-display-font-weight: 800;
+
+  /* heading - headline */
+  @include desktop {
+    --lib-core--typography-heading-headline-font-size: #{$heading-three};
+  }
+  @include tablet {
+    --lib-core--typography-heading-headline-font-size: #{$heading-four};
+  }
+  @include mobile {
+    --lib-core--typography-heading-headline-font-size: #{$heading-five};
+  }
+  --lib-core--typography-heading-headline-line-height: 120%;
+  --lib-core--typography-heading-headline-text-decoration: none;
+  --lib-core--typography-heading-headline-font-weight: 800;
+
+  /* heading - title */
+  @include desktop {
+    --lib-core--typography-heading-title-font-size: #{$heading-five};
+  }
+  @include tablet {
+    --lib-core--typography-heading-title-font-size: #{$heading-six};
+  }
+  @include mobile {
+    --lib-core--typography-heading-title-font-size: #{$heading-seven};
+  }
+  --lib-core--typography-heading-title-line-height: 120%;
+  --lib-core--typography-heading-title-text-decoration: none;
+  --lib-core--typography-heading-title-font-weight: 700;
+
+  --lib-core--typography-font-body-medium: 400 16px / 1.25 var(--lib-core--font-family-primary);
+  --lib-core--typography-font-body-large: 400 20px / 1.25 var(--lib-core--font-family-primary);
+}

@@ -1,0 +1,109 @@
+{{#global_right}}
+<div class="core-image-inside block-inside">
+  <div class="core-image-image-container">
+    {{ image }}
+  </div>
+  <div class="core-image-content">
+    <div>
+      {{ contentAtoms.eyebrow }}
+      {{ contentAtoms.headline }}
+      {{ contentAtoms.content }}
+      <div class="image-block-mobile-button">{{ contentAtoms.buttons }}</div>
+      {{ contentAtoms.disclaimer }}
+    </div>
+    {{ #contentAtoms.buttons }}
+    <div>
+      {{ contentAtoms.buttons }}
+    </div>
+    {{ /contentAtoms.buttons }}
+  </div>
+</div>
+{{/global_right}}
+
+{{#global_center}}
+<div class="core-image-inside block-inside">
+  <div class="core-image-image-container">
+    {{ image }}
+  </div>
+  <div class="core-image-content">
+    <div>
+      {{ contentAtoms.eyebrow }}
+      {{ contentAtoms.headline }}
+      {{ contentAtoms.content }}
+      <div class="image-block-mobile-button">{{ contentAtoms.buttons }}</div>
+      {{ contentAtoms.disclaimer }}
+    </div>
+    {{ #contentAtoms.buttons }}
+    <div>
+      {{ contentAtoms.buttons }}
+    </div>
+    {{ /contentAtoms.buttons }}
+  </div>
+</div>
+{{/global_center}}
+
+{{#global_left}}
+<div class="core-image-inside block-inside">
+  <div class="core-image-image-container">
+    {{ image }}
+  </div>
+  <div class="core-image-content">
+    <div>
+      {{ contentAtoms.eyebrow }}
+      {{ contentAtoms.headline }}
+      {{ contentAtoms.content }}
+      <div class="image-block-mobile-button">{{ contentAtoms.buttons }}</div>
+      {{ contentAtoms.disclaimer }}
+    </div>
+    {{ #contentAtoms.buttons }}
+    <div>
+      {{ contentAtoms.buttons }}
+    </div>
+    {{ /contentAtoms.buttons }}
+  </div>
+</div>
+{{/global_left}}
+
+{{#global_no_image}}
+<div class="core-image-inside block-inside no-image">
+  <div class="core-image-content">
+    <div>
+      {{ contentAtoms.eyebrow }}
+      {{ contentAtoms.headline }}
+      {{ contentAtoms.content }}
+      <div class="image-block-mobile-button">{{ contentAtoms.buttons }}</div>
+      {{ contentAtoms.disclaimer }}
+    </div>
+    {{ #contentAtoms.buttons }}
+    <div>
+      {{ contentAtoms.buttons }}
+    </div>
+    {{ /contentAtoms.buttons }}
+  </div>
+</div>
+{{/global_no_image}}
+
+{{#default_variant}}
+<div class="core-image-inside block-inside">
+  <div class="core-image-content">
+    {{ contentAtoms.all }}
+  </div>
+
+  <div class="core-image-image-container">
+    {{ image }}
+    {{ contentAtoms.disclaimer }}
+  </div>
+</div>
+{{/default_variant}}
+
+{{#full_bleed}}
+<div class="core-image-inside block-inside">
+  <div class="core-image-image-container">
+    {{ image }}
+
+    <div class="core-image-content">
+      {{ contentAtoms.all }}
+    </div>
+  </div>
+</div>
+{{/full_bleed}}

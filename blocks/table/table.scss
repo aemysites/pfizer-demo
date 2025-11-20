@@ -1,0 +1,233 @@
+@import '../../styles/figma/figma-mixin';
+
+.core-table {
+  width: inherit;
+
+  td[headers='col-1'],
+  td[headers='col-1'] p {
+    display: flex;
+    align-items: center;
+    gap: var(--size-24);
+
+    img {
+      height: var(--size-72);
+      width: var(--size-72);
+    }
+  }
+
+  // core-table baseline styles
+  table {
+    @include breakpointMediumUp {
+      font: var(--lib-core--body-m-font);
+    }
+
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+    font: font(--lib-core--body-m-font);
+    color: var(--text-color-neutral-primary);
+
+    a {
+      // add mapping later
+      word-break: normal;
+      white-space: nowrap;
+    }
+
+    a.button.text .icon {
+      margin-left: 4px;
+      height: var(--size-20);
+      width: var(--size-20);
+      min-width: var(--size-20);
+    }
+
+    a.button.text .icon svg {
+      width: var(--size-20);
+    }
+
+    h3 {
+      font: var(--lib-core--title-s-font);
+      color: var(--surface-color-branded-core-seed);
+      margin: 0;
+    }
+
+    h3:has(.icon) {
+      display: flex;
+      align-items: center;
+      gap: var(--size-24);
+    }
+
+    // Cell base styles
+    td {
+      text-align: left;
+      padding: var(--size-24) 0 var(--size-24) var(--size-32);
+      vertical-align: middle;
+
+      &:not(:first-of-type) {
+        padding-left: var(--size-16);
+        padding-right: var(--size-16);
+      }
+
+      @include breakpointMediumUp {
+        padding: var(--size-16) var(--size-8) var(--size-16) var(--size-32);
+      }
+    }
+
+    thead {
+      tr {
+        th {
+          padding: var(--size-16);
+
+          &:not(:first-child) {
+            padding-left: var(--size-16);
+          }
+
+          &:first-child {
+            padding-right: 0;
+
+            @include breakpointMediumUp {
+              padding-left: var(--size-32);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Table header styles
+  table thead {
+    tr th {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font: var(--lib-core--label-m-font);
+      color: var(--surface-color-branded-core-seed);
+      border-top: 1px solid var(--surface-color-branded-core-seed);
+      border-bottom: 1px solid var(--surface-color-branded-core-seed);
+      background: var(--surface-color-neutral-default);
+      z-index: 1;
+    }
+  }
+
+  // Table body styles
+  table tbody {
+    tr {
+      font: var(--lib-core--body-m-font);
+
+      &:nth-child(even) {
+        background-color: var(--surface-color-branded-core-tinted);
+      }
+    }
+  }
+
+  // Icon styles within table
+  table span.icon {
+    min-width: 24px;
+    max-width: 72px;
+    width: 100%;
+    height: inherit;
+    display: inline-flex;
+  }
+
+  // Generated wrapper styles
+  .table-generated-wrapper {
+    width: 100%;
+    position: relative;
+  }
+
+  // Wrapper styles for responsiveness
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  caption.table-title {
+    color: var(--surface-color-branded-core-seed);
+    text-align: left;
+
+    p {
+      margin: 0;
+    }
+
+    font: var(--lib-core--title-s-font);
+    margin: 0;
+    margin-bottom: var(--size-16);
+
+    @include breakpointMediumUp {
+      font: var(--lib-core--title-m-font);
+      margin-bottom: var(--size-24);
+    }
+  }
+
+  .table-disclaimer {
+    border-top: 1px solid var(--color-border-global-neutral-on-light-primary);
+    padding-top: var(--size-16);
+    font: var(--lib-core--body-xs-font);
+    width: 100%;
+
+    @include breakpointMediumUp {
+      padding-top: var(--size-24);
+    }
+  }
+
+  // full width variant styles
+  &.full-width {
+    img {
+      max-width: unset;
+    }
+
+    .table-disclaimer.atoms-disclaimer {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    td:first-child {
+      font: var(--lib-core--title-s-font);
+      color: var(--text-color-brand-core);
+    }
+
+    @include breakpointMediumUp {
+      $total-horizontal-padding: calc(32px * 4 + 80px * 2);
+
+      td {
+        padding: var(--size-32) var(--size-16) var(--size-32) var(--size-16);
+
+        &:first-child {
+          padding-left: var(--size-32);
+        }
+
+        &:last-child {
+          padding-right: var(--size-32);
+        }
+      }
+    }
+
+    @include breakpointSmallDown {
+      thead {
+        display: none;
+      }
+
+      tr {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-24);
+        padding: var(--size-32) var(--size-24);
+      }
+
+      td {
+        padding: 0;
+      }
+    }
+  }
+}
+
+// Print styles
+// @media print {
+//   .core-table {
+//     .table-wrapper {
+//       overflow-x: visible;
+//     }
+//   }
+// }

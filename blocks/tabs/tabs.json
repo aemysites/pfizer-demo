@@ -1,0 +1,24 @@
+{
+  "tabs": {
+    "type": "tabs",
+    "description": "This is a tabs block description",
+    "schema": {
+      "classes": [],
+      "tabsItemCollection": {
+        "type": "multiple",
+        "description": "This is a collection of tabs items",
+        "subTarget": ".core-tabs > div",
+        "items": {
+          "label": {
+            "selector": ":scope div:nth-child(1)",
+            "target": "textContent"
+          },
+          "body": {
+            "selector": ":scope div:nth-child(2)",
+            "target": "innerHTML"
+          }
+        }
+      }
+    }
+  }
+}

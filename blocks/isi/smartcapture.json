@@ -1,0 +1,12 @@
+{
+  "smartcapture": [
+    {
+      "smName": "isi"
+    },
+    {
+      "selector": ".toggle-isi",
+      "smName": "isi-open",
+      "event": "click"
+    }
+  ]
+}

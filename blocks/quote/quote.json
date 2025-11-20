@@ -1,0 +1,26 @@
+{
+  "quote": {
+    "name": "Quote",
+    "description": "This is a qoute block.",
+    "schema": {
+      "classes": ["large-image", "small-image", "right", "in-testimonial-quote", "in-carousel-quote", "text", "center"],
+      "picture": {
+        "selector": "picture",
+        "target": "outerHTML",
+        "optional": true
+      },
+      "quote": {
+        "selector": "selectRow:quote",
+        "target": "textContent"
+      },
+      "patientName": {
+        "selector": "selectRow:patient_name",
+        "target": "textContent"
+      },
+      "patientDescription": {
+        "selector": "selectRow:patient_description",
+        "target": "textContent"
+      }
+    }
+  }
+}

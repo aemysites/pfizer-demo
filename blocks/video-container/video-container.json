@@ -1,0 +1,7 @@
+{
+  "video-container": {
+    "name": "video-container",
+    "description": "This is a Video Container block.",
+    "schema": {}
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "overlay": {
+    "description": "This is the Overlay block description",
+    "schema": {
+      "classes": [],
+      "contentAtoms": true,
+      "label": {
+        "selector": "selectRow:label",
+        "target": "textContent"
+      },
+      "accept": {
+        "selector": "selectRow:accept",
+        "target": "textContent",
+        "optional": true
+      },
+      "decline": {
+        "selector": "selectRow:decline",
+        "target": "textContent",
+        "optional": true
+      },
+      "submit": {
+        "selector": "selectRow:submit",
+        "target": "textContent",
+        "optional": true
+      },
+      "form": {
+        "selector": "selectRow:form",
+        "target": "textContent",
+        "optional": true
+      }
+    }
+  }
+}

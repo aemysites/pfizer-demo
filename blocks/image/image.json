@@ -1,0 +1,14 @@
+{
+  "image": {
+    "type": "image",
+    "description": "This is an image block description",
+    "schema": {
+      "classes": ["left", "right", "center", "full-bleed", "global", "offset"],
+      "contentAtoms": true,
+      "image": {
+        "selector": ".image-before-render--image",
+        "target": "innerHTML"
+      }
+    }
+  }
+}

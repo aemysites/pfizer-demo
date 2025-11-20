@@ -1,0 +1,9 @@
+{
+  "collection-carousel": {
+    "name": "collection-carousel",
+    "description": "This is the collection-carousel block.",
+    "schema": {
+      "classes": []
+    }
+  }
+}

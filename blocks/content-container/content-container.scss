@@ -1,0 +1,205 @@
+@import '../../styles/figma/figma-mixin';
+
+.core-content-container {
+  .atoms-disclaimer-text-default,
+  .atoms-content-text-default {
+    p {
+      max-width: 1063px;
+    }
+  }
+
+  &.block:has(.brand) {
+    background-color: var(--surface-color-branded-core-tinted);
+  }
+
+  &.block {
+    // these do not seem right from before...
+    // background-color: orange !important;
+    // padding: var(--size-24) var(--size-24) var(--size-48) var(--size-24);
+    @include breakpointMediumUp {
+      // padding: var(--size-80);
+      // padding: 0 var(--size-80);
+    }
+  }
+
+  .core-text {
+    margin-bottom: var(--size-40);
+
+    .atoms-content p {
+      margin-bottom: 0;
+    }
+
+    .atoms-headline {
+      margin-bottom: var(--size-24);
+    }
+
+    h2 {
+      font: var(--lib-core--headline-s-light-font);
+
+      strong {
+        font: var(--lib-core--headline-s-bold-font);
+      }
+
+      @include breakpointMediumUp {
+        font: var(--lib-core--headline-m-light-font);
+
+        strong {
+          font: var(--lib-core--headline-m-bold-font);
+        }
+      }
+    }
+  }
+
+  &.grid .atoms-disclaimer {
+    margin-top: var(--size-40);
+  }
+
+  hr {
+    display: none;
+    margin: 0;
+    position: absolute;
+    width: 1px;
+    background-color: #c9c9c9;
+    border: unset;
+
+    @include breakpointMediumUp {
+      display: block;
+      inset: 0 50%;
+    }
+  }
+
+  .core-content-container-grid-wrapper,
+  .core-content-container-column-wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: var(--size-32);
+
+    @include breakpointMediumUp {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: var(--size-40);
+      column-gap: 200px;
+    }
+  }
+
+  .core-content-container-column-wrapper {
+    gap: 240px;
+
+    hr {
+      display: block;
+      height: 1px;
+      width: unset;
+      inset: 50% 0;
+
+      @include breakpointMediumUp {
+        inset: 0 50%;
+        width: 1px;
+        height: unset;
+      }
+    }
+  }
+
+  .core-content-container-column-wrapper .core-content {
+    .core-content-inside {
+      .atoms-headline {
+        margin-bottom: var(--size-16);
+      }
+
+      .atoms-disclaimer {
+        margin-top: var(--size-24);
+
+        @include breakpointMediumUp {
+          margin-top: var(--size-32);
+        }
+      }
+
+      flex-direction: column;
+      padding: 0;
+      gap: var(--size-24);
+
+      @include breakpointMediumUp {
+        gap: var(--size-32);
+      }
+
+      span.icon {
+        margin: 0;
+      }
+    }
+
+    .core-content-inside > div {
+      width: 100%;
+    }
+  }
+
+  .core-text-wrapper:last-child .core-text {
+    margin: 0;
+  }
+
+  &.brand {
+    background-color: var(--surface-color-branded-core-tinted);
+  }
+
+  /* START Grid with Icon/Number variants (Content 2.2) */
+
+  &.grid .core-content.number,
+  &.grid .core-content.icon {
+    .core-content-inside {
+      flex-direction: column;
+      gap: var(--size-16);
+    }
+  }
+
+  &.grid:has(.core-content.number),
+  &.grid:has(.core-content.icon) {
+    .atoms-disclaimer {
+      margin-top: var(--size-24);
+
+      @include breakpointMediumUp {
+        margin-top: var(--size-32);
+      }
+    }
+
+    .atoms-buttons {
+      margin-top: var(--size-24);
+      margin-bottom: 0;
+
+      @include breakpointMediumUp {
+        margin-top: var(--size-16);
+      }
+    }
+
+    .core-content-container-grid-wrapper {
+      @include breakpointSmallDown {
+        column-gap: var(--size-40);
+      }
+    }
+
+    .core-content-wrapper:first-child {
+      order: 0;
+    }
+
+    .core-content-wrapper:last-child {
+      order: 2;
+    }
+
+    hr {
+      display: block;
+      position: static;
+      height: 1px;
+      width: 100%;
+      order: 1;
+
+      @include breakpointMediumUp {
+        inset: 0 50%;
+        position: absolute;
+        width: 1px;
+        height: 100%;
+      }
+    }
+  }
+
+  /* END Grid with Icon/Number */
+
+}

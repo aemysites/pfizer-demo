@@ -1,0 +1,84 @@
+/* .core-alert */
+.core-alert {
+  --core-alert--background-color: var(--lib-core--alert--background-color, var(--lib-core--color-primary-container));
+  --core-alert--color: var(--lib-core--alert--color, var(--lib-core--color-on-primary-container));
+  --core-alert--font: var(--lib-core--alert-font, 700 var(--lib-core--spacing-5x) / 1.25 var(--lib-core--font-family-primary));
+
+  background-color: var(--core-alert--background-color);
+  color: var(--core-alert--color);
+}
+
+.core-alert {
+  padding: var(--lib-core--spacing-5x);
+}
+
+.core-alert .core-alert-content,
+.core-alert .core-alert-content h2,
+.core-alert .core-alert-content h3 {
+  font-weight: var(--lib-core--typography-heading-title-font-weight);
+  font-family: var(--lib-core--font-family-heading-diatype-bold);
+  width: 100%;
+  flex: inherit;
+}
+
+.core-alert .core-alert-content {
+  font-size: var(--core-accordion-heading-font-size, var(--lib-core--font-size-title-small-small-small));
+  line-height: var(--core-accordion-heading-line-height, var(--lib-core--line-height-title-small-small-small));
+}
+
+.core-alert .core-alert-content h2 {
+  font-size: var(--core-accordion-heading-font-size, var(--lib-core--font-size-headline-small-small-small));
+  line-height: var(--core-accordion-heading-line-height, var(--lib-core--line-height-headline-small-small-small));
+}
+
+.core-alert .core-alert-content h3 {
+  font-size: var(--core-accordion-heading-font-size, var(--lib-core--font-size-title-small-small-small));
+  line-height: var(--core-accordion-heading-line-height, var(--lib-core--line-height-title-small-small-small));
+}
+
+.core-alert .block-inside {
+  text-align: left;
+  padding: 0;
+}
+
+.core-alert a:not([class]) {
+  text-decoration: underline;
+}
+
+.core-alert p {
+  margin: 0;
+}
+
+.core-alert .block-inside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.core-alert .block-inside .button-container,
+.core-alert .block-inside .button-container a {
+  margin: 0;
+}
+
+.core-alert .block-inside .button-parent {
+  margin-top: var(--lib-core--spacing-5x);
+  flex: 1 1 max-content;
+}
+
+@media (min-width: 768px) {
+  .core-alert .block-inside {
+    flex-direction: row;
+    gap: var(--lib-core--spacing-7x);
+  }
+
+  .core-alert .block-inside .button-parent {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .core-alert .block-inside {
+    gap: var(--lib-core--spacing-8x);
+  }
+}

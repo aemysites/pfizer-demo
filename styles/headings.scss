@@ -1,0 +1,110 @@
+/**
+ Assumption these are assigned media queries:
+ > mobile: @media (max-width: 767px)
+ > tablet: @media only screen and (min-width: 768px) and (max-width: 1023px)
+ > desktop: @media (max-width: 1024px)
+*/
+
+$show-accent: false;
+
+@mixin accent() {
+  @if $show-accent {
+    position: relative;
+    padding-top: var(--lib-core--accent-padding-top, 12px);
+
+    &:not(:has(em)) {
+      &::before,
+      &::after {
+        content: '';
+        width: var(--lib-core--accent-before-width, 28px);
+        height: var(--lib-core--accent-before-height, 4px);
+        background: var(--lib-core--accent-before-background, var(--lib-core--color-primary));
+        position: absolute;
+        text-indent: -9999px;
+        overflow: hidden;
+        top: var(--lib-core--accent-before-top, 0);
+      }
+
+      &::after {
+        opacity: 0.3;
+        left: var(--lib-core--accent-before-width, 28px);
+      }
+    }
+
+    em {
+      font-style: normal;
+    }
+  }
+}
+
+h1 {
+  font: var(--lib-core--headline-s-light-font);
+
+  @include breakpointMediumUp {
+    font: var(--lib-core--headline-xl-light-font);
+  }
+}
+
+h2 {
+  font: var(--lib-core--headline-s-light-font);
+
+  @include breakpointMediumUp {
+    font: var(--lib-core--headline-m-light-font);
+  }
+}
+
+h3 {
+  font: var(--lib-core--headline-s-light-font);
+
+  @include breakpointMediumUp {
+    font: var(--lib-core--headline-m-light-font);
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin-top: var(--lib-core--heading-display-margin-top, var(--lib-core--spacing-1x));
+  margin-bottom: var(--lib-core--heading-display-margin-bottom, var(--lib-core--spacing-3x));
+
+  strong {
+    font-family: var(--lib-core--font-family-primary-bold);
+  }
+}
+
+// just inline within document
+.default-content-wrapper > {
+  h1,
+  h2,
+  h3 {
+    color: var(--surface-color-branded-core-seed);
+  }
+}
+
+.default-content-wrapper {
+  h1,
+  h2,
+  h3 {
+    @include accent;
+  }
+}
+
+h1,
+h2,
+h3 {
+  &.accent {
+    @include accent;
+  }
+}
+
+.inverted {
+  --lib-core--accent-before-background: var(--lib-core--color-on-secondary);
+}
+
+/* For alternative font-family */
+
+h1.heading-tomorrow,
+h2.heading-tomorrow,
+h3.heading-tomorrow {
+  font-family: var(--lib-core--font-family-heading-tomorrow);
+}

@@ -1,0 +1,1226 @@
+{
+  "accepts_new_patients": {
+    "type": "long"
+  },
+  "additional_specialty_information": {
+    "type": "text"
+  },
+  "avg_rating": {
+    "type": "long"
+  },
+  "award": {
+    "type": "nested",
+    "properties": {
+      "award_name": {
+        "type": "text"
+      },
+      "awarding_institution": {
+        "type": "text"
+      },
+      "id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "received_years": {
+        "type": "text"
+      },
+      "rel_id": {
+        "type": "long"
+      }
+    }
+  },
+  "bio": {
+    "type": "text"
+  },
+  "booking": {
+    "type": "nested",
+    "properties": {
+      "hidden_id": {
+        "type": "long"
+      },
+      "id": {
+        "type": "long"
+      },
+      "in_person_booking_ddc": {
+        "type": "keyword"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "telemedicine_booking_ddc": {
+        "type": "keyword"
+      },
+      "third_party_booking": {
+        "type": "keyword"
+      },
+      "virtual_visit_ddc": {
+        "type": "keyword"
+      }
+    }
+  },
+  "brief_bio": {
+    "type": "text"
+  },
+  "certification": {
+    "type": "nested",
+    "properties": {
+      "certification_specialty_id": {
+        "type": "long"
+      },
+      "certification_specialty_name": {
+        "type": "text"
+      },
+      "certification_sub_specialty_id": {
+        "type": "long"
+      },
+      "certification_sub_specialty_name": {
+        "type": "text"
+      },
+      "certification_type_id": {
+        "type": "long"
+      },
+      "certification_type_name": {
+        "type": "text"
+      },
+      "certifying_body_id": {
+        "type": "long"
+      },
+      "certifying_body_name": {
+        "type": "text"
+      },
+      "id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "year_achieved": {
+        "type": "long"
+      }
+    }
+  },
+  "claimed": {
+    "type": "long"
+  },
+  "country_id": {
+    "type": "long"
+  },
+  "country_name": {
+    "type": "text"
+  },
+  "credential_id": {
+    "type": "long"
+  },
+  "date_added": {
+    "type": "text"
+  },
+  "date_updated": {
+    "type": "text"
+  },
+  "details": {
+    "type": "nested",
+    "properties": {
+      "accepts_government_insurances": {
+        "type": "long"
+      },
+      "adenhance_url": {
+        "type": "text"
+      },
+      "date_birth": {
+        "type": "date",
+        "format": "dateOptionalTime"
+      },
+      "date_updated": {
+        "type": "text"
+      },
+      "dea_number": {
+        "type": "text"
+      },
+      "email": {
+        "type": "keyword"
+      },
+      "has_financing_plans": {
+        "type": "long"
+      },
+      "has_hospitals": {
+        "type": "long"
+      },
+      "has_medications": {
+        "type": "long"
+      },
+      "has_sliding_billing": {
+        "type": "long"
+      },
+      "id": {
+        "type": "long"
+      },
+      "is_insurance_currently_saving": {
+        "type": "long"
+      },
+      "licence_number": {
+        "type": "text"
+      },
+      "no_insurance_reason": {
+        "type": "text"
+      },
+      "pb_account": {
+        "type": "text"
+      },
+      "pb_user": {
+        "type": "long"
+      },
+      "personal_phone_number": {
+        "type": "text"
+      },
+      "philosophy_id": {
+        "type": "long"
+      },
+      "philosophy_name": {
+        "type": "text"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "schedule_mail_days": {
+        "type": "long"
+      },
+      "schedule_mail_enabled": {
+        "type": "long"
+      },
+      "system_email": {
+        "type": "keyword"
+      },
+      "year_birth": {
+        "type": "long"
+      }
+    }
+  },
+  "docscore": {
+    "type": "long"
+  },
+  "education": {
+    "type": "nested",
+    "properties": {
+      "area_of_focus": {
+        "type": "text"
+      },
+      "education_name": {
+        "type": "text"
+      },
+      "education_name_id": {
+        "type": "long"
+      },
+      "education_type_id": {
+        "type": "long"
+      },
+      "education_type_name": {
+        "type": "text"
+      },
+      "graduation_year": {
+        "type": "long"
+      },
+      "id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "started_year": {
+        "type": "long"
+      }
+    }
+  },
+  "experience": {
+    "type": "nested",
+    "properties": {
+      "description": {
+        "type": "text"
+      },
+      "from_date": {
+        "type": "long"
+      },
+      "id": {
+        "type": "long"
+      },
+      "organization": {
+        "type": "text"
+      },
+      "position": {
+        "type": "text"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "to_date": {
+        "type": "long"
+      }
+    }
+  },
+  "featured": {
+    "type": "long"
+  },
+  "featured_phone_number": {
+    "type": "nested",
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "partner_site_id": {
+        "type": "long"
+      },
+      "partner_site_name": {
+        "type": "text"
+      },
+      "phone_number": {
+        "type": "text"
+      },
+      "practice_id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "twilio_partner_id": {
+        "type": "long"
+      },
+      "twilio_partner_name": {
+        "type": "text"
+      }
+    }
+  },
+  "fees": {
+    "type": "text"
+  },
+  "first_name": {
+    "type": "text"
+  },
+  "first_name_na": {
+    "type": "keyword"
+  },
+  "form": {
+    "type": "nested",
+    "properties": {
+      "description": {
+        "type": "text"
+      },
+      "file_link": {
+        "type": "text"
+      },
+      "file_path": {
+        "type": "text"
+      },
+      "id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      }
+    }
+  },
+  "friendly_url": {
+    "type": "keyword"
+  },
+  "gender": {
+    "type": "text"
+  },
+  "hospital": {
+    "type": "nested",
+    "properties": {
+      "address": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "city": {
+        "type": "text"
+      },
+      "hospital": {
+        "type": "text"
+      },
+      "hospital_id": {
+        "type": "long"
+      },
+      "id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "state": {
+        "type": "text"
+      },
+      "zipcode": {
+        "type": "text"
+      }
+    }
+  },
+  "id": {
+    "type": "long"
+  },
+  "insurance": {
+    "type": "nested",
+    "properties": {
+      "company_id": {
+        "type": "long"
+      },
+      "friendly_url": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "long"
+      },
+      "insurance_company_alias": {
+        "type": "text"
+      },
+      "insurance_company_name": {
+        "type": "text"
+      },
+      "insurance_company_priority": {
+        "type": "long"
+      },
+      "insurance_id": {
+        "type": "long"
+      },
+      "insurance_name": {
+        "type": "text"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "visits_number": {
+        "type": "long"
+      }
+    }
+  },
+  "is_test": {
+    "type": "long"
+  },
+  "language": {
+    "type": "nested",
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "language_id": {
+        "type": "long"
+      },
+      "language_name": {
+        "type": "text"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      }
+    }
+  },
+  "last_name": {
+    "type": "text"
+  },
+  "localization_id": {
+    "type": "long"
+  },
+  "localization_name": {
+    "type": "text"
+  },
+  "medication": {
+    "type": "nested",
+    "properties": {
+      "medication_id": {
+        "type": "long"
+      },
+      "medication_name": {
+        "type": "text"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      }
+    }
+  },
+  "membership": {
+    "type": "nested",
+    "properties": {
+      "description": {
+        "type": "text"
+      },
+      "from_date": {
+        "type": "long"
+      },
+      "id": {
+        "type": "long"
+      },
+      "organization": {
+        "type": "text"
+      },
+      "position": {
+        "type": "text"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "to_date": {
+        "type": "long"
+      }
+    }
+  },
+  "middle_name": {
+    "type": "text"
+  },
+  "nasp_approved": {
+    "type": "long"
+  },
+  "npi_id": {
+    "type": "text"
+  },
+  "partner_data": {
+    "type": "nested",
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "internal_column_name": {
+        "type": "text"
+      },
+      "internal_column_value": {
+        "type": "text"
+      },
+      "internal_entity_type": {
+        "type": "text"
+      },
+      "match_column_name": {
+        "type": "text"
+      },
+      "match_column_value": {
+        "type": "text"
+      },
+      "partner_site_id": {
+        "type": "long"
+      },
+      "partner_site_name": {
+        "type": "text"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "retrieved_column_name": {
+        "type": "text"
+      },
+      "retrieved_column_value": {
+        "type": "text"
+      },
+      "retrieved_entity_type": {
+        "type": "text"
+      }
+    }
+  },
+  "partner_site_id": {
+    "type": "long"
+  },
+  "partner_site_name": {
+    "type": "text"
+  },
+  "payment_type": {
+    "type": "nested",
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "payment_type_id": {
+        "type": "long"
+      },
+      "payment_type_name": {
+        "type": "text"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      }
+    }
+  },
+  "photo": {
+    "type": "nested",
+    "properties": {
+      "caption": {
+        "type": "text"
+      },
+      "cover": {
+        "type": "long"
+      },
+      "date_added": {
+        "type": "text"
+      },
+      "id": {
+        "type": "long"
+      },
+      "photo_name": {
+        "type": "text"
+      },
+      "photo_path": {
+        "type": "text"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "sort_order": {
+        "type": "long"
+      }
+    }
+  },
+  "photo_path": {
+    "type": "text"
+  },
+  "population": {
+    "type": "nested",
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "population_id": {
+        "type": "long"
+      },
+      "population_name": {
+        "type": "text"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      }
+    }
+  },
+  "practice": {
+    "type": "nested",
+    "properties": {
+      "address": {
+        "type": "text"
+      },
+      "aesthetic_procedure": {
+        "type": "long"
+      },
+      "city_friendly_url": {
+        "type": "keyword"
+      },
+      "city_id": {
+        "type": "long"
+      },
+      "city_name": {
+        "type": "text"
+      },
+      "coverage_location": {
+        "type": "geo_point"
+      },
+      "coverage_location_id": {
+        "type": "long"
+      },
+      "coverage_radius": {
+        "type": "long"
+      },
+      "coverage_state_abbreviation": {
+        "type": "text"
+      },
+      "coverage_state_id": {
+        "type": "long"
+      },
+      "date_added": {
+        "type": "text"
+      },
+      "date_updated": {
+        "type": "text"
+      },
+      "description": {
+        "type": "text"
+      },
+      "direct_phone_number": {
+        "type": "text"
+      },
+      "dme_services": {
+        "type": "text"
+      },
+      "email": {
+        "type": "keyword"
+      },
+      "facility_fee": {
+        "type": "long"
+      },
+      "fax_number": {
+        "type": "text"
+      },
+      "featured_phone_number": {
+        "type": "long"
+      },
+      "friendly_url": {
+        "type": "keyword"
+      },
+      "handicap_accesible": {
+        "type": "long"
+      },
+      "id": {
+        "type": "long"
+      },
+      "latitude": {
+        "type": "double"
+      },
+      "location": {
+        "type": "geo_point"
+      },
+      "location_details": {
+        "type": "text"
+      },
+      "location_id": {
+        "type": "long"
+      },
+      "logo_path": {
+        "type": "text"
+      },
+      "longitude": {
+        "type": "double"
+      },
+      "name": {
+        "type": "text"
+      },
+      "nasp_approved": {
+        "type": "long"
+      },
+      "out_of_network": {
+        "type": "long"
+      },
+      "parent_practice_id": {
+        "type": "long"
+      },
+      "phone_number": {
+        "type": "text"
+      },
+      "practice_id": {
+        "type": "long"
+      },
+      "practice_type_id": {
+        "type": "long"
+      },
+      "practice_type_name": {
+        "type": "text"
+      },
+      "primary_location": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rank_order": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "state_abbreviation": {
+        "type": "text"
+      },
+      "state_friendly_url": {
+        "type": "keyword"
+      },
+      "state_id": {
+        "type": "long"
+      },
+      "state_name": {
+        "type": "text"
+      },
+      "unpublished": {
+        "type": "long"
+      },
+      "verified": {
+        "type": "long"
+      },
+      "visits_number": {
+        "type": "long"
+      },
+      "website": {
+        "type": "text"
+      },
+      "yext_location_id": {
+        "type": "text"
+      },
+      "zipcode": {
+        "type": "text"
+      }
+    }
+  },
+  "practice_listing": {
+    "type": "nested",
+    "properties": {
+      "date_added": {
+        "type": "text"
+      },
+      "date_updated": {
+        "type": "text"
+      },
+      "id": {
+        "type": "long"
+      },
+      "listing_type_id": {
+        "type": "long"
+      },
+      "listing_type_name": {
+        "type": "text"
+      },
+      "lrd_left": {
+        "type": "text"
+      },
+      "lrd_right": {
+        "type": "text"
+      },
+      "practice_id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "shortened_url": {
+        "type": "text"
+      },
+      "url": {
+        "type": "text"
+      }
+    }
+  },
+  "practice_schedule": {
+    "type": "nested",
+    "properties": {
+      "day_number": {
+        "type": "long"
+      },
+      "hours": {
+        "type": "text"
+      },
+      "id": {
+        "type": "long"
+      },
+      "is_generated": {
+        "type": "long"
+      },
+      "practice_id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "provider_practice_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      }
+    }
+  },
+  "prefix": {
+    "type": "text"
+  },
+  "provider_id": {
+    "type": "long"
+  },
+  "provider_name": {
+    "type": "text"
+  },
+  "provider_priority_order": {
+    "type": "long"
+  },
+  "publication": {
+    "type": "nested",
+    "properties": {
+      "provider_id": {
+        "type": "long"
+      },
+      "publication_type": {
+        "type": "text"
+      },
+      "publication_type_id": {
+        "type": "long"
+      },
+      "published_month": {
+        "type": "long"
+      },
+      "published_year": {
+        "type": "long"
+      },
+      "publisher_name": {
+        "type": "text"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "title": {
+        "type": "text"
+      }
+    }
+  },
+  "rating": {
+    "type": "nested",
+    "properties": {
+      "account_device_id": {
+        "type": "long"
+      },
+      "account_id": {
+        "type": "long"
+      },
+      "date_added": {
+        "type": "text"
+      },
+      "date_updated": {
+        "type": "text"
+      },
+      "description": {
+        "type": "text"
+      },
+      "device_id": {
+        "type": "long"
+      },
+      "facebook_clicks": {
+        "type": "long"
+      },
+      "facebook_url": {
+        "type": "text"
+      },
+      "facebook_url_short": {
+        "type": "text"
+      },
+      "friendly_url": {
+        "type": "keyword"
+      },
+      "id": {
+        "type": "long"
+      },
+      "localization_id": {
+        "type": "long"
+      },
+      "localization_name": {
+        "type": "text"
+      },
+      "origin": {
+        "type": "text"
+      },
+      "partner_id": {
+        "type": "long"
+      },
+      "partner_site_id": {
+        "type": "long"
+      },
+      "patient_id": {
+        "type": "long"
+      },
+      "practice_id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rating": {
+        "type": "long"
+      },
+      "rating_appearance": {
+        "type": "long"
+      },
+      "rating_billing": {
+        "type": "long"
+      },
+      "rating_clear_explanations": {
+        "type": "long"
+      },
+      "rating_courtesy": {
+        "type": "long"
+      },
+      "rating_diagnosis": {
+        "type": "long"
+      },
+      "rating_follow_up": {
+        "type": "long"
+      },
+      "rating_friendliness": {
+        "type": "long"
+      },
+      "rating_getting_appt": {
+        "type": "long"
+      },
+      "rating_listening_skills": {
+        "type": "long"
+      },
+      "rating_spending_time": {
+        "type": "long"
+      },
+      "rating_trust": {
+        "type": "long"
+      },
+      "rating_waiting_time": {
+        "type": "long"
+      },
+      "reference_url": {
+        "type": "text"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "reviewer_city_id": {
+        "type": "long"
+      },
+      "reviewer_email": {
+        "type": "keyword"
+      },
+      "reviewer_location": {
+        "type": "text"
+      },
+      "reviewer_name": {
+        "type": "text"
+      },
+      "reviewer_name_anon": {
+        "type": "long"
+      },
+      "shared_with": {
+        "type": "long"
+      },
+      "source_ip_address": {
+        "type": "text"
+      },
+      "status": {
+        "type": "text"
+      },
+      "title": {
+        "type": "text"
+      },
+      "twitter_clicks": {
+        "type": "long"
+      },
+      "twitter_url": {
+        "type": "text"
+      },
+      "twitter_url_short": {
+        "type": "text"
+      },
+      "yext_review_id": {
+        "type": "long"
+      },
+      "yext_site_id": {
+        "type": "text"
+      }
+    }
+  },
+  "residency": {
+    "type": "nested",
+    "properties": {
+      "area_of_focus": {
+        "type": "text"
+      },
+      "hospital_name": {
+        "type": "text"
+      },
+      "id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "residency_type_id": {
+        "type": "long"
+      },
+      "residency_type_name": {
+        "type": "text"
+      },
+      "year_completed": {
+        "type": "long"
+      }
+    }
+  },
+  "schedule_online": {
+    "type": "long"
+  },
+  "search_order": {
+    "type": "long"
+  },
+  "sitemap": {
+    "type": "nested",
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "sitemap_order": {
+        "type": "long"
+      }
+    }
+  },
+  "specialty": {
+    "type": "nested",
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "name_ads": {
+        "type": "text"
+      },
+      "primary_specialty": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "specialty_friendly_url": {
+        "type": "keyword"
+      },
+      "specialty_id": {
+        "type": "long"
+      },
+      "specialty_name": {
+        "type": "text"
+      },
+      "specialty_name_schemaorg": {
+        "type": "text"
+      },
+      "sub_specialty_id": {
+        "type": "long"
+      },
+      "sub_specialty_name": {
+        "type": "text"
+      },
+      "taxonomy_code": {
+        "type": "text"
+      }
+    }
+  },
+  "suffix": {
+    "type": "text"
+  },
+  "suspended": {
+    "type": "long"
+  },
+  "title": {
+    "type": "text"
+  },
+  "treatment": {
+    "type": "nested",
+    "properties": {
+      "id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      },
+      "treatment_id": {
+        "type": "long"
+      },
+      "treatment_name": {
+        "type": "text"
+      }
+    }
+  },
+  "vanity_specialty": {
+    "type": "text"
+  },
+  "verified": {
+    "type": "long"
+  },
+  "video": {
+    "type": "nested",
+    "properties": {
+      "embed_code": {
+        "type": "text"
+      },
+      "id": {
+        "type": "long"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      }
+    }
+  },
+  "virtual_visit": {
+    "type": "nested",
+    "properties": {
+      "accept_new_patients": {
+        "type": "long"
+      },
+      "account_id": {
+        "type": "long"
+      },
+      "enabled": {
+        "type": "long"
+      },
+      "id": {
+        "type": "long"
+      },
+      "name": {
+        "type": "text"
+      },
+      "provider_id": {
+        "type": "long"
+      },
+      "rel_id": {
+        "type": "long"
+      }
+    }
+  },
+  "year_began_practicing": {
+    "type": "long"
+  }
+}

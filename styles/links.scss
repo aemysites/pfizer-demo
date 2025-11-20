@@ -1,0 +1,25 @@
+a {
+  color: var(--lib-core--color-primary);
+  font-synthesis: none;
+}
+
+a:hover {
+  color: var(--lib-core--color-primary);
+}
+
+a:any-link {
+  color: var(--lib-core--color-primary);
+  text-decoration: none;
+  word-break: break-word;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: var(--lib-core--spacing-half);
+  text-underline-offset: var(--lib-core--spacing-half);
+}
+
+.inverted a:any-link {
+  color: var(--surface-color-branded-core-seed);
+  text-decoration: underline;
+}

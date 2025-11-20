@@ -1,0 +1,76 @@
+
+  <div class="core-find-a-doctor-filter">
+    <div class="core-find-a-doctor-filter-container">
+      <div class="core-find-a-doctor-left-content">
+        <div class="core-find-a-doctor-results">
+          <span>XXX result(s) found</span>
+        </div>
+        <div class="core-find-a-doctor-left-filter">
+          <div class="core-find-a-doctor-filter-dropdown">
+          </div>
+          <div class="core-find-a-doctor-filter-right button-container">
+            <em><a><span class="core-find-a-doctor-filter-icon icon icon-lib-filter"></span>Filter</a></em>
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="core-find-a-doctor-right-content"></div>
+    </div>
+  </div>
+  <div class="core-find-a-doctor-map-list-view">
+    <div class="core-find-a-doctor-list-container">
+    </div>
+    <div class="core-find-a-doctor-map">
+    </div>
+  </div>
+  <div class="core-find-a-doctor-pagination">
+  </div>
+  {{ #contentAtoms.disclaimer }}
+  <div class="core-find-a-doctor-block-disclaimer">
+    {{ contentAtoms.disclaimer }}
+  </div>
+  {{ /contentAtoms.disclaimer }}
+  <dialog id="doctor-details-modal">
+    <div class="modal-content">
+      <div class="close-button-wrapper">
+        <img class="close-modal-button" src="/lib/icons/close-small.svg" alt="Close">
+      </div>
+      <div class="main-modal-content-wrapper">
+        <div class="middle-modal-content-wrapper">
+          <div class="left-side-info atoms-content">
+            <img class="modal-profile-image" src="/lib/icons/doc-profile.svg" alt="Profile Image">
+            <div class="flex-helper">
+              <h3 class="modal-name"></h3>
+              <div class="modal-title"></div>
+              <a href="" class="modal-phone"></a>
+              <a href="" class="modal-address"></a>
+            </div>
+          </div>
+          <div class="right-side-info atoms-content>">
+            <div class="core-find-a-doctor-map"></div>
+            <a href="#" title="Get Directions>" class="button primary">
+              <span class="span-button-text-variant">Get Directions</span>
+              <span class="icon icon-lib-chevron-right" role="img" aria-label="Icon - lib-chevron-right" data-reference-icon="content" data-icon-loaded="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 16"><use href="#icons-sprite-lib-chevron-right"></use></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="bottom-modal-content-wrapper">
+          <div class="bottom-title">Accepted insurance providers</div>
+          <div class="bottom-middle-text">This list of accepted insurances may change.  Please speak with your provider.</div>
+          <ul class="accepted-insurance-list">
+            <li>[Insurance Provider]</li>
+            <li>[Insurance Provider]</li>
+            <li>[Insurance Provider]</li>
+            <li>[Insurance Provider]</li>
+            <li>[Insurance Provider]</li>
+            <li>[Insurance Provider]</li>
+            <li>[Insurance Provider]</li>
+            <li>[Insurance Provider]</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </dialog>
+

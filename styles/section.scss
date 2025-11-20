@@ -1,0 +1,356 @@
+body {
+  --lib-core--spacing-base: var(--lib-core--spacing-1x);
+
+  $spacing-sizes: (
+    'none': 0,
+    's': 6,
+    'm': 10,
+    'l': 20,
+  );
+  $section-parents: ('main', '.core-overlay-host-content');
+
+  // Mixin to handle spacing between blocks within a section
+  @mixin between-block-spacing($size) {
+    > div:not(:last-child) {
+      @if $size == 's' {
+        padding-bottom: 12px;
+      } @else if $size == 'm' {
+        padding-bottom: 24px;
+      } @else if $size == 'l' {
+        padding-bottom: 40px;
+      } @else {
+        padding-bottom: 0;
+      }
+
+      @media (max-width: 767px) {
+        @if $size == 's' {
+          padding-bottom: 8px;
+        } @else if $size == 'm' {
+          padding-bottom: 16px;
+        } @else if $size == 'l' {
+          padding-bottom: 24px;
+        } @else {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @mixin section-between-blocks-spacing() {
+    @each $size, $multiplier in $spacing-sizes {
+      @each $parent in $section-parents {
+        // global settings - 'data-section-between-spacing--global'
+        &[data-section-between-spacing--global='#{$size}'] #{$parent} .section {
+          @include between-block-spacing($size);
+        }
+
+        // page level - 'data-section-between-spacing--page'
+        &[data-section-between-spacing--page='#{$size}'] #{$parent} .section {
+          @include between-block-spacing($size);
+        }
+
+        // section level settings - 'data-section-between-spacing--section'
+        .section,
+        #{$parent} div.section {
+          &[data-section-between-spacing--section='#{$size}'] {
+            @include between-block-spacing($size);
+          }
+        }
+      }
+    }
+  }
+
+  // Mixin to handle section padding with responsive behavior
+  @mixin section-padding($size, $multiplier, $important: false) {
+    $important-flag: if($important, ' !important', '');
+
+    padding-top: calc(#{$multiplier} * var(--lib-core--spacing-base)) #{$important-flag};
+    padding-bottom: calc(#{$multiplier} * var(--lib-core--spacing-base)) #{$important-flag};
+
+    @media (max-width: 767px) {
+      // special mobile measurements
+      $multiplier-mobile: '0';
+
+      @if $size == 's' {
+        $multiplier-mobile: '4';
+      } @else if $size == 'm' {
+        $multiplier-mobile: '6';
+      } @else if $size == 'l' {
+        $multiplier-mobile: '12';
+      }
+
+      padding-top: calc(#{$multiplier-mobile} * var(--lib-core--spacing-base)) #{$important-flag};
+      padding-bottom: calc(#{$multiplier-mobile} * var(--lib-core--spacing-base)) #{$important-flag};
+    }
+  }
+
+  // Main mixin to generate spacing classes at global, page and section levels
+  @mixin section-spacing() {
+    @each $size, $multiplier in $spacing-sizes {
+      @each $parent in $section-parents {
+        // global settings - 'data-section-spacing--global'
+        &[data-section-spacing--global='#{$size}'] #{$parent} .section {
+          @include section-padding($size, $multiplier, false);
+        }
+
+        // page level - 'data-section-spacing--page'
+        &[data-section-spacing--page='#{$size}'] #{$parent} .section {
+          @include section-padding($size, $multiplier, true);
+        }
+
+        // section level settings - 'data-section-spacing--section'
+        .section,
+        #{$parent} div.section {
+          &[data-section-spacing--section='#{$size}'] {
+            @include section-padding($size, $multiplier, true);
+          }
+        }
+      }
+    }
+  }
+
+  // execute the mixin //////////////////////////////
+
+  @include section-spacing;
+  @include section-between-blocks-spacing;
+
+  // ////////////////////////////////////////////////
+}
+
+// remove padding from last section on main
+html body main .section:last-child {
+  padding-bottom: 0;
+}
+
+// remove padding from first section on main
+html body main .section:first-child {
+  padding-top: 0;
+}
+
+// Theming sections - initial scope being tested by OSS /////////////////
+
+div.section[data-section-theme-background-color] {
+  position: relative;
+}
+
+div.section[data-section-background-color='branded-core-tinted'] {
+  background-color: var(--lib-core--color-background-section-primary);
+
+  // adding color white for now but won't be reliable for blocks:
+  color: var(--lib-core--color-system-white);
+}
+
+div.section[data-section-background-color='branded-core'] {
+  background-color: var(--lib-core--color-background-section-secondary);
+}
+
+body [data-collection-container]:has(.block:not([data-block-status='activated'])) {
+  opacity: 0;
+}
+
+// Global Block Padding rules /////////////////////////////////////////
+
+// block-padding-desktop-padding-l: 80px;
+// block-padding-desktop-padding-s: 24px;
+// block-padding-mobile-padding-l: 48px;
+// block-padding-mobile--24: 24px;
+
+div[data-main-section-layout-container],
+div[data-main-section-layout-container] > div {
+  > .block-padding-standard {
+    padding: var(--size-80) var(--size-80) var(--size-80) var(--size-80);
+    margin-left: -80px;
+    margin-right: -80px;
+
+    // background-color: rgb(0, 208, 62) !important;
+
+    @media (max-width: 1023px) {
+      padding: var(--size-48) var(--size-24);
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+  }
+
+  > .block-padding-desktop-0 {
+    @media (min-width: 1024px) {
+      padding: 0;
+    }
+  }
+
+  > .block-padding-mobile-0 {
+    @media (max-width: 1023px) {
+      padding: 0;
+    }
+  }
+
+  > .block-padding-standard-desktop-standard-bottom {
+    @media (min-width: 1024px) {
+      padding-bottom: var(--size-80);
+    }
+  }
+
+  > .block-padding-standard-desktop-standard-top {
+    @media (min-width: 1024px) {
+      padding-top: var(--size-80);
+    }
+  }
+
+  > .block-padding-standard-inset {
+    padding: var(--size-80) var(--size-80) var(--size-80) var(--size-80);
+
+    // background-color: rgb(0, 208, 62) !important;
+
+    @media (max-width: 1023px) {
+      padding: var(--size-48) var(--size-24);
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+  }
+
+  > .block-padding-standard-no-gutters {
+    padding: var(--size-80) 0 var(--size-80) 0;
+
+    @media (max-width: 1023px) {
+      padding: var(--size-48) 0;
+    }
+  }
+
+  > .block-padding-no-gutters-negative-margin {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: -80px;
+    margin-right: -80px;
+
+    @media (max-width: 1023px) {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+  }
+
+  > .block-padding-desktop-x-190 {
+    @media (min-width: 1024px) {
+      padding-left: 190px;
+      padding-right: 190px;
+    }
+  }
+
+  > .block-padding-mobile-bottom-48 {
+    @media (max-width: 1023px) {
+      padding-bottom: 48px;
+    }
+  }
+
+  > .block-padding-desktop-top-40 {
+    @media (min-width: 1024px) {
+      padding-top: 40px;
+    }
+  }
+
+  > .block-padding-desktop-bottom-40 {
+    @media (min-width: 1024px) {
+      padding-bottom: 40px;
+    }
+  }
+
+  > .block-padding-desktop-x-0 {
+    @media (min-width: 1024px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  > .block-padding-mobile-x-0 {
+    @media (max-width: 1023px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  > .block-padding-desktop-y-0 {
+    @media (min-width: 1024px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  > .block-padding-mobile-y-0 {
+    @media (max-width: 1023px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  > .block-padding-desktop-bottom-24 {
+    @media (min-width: 1024px) {
+      padding-bottom: 24px;
+    }
+  }
+
+  > .block-padding-mobile-bottom-24 {
+    @media (max-width: 1023px) {
+      padding-bottom: 24px;
+    }
+  }
+
+  > .block-padding-desktop-top-24 {
+    @media (min-width: 1024px) {
+      padding-top: 24px;
+    }
+  }
+
+  > .block-padding-mobile-bottom-16 {
+    @media (max-width: 1023px) {
+      padding-bottom: 16px;
+    }
+  }
+
+  > .block-padding-mobile-top-16 {
+    @media (max-width: 1023px) {
+      padding-top: 16px;
+    }
+  }
+}
+
+// //////////////
+
+body.gutter-rules {
+  @media (min-width: 1024px) {
+    position: relative;
+
+    > main {
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        border: 2px dotted red;
+      }
+
+      &::before {
+        left: 78px;
+        border-right: none;
+      }
+
+      &::after {
+        right: 78px;
+        border-left: none;
+      }
+
+      > .section {
+        z-index: 2;
+      }
+    }
+  }
+}
+
+// DO NOT MERGE ///////////////////////////////////////////
+
+// html body main div[data-standard-block-padding] {
+//   border-top: 1px dashed rgb(23 72 39) !important;
+//   border-bottom: 1px dashed rgb(23 72 39) !important;
+//   background-color: rgb(126 252 0 / 41.2%) !important;
+// }

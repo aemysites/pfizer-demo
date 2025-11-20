@@ -1,0 +1,27 @@
+<div class="core-data-vis-container-inside block-inside">
+    <div class="core-data-vis-main-container">
+      
+      {{ #textblock }}
+      <div class="core-data-vis-text-block">
+        {{ textblock }} 
+      </div>
+      {{ /textblock }} 
+  
+      <div class="core-data-vis-charts">
+        {{ #graphs }}
+            <div class="core-data-vis-chart-block">
+                {{ . }}
+            </div>
+        {{ /graphs }}
+      </div>
+
+    </div> 
+
+    {{ #disclaimer }}
+    <div class="core-data-vis-disclaimer">
+      {{ disclaimer }}
+    </div>
+    {{ /disclaimer }}
+
+  </div>
+  
