@@ -1,0 +1,26 @@
+{
+  "accordion": {
+    "name": "accordion",
+    "description": "This is an accordion block. An accordion is a UI element that expands to reveal hidden content when clicked on.",
+    "schema": {
+      "classes": ["editorial-width", "inline"],
+      "accordionCollection": {
+        "type": "multiple",
+        "description": "This is a collection of accordion items. Each item consists of a header and a body.",
+        "subTarget": ".accordion-div-target",
+        "items": {
+          "header": {
+            "description": "This is the header of the accordion item. It is usually a brief summary or a title representing the content of the item. When clicked, it triggers the expansion or collapse of the body.",
+            "selector": "div:nth-of-type(1)",
+            "target": "outerHTML"
+          },
+          "content": {
+            "description": "This is the body of the accordion item. It contains the main content that is revealed when the header is clicked. It can contain text, links, images, etc.",
+            "selector": "div:nth-of-type(2)",
+            "target": "outerHTML"
+          }
+        }
+      }
+    }
+  }
+}

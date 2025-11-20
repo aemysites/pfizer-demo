@@ -1,0 +1,154 @@
+// shared.scss
+
+.dropdown-container {
+  position: relative;
+
+  --core-dropdown--font-size: inherit;
+  --core-dropdown--font-weight: 400;
+  --core-dropdown--line-height: inherit;
+  --core-dropdown--padding-y: var(--lib-core--spacing-2x);
+  --core-dropdown--border: var(--lib-core--color-outline);
+
+  label {
+    font-size: var(--core-dropdown--font-size);
+    font-weight: var(--core-dropdown--font-weight);
+    line-height: var(--core-dropdown--line-height);
+  }
+
+  select {
+    position: relative;
+    box-sizing: content-box;
+    font: inherit;
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    max-width: 300px;
+    overflow: hidden;
+  }
+
+  select {
+    font-size: var(--core-dropdown--font-size);
+    font-weight: var(--core-dropdown--font-weight);
+    line-height: var(--core-dropdown--line-height);
+    color: var(--lib-core--color-on-surface-variant);
+    padding: var(--core-dropdown--padding-y) 0;
+    border: 1px solid var(--core-dropdown--border);
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.visibility-hidden {
+  visibility: hidden !important;
+}
+
+.relative {
+  position: relative !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+body:not(.blocks-activated) .core-footer,
+header .block:not([data-block-status='loaded']),
+main .block:not([data-block-status='activated']),
+main .default-content-wrapper:not([data-content-status='activated']) {
+  display: none;
+}
+
+main .core-isi.block[data-block-status='loaded'] {
+  display: block;
+}
+
+main .section {
+  display: none;
+}
+
+main .section:has([data-block-status='activated']),
+main .section:has([data-content-status='activated']) {
+  display: block;
+}
+
+main .section .video-gif-image {
+  position: relative;
+}
+
+main .section .video-gif-image button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: var(--size-24);
+  margin-bottom: var(--size-24);
+  background-color: var(--surface-color-neutral-tertiary);
+  opacity: 0.68;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  padding: 11px;
+  cursor: pointer;
+
+  & svg {
+    fill: #fff;
+  }
+}
+
+@include breakpointMediumUp {
+  main .section .video-gif-image button {
+    margin-left: var(--size-80);
+    margin-bottom: var(--size-40);
+  }
+}
+
+// shared style for full viewport //////////////////////////////
+
+body .global-layout-full-viewport {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  // CSS custom properties (variables) cannot be used in media queries, so can't use --layout-grid-width-max-container
+  @media (min-width: 1920px) {
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    max-width: calc(100vw);
+  }
+
+  // immediate child sets max width rules
+  > .block {
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+
+    --layout-grid-width-max-container: 1920px;
+    --layout-side-gutters: 24px;
+
+    @include breakpointMediumUp {
+      --layout-side-gutters: 80px;
+    }
+
+    padding-left: var(--layout-side-gutters);
+    padding-right: var(--layout-side-gutters);
+
+    --site-width: calc(var(--layout-grid-width-max-container));
+
+    max-width: var(--layout-grid-width-max-container);
+  }
+}
+
+// shared style for no gutter block, to be applied in blocks //////////////////////////////
+
+body .section div.block.no-gutter-block {
+  margin-left: -24px;
+  margin-right: -24px;
+
+  @include breakpointMediumUp {
+    margin-left: -80px;
+    margin-right: -80px;
+  }
+}

@@ -1,0 +1,664 @@
+.button-container {
+  max-width: 100%;
+  width: 100%;
+  margin: 1.3rem 0;
+
+  @include breakpointMediumUp {
+    &:not(.button-full) {
+      display: inline-block;
+    }
+  }
+
+  &.inverted-background {
+    padding: 12px;
+    background-color: black;
+    border-radius: 0;
+  }
+}
+
+@mixin button-base {
+  box-sizing: border-box;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--lib-core--font-family-primary);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &.text .span-button-text-variant {
+    max-height: 36px;
+  }
+
+  &:not(.button-full) {
+    width: fit-content;
+  }
+
+  @include breakpointMediumUp {
+    max-width: 348px;
+
+    &:not(.button-icon, .button-icon, .text) {
+      height: var(--size-56);
+      min-width: 200px;
+      max-width: 348px;
+    }
+  }
+
+  span {
+    vertical-align: middle;
+    display: inline-block;
+    letter-spacing: var(--letter-spacing-reg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    min-width: 240px;
+    width: 100%;
+    height: var(--size-56);
+  }
+}
+
+@mixin button-colors($color, $backgroundColor, $borderUnderlineColor, $hoverFocusedColor: transparent, $hoverFocusedBg: transparent, $buttonType, $focusBorderColor: #000) {
+  background-color: $backgroundColor;
+  color: $color;
+
+  @if $buttonType == 'text' {
+    &:not(.button-icon) {
+      max-height: 36px;
+    }
+
+    box-shadow: none;
+  } @else if $buttonType == 'secondary' {
+    // TODO..
+    box-shadow: inset 0 0 0 2px $borderUnderlineColor;
+
+    span {
+      text-decoration: none;
+    }
+  } @else {
+    span {
+      text-decoration: none;
+    }
+  }
+
+  &::after {
+    background-color: $color;
+  }
+
+  &:hover {
+    color: $hoverFocusedColor;
+    background-color: $hoverFocusedBg;
+
+    @if $buttonType == 'text' {
+      &.button-icon {
+        background-color: var(--surface-color-global-neutral-black-5);
+        border-radius: var(--corner-round-s);
+
+        &.inverted {
+          background-color: var(--surface-color-global-neutral-white-15);
+        }
+      }
+
+      span.span-button-text-variant {
+        text-decoration-color: $hoverFocusedColor;
+        border-bottom: 2px solid $hoverFocusedColor;
+      }
+
+      &:active,
+      &:focus,
+      &:focus-visible {
+        color: $hoverFocusedColor;
+      }
+    } @else if $buttonType == 'secondary' {
+      color: var(--button-color-secondary-text-hover-focused);
+
+      &:active,
+      &:focus,
+      &:focus-visible {
+        color: var(--button-color-secondary-text-hover-focused);
+      }
+
+      &.inverted {
+        color: $hoverFocusedColor;
+
+        &:active,
+        &:focus,
+        &:focus-visible {
+          color: $hoverFocusedColor;
+          box-shadow:
+            inset 0 0 0 3px var(--color-button-secondary-core-reversed-surface-hover),
+            inset 0 0 0 5px var(--color-button-secondary-core-reversed-surface-hover);
+        }
+      }
+    }
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    color: $color;
+    outline: none;
+
+    @if $buttonType == 'text' {
+      position: relative;
+
+      /* FULL WIDTH BUTTON BOTTOM LINE POSITION */
+      &:not(.button-icon).button-full .span-button-text-variant {
+        &::after {
+          position: relative;
+          top: 6px;
+        }
+      }
+
+      &:not(.button-icon) {
+        /* BUTTONS WITH ICONS AND TEXT */
+        &:has(> :last-child:nth-child(2)) {
+          /* ALIGNING BOTTOM LINES */
+          .span-button-text-variant:first-child {
+            &::after {
+              right: 32px;
+            }
+          }
+
+          .span-button-text-variant:not(:first-child) {
+            &::after {
+              left: 32px;
+            }
+          }
+        }
+
+        /* ALIGN BOTTOM LINES FOR button-l, button-m, button-s AND button */
+        &:has(> :last-child:nth-child(2)) {
+          &.button-l .span-button-text-variant:first-child,
+          &.button-l .span-button-text-variant:not(:first-child) {
+            &::after {
+              bottom: -3px;
+            }
+          }
+
+          &.button-m .span-button-text-variant:first-child,
+          &.button-m .span-button-text-variant:not(:first-child) {
+            &::after {
+              bottom: -1px;
+            }
+          }
+
+          &.button-s .span-button-text-variant:first-child,
+          &.button-s .span-button-text-variant:not(:first-child) {
+            &::after {
+              bottom: 0;
+            }
+          }
+
+          /* DEFAULT BUTTON BOTTOM LINE */
+          .span-button-text-variant {
+            &::after {
+              background: none;
+              border-bottom: 2px solid $focusBorderColor;
+              content: '';
+              display: block;
+              position: absolute;
+              inset: 0 0 6px;
+              pointer-events: none;
+              bottom: -1px;
+            }
+          }
+        }
+
+        /* DEFAULT BUTTON BOTTOM LINE */
+        .span-button-text-variant {
+          &::after {
+            background: none;
+            border-bottom: 2px solid $focusBorderColor;
+            content: '';
+            display: block;
+            position: absolute;
+            inset: 0 0 6px;
+            pointer-events: none;
+            bottom: -2px;
+          }
+        }
+
+        &.button-l {
+          .span-button-text-variant {
+            &::after {
+              bottom: -4px;
+            }
+          }
+        }
+
+        &.button-m {
+          .span-button-text-variant {
+            &::after {
+              bottom: -2px;
+            }
+          }
+        }
+
+        &.button-s {
+          .span-button-text-variant {
+            &::after {
+              bottom: -1px;
+            }
+          }
+        }
+      }
+
+      &.button.text.button-icon {
+        border-radius: var(--size-8);
+        border: 2px solid $hoverFocusedColor;
+      }
+    } @else if $buttonType == 'secondary' {
+      // TODO: find the best approach to add double border (box-shadow) on focused
+      box-shadow:
+        inset 0 0 0 1px $hoverFocusedColor,
+        inset 0 0 0 3px white,
+        inset 0 0 0 5px $borderUnderlineColor;
+      color: $color;
+    } @else {
+      box-shadow:
+        inset 0 0 0 1px $hoverFocusedBg,
+        inset 0 0 0 3px #fff;
+    }
+
+    &.inverted {
+      @if $buttonType == 'text' {
+        box-shadow: none;
+        position: relative;
+
+        &.button.text.button-icon {
+          border-radius: var(--size-8);
+          border: 2px solid $hoverFocusedColor;
+        }
+
+        &:not(.button-icon) {
+          /* BUTTONS WITH ICONS AND TEXT */
+          &:has(> :last-child:nth-child(2)) {
+            /* ALIGNING BOTTOM LINES */
+            .span-button-text-variant:first-child {
+              &::after {
+                right: 32px;
+              }
+            }
+
+            .span-button-text-variant:not(:first-child) {
+              &::after {
+                left: 32px;
+              }
+            }
+          }
+
+          /* ALIGN BOTTOM LINES FOR button-l, button-m, button-s AND button */
+          &:has(> :last-child:nth-child(2)) {
+            &.button-l .span-button-text-variant:first-child,
+            &.button-l .span-button-text-variant:not(:first-child) {
+              &::after {
+                bottom: -3px;
+              }
+            }
+
+            &.button-m .span-button-text-variant:first-child,
+            &.button-m .span-button-text-variant:not(:first-child) {
+              &::after {
+                bottom: -1px;
+              }
+            }
+
+            &.button-s .span-button-text-variant:first-child,
+            &.button-s .span-button-text-variant:not(:first-child) {
+              &::after {
+                bottom: 0;
+              }
+            }
+
+            &.button:not(.button-s, .button-m, .button-l) .span-button-text-variant:first-child,
+            &.button:not(.button-s, .button-m, .button-l) .span-button-text-variant:not(:first-child) {
+              &::after {
+                bottom: -1px;
+              }
+            }
+          }
+
+          /* DEFAULT BUTTON BOTTOM LINE */
+          .span-button-text-variant {
+            &::after {
+              background: none;
+              border-bottom: 2px solid $focusBorderColor;
+              content: '';
+              display: block;
+              position: absolute;
+              inset: 0 0 6px;
+              pointer-events: none;
+              bottom: -2px;
+            }
+          }
+
+          &.button-l {
+            .span-button-text-variant {
+              &::after {
+                bottom: -4px;
+              }
+            }
+          }
+
+          &.button-m {
+            .span-button-text-variant {
+              &::after {
+                bottom: -2px;
+              }
+            }
+          }
+
+          &.button-s {
+            .span-button-text-variant {
+              &::after {
+                bottom: -1px;
+              }
+            }
+          }
+        }
+
+        &:not(.button-icon).button-full .span-button-text-variant {
+          &::after {
+            position: relative;
+            top: 6px;
+          }
+        }
+
+        &:not(.button-icon) .span-button-text-variant {
+          &::after {
+            background: none;
+            border-bottom: 2px solid $color;
+            content: '';
+            display: block;
+            position: absolute;
+            pointer-events: none;
+          }
+        }
+      } @else if $buttonType == 'secondary' {
+        // TODO: find the best approach to add double border (box-shadow) on focused
+        box-shadow:
+          inset 0 0 0 1px $color,
+          inset 0 0 0 3px var(--button-color-branded-secondary-reversed-focused-border-branded),
+          inset 0 0 0 5px $color;
+        color: $color;
+      } @else {
+        box-shadow:
+          inset 0 0 0 1px $hoverFocusedBg,
+          inset 0 0 0 3px $focusBorderColor;
+      }
+    }
+  }
+}
+
+@mixin button-size($paddingY, $fontSize, $lineHeight, $font-weight) {
+  padding: $paddingY var(--size-24);
+  border-radius: 999px;
+
+  span {
+    font-size: $fontSize;
+    font-weight: $font-weight;
+    line-height: $fontSize;
+  }
+
+  .icon {
+    width: var(--size-24);
+    margin: 0;
+
+    &:not(:first-child) {
+      margin-left: 8px;
+      margin-right: 0;
+    }
+
+    &:not(:last-child) {
+      margin-right: 8px;
+      margin-left: 0;
+    }
+
+    svg {
+      margin: 0;
+      width: var(--size-24);
+      height: 100%;
+      fill: currentcolor;
+    }
+
+    &.icon-lib-chevron-right svg,
+    &.icon-lib-chevron-left svg {
+      width: 17px;
+      height: 13.3px;
+      padding: 3.33px 1.5px;
+      box-sizing: content-box;
+    }
+  }
+}
+
+a.button:any-link,
+a.button[role='button'],
+button.button,
+// Default styling applied to the text button
+form button {
+  @include button-base;
+  @include button-size(var(--size-20), var(--font-size-16), var(--size-56), var(--font-weight-700));
+
+  &.text {
+    @include button-colors(
+      var(--button-color-tertiary-text),
+      var(--button-color-tertiary-bg),
+      var(--button-color-tertiary-underline),
+      var(--button-color-tertiary-text-hover-focused),
+      var(--button-color-tertiary-bg-hover-focused),
+      'text',
+      var(--color-button-branded-tertiary-default-default)
+    );
+
+    &.text .span-button-text-variant {
+      border-bottom: 2px solid var(--button-color-tertiary-underline);
+      max-height: 36px;
+    }
+
+    &.button-icon {
+      border: 2px solid transparent;
+    }
+  }
+
+  &.hva {
+    padding: 0 var(--size-16);
+    height: var(--size-48);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .hva-level-1 {
+      font: var(--lib-core--button-xs-font);
+    }
+
+    .hva-level-2 {
+      font: var(--lib-core--body-xs-font);
+    }
+
+    .hva-level-1,
+    .hva-level-2 {
+      display: block;
+    }
+
+    @include breakpointMediumUp {
+      padding: 0 var(--size-32);
+      width: var(--size-200);
+
+      .hva-level-1 {
+        font: var(--lib-core--button-s-font);
+      }
+
+      .hva-level-2 {
+        font: var(--lib-core--body-s-font);
+      }
+    }
+  }
+
+  &.text {
+    padding: 0;
+    border-radius: 0;
+
+    span {
+      max-width: 70ch;
+    }
+
+    &.inverted {
+      @include button-colors(
+        var(--button-color-tertiary-text-inverted),
+        var(--button-color-tertiary-bg-inverted),
+        var(--button-color-tertiary-underline-inverted),
+        var(--button-color-tertiary-text-inverted-hover-focused),
+        var(--button-color-tertiary-bg-inverted-hover-focused),
+        'text',
+        #fff
+      );
+    }
+
+    &.inverted .span-button-text-variant {
+      border-bottom: 2px solid var(--button-color-tertiary-underline-inverted);
+      max-height: 36px;
+    }
+  }
+
+  &.primary {
+    @include button-colors(
+      var(--button-color-primary-text),
+      var(--button-color-primary-bg),
+      transparent,
+      var(--button-color-primary-text-hover-focused),
+      var(--button-color-primary-bg-hover-focused),
+      'primary'
+    );
+  }
+
+  // TODO:
+  // https://www.figma.com/design/Nyolgf3MTgveolG76rm6DN/AFBLI---758-_-Global-Buttons-Updates?node-id=39965-77318&m=dev
+  &.primary.inverted {
+    @include button-colors(
+      var(--button-color-primary-text-reversed-foreground-light-mode),
+      var(--button-color-primary-bg-inverted),
+      transparent,
+      var(--button-color-primary-text-inverted-hover-focused),
+      var(--button-color-primary-bg-inverted-hover-focused),
+      'primary'
+    );
+  }
+
+  // TODO:
+  // https://www.figma.com/design/Nyolgf3MTgveolG76rm6DN/AFBLI---758-_-Global-Buttons-Updates?node-id=1232-756&m=dev
+  &.secondary {
+    @include button-colors(
+      var(--button-color-secondary-text),
+      var(--button-color-secondary-bg),
+      var(--button-color-secondary-outline),
+      var(--button-color-secondary-outline-hover-focused),
+      var(--button-color-secondary-bg-hover),
+      'secondary'
+    );
+  }
+
+  &.secondary.inverted {
+    @include button-colors(
+      var(--button-color-secondary-text-inverted),
+      var(--button-color-secondary-bg-inverted),
+      var(--button-color-secondary-outline-inverted),
+      var(--button-color-secondary-text-inverted-hover-focused),
+      var(--button-color-secondary-bg-inverted-hover-focused),
+      'secondary'
+    );
+  }
+
+  &.button-s span {
+    font: var(--lib-core--button-s-font);
+  }
+
+  &.button-m span {
+    font: var(--lib-core--button-m-font);
+  }
+
+  &.button-l span {
+    font: var(--lib-core--button-l-font);
+  }
+
+  &.button-full {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &:not(.text).button-icon {
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 0;
+    min-width: auto;
+    min-height: auto;
+
+    span.icon {
+      width: var(--size-24);
+      height: var(--size-24);
+      margin: 0;
+      display: block;
+      line-height: 0;
+    }
+
+    .icon:not(.icon-lib-chevron-right, .icon-lib-chevron-left) svg {
+      width: 100%;
+      fill: currentcolor;
+    }
+  }
+}
+
+// disabled button styles
+a.button[disabled],
+a.button.disabled,
+button.button[disabled],
+button.button.disabled,
+form button[disabled],
+form button.disabled {
+  cursor: default !important;
+  color: var(--button-color-tertiary-text-disabled) !important;
+  background-color: var(--button-color-tertiary-bg-disabled) !important;
+  pointer-events: none !important;
+
+  &.text > span {
+    border-bottom: 2px solid var(--button-color-tertiary-text-disabled) !important;
+    text-decoration-color: var(--button-color-tertiary-text-disabled) !important;
+  }
+
+  &.primary {
+    color: var(--button-color-primary-text-disabled) !important;
+    background-color: var(--button-color-primary-bg-disabled) !important;
+  }
+
+  &.secondary {
+    color: var(--button-color-secondary-text-disabled) !important;
+    background-color: var(--button-color-secondary-bg-disabled) !important;
+    box-shadow: inset 0 0 0 3px var(--button-color-secondary-outline-inverted-disabled) !important;
+  }
+}
+
+// baseline multiple buttons when NOT in .atoms-buttons
+div:not(.atoms-buttons) .button-container.button-container-multi {
+  display: inline-flex;
+  width: 100%;
+  gap: var(--size-24);
+
+  @include breakpointSmallDown {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--size-16);
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "content": {
+    "type": "content",
+    "description": "content block",
+    "schema": {
+      "classes": ["number", "large-icon", "embedded-content", "content-full-width", "branded-container", "brand-core", "no-gutter-block"],
+      "contentAtoms": true,
+      "numberContent": {
+        "selector": ".content-block-number-number",
+        "target": "outerHTML",
+        "description": "Content number title"
+      },
+      "icon": {
+        "selector": ".icon",
+        "target": "outerHTML",
+        "optional": true,
+        "description": "Icon"
+      }
+    }
+  }
+}

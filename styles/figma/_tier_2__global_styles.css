@@ -1,0 +1,285 @@
+/* Generated on Fri, 21 Feb 2025 15:37:40 GMT*/
+
+/* ::  T I E R - T W O is - "2. A-Z Brands"  :::::::::::::::::::::::::::::::*/ 
+:root {
+  /* 3-global-styles || default || typography-global*/ 
+  --default---typography-global: var(--font-family-diatype-regular, 'Pfizer Diatype');
+  /* 3-global-styles || alt-utility || typography-global*/ 
+  --alt-utility---typography-global: var(--font-family-diatype-regular, 'Pfizer Diatype');
+  /* 3-global-styles || alt-success || typography-global*/ 
+  --alt-success---typography-global: var(--font-family-diatype-regular, 'Pfizer Diatype');
+  /* 3-global-styles || alt-error || typography-global*/ 
+  --alt-error---typography-global: var(--font-family-diatype-regular, 'Pfizer Diatype');
+  /* 3-global-styles || default || color-neutrals-neutral-black*/ 
+  --default---color-neutrals-neutral-black: var(--color-gray-black, #000000);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-black*/ 
+  --alt-utility---color-neutrals-neutral-black: var(--color-gray-black, #000000);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-black*/ 
+  --alt-success---color-neutrals-neutral-black: var(--color-gray-black, #000000);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-black*/ 
+  --alt-error---color-neutrals-neutral-black: var(--color-gray-black, #000000);
+  /* 3-global-styles || Default || [nativeValue]*/
+  --default---color-neutrals-neutral-black-95: #000000f2;
+  /* 3-global-styles || Alt Utility || [nativeValue]*/
+  --alt-utility---color-neutrals-neutral-black-95: #000000f2;
+  /* 3-global-styles || Alt Success || [nativeValue]*/
+  --alt-success---color-neutrals-neutral-black-95: #000000f2;
+  /* 3-global-styles || Alt Error || [nativeValue]*/
+  --alt-error---color-neutrals-neutral-black-95: #000000f2;
+  /* 3-global-styles || Default || [nativeValue]*/
+  --default---color-neutrals-neutral-black-40: #00000066;
+  /* 3-global-styles || Alt Utility || [nativeValue]*/
+  --alt-utility---color-neutrals-neutral-black-40: #00000066;
+  /* 3-global-styles || Alt Success || [nativeValue]*/
+  --alt-success---color-neutrals-neutral-black-40: #00000066;
+  /* 3-global-styles || Alt Error || [nativeValue]*/
+  --alt-error---color-neutrals-neutral-black-40: #00000066;
+  /* 3-global-styles || Default || [nativeValue]*/
+  --default---color-neutrals-neutral-black-5: #0000000d;
+  /* 3-global-styles || Alt Utility || [nativeValue]*/
+  --alt-utility---color-neutrals-neutral-black-5: #0000000d;
+  /* 3-global-styles || Alt Success || [nativeValue]*/
+  --alt-success---color-neutrals-neutral-black-5: #0000000d;
+  /* 3-global-styles || Alt Error || [nativeValue]*/
+  --alt-error---color-neutrals-neutral-black-5: #0000000d;
+  /* 3-global-styles || default || color-neutrals-neutral-100*/ 
+  --default---color-neutrals-neutral-100: var(--color-gray-100, #171717);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-100*/ 
+  --alt-utility---color-neutrals-neutral-100: var(--color-gray-100, #171717);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-100*/ 
+  --alt-success---color-neutrals-neutral-100: var(--color-gray-100, #171717);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-100*/ 
+  --alt-error---color-neutrals-neutral-100: var(--color-gray-100, #171717);
+  /* 3-global-styles || default || color-neutrals-neutral-90*/ 
+  --default---color-neutrals-neutral-90: var(--color-gray-90, #292929);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-90*/ 
+  --alt-utility---color-neutrals-neutral-90: var(--color-gray-90, #292929);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-90*/ 
+  --alt-success---color-neutrals-neutral-90: var(--color-gray-90, #292929);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-90*/ 
+  --alt-error---color-neutrals-neutral-90: var(--color-gray-90, #292929);
+  /* 3-global-styles || default || color-neutrals-neutral-80*/ 
+  --default---color-neutrals-neutral-80: var(--color-gray-80, #3d3d3d);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-80*/ 
+  --alt-utility---color-neutrals-neutral-80: var(--color-gray-80, #3d3d3d);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-80*/ 
+  --alt-success---color-neutrals-neutral-80: var(--color-gray-80, #3d3d3d);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-80*/ 
+  --alt-error---color-neutrals-neutral-80: var(--color-gray-80, #3d3d3d);
+  /* 3-global-styles || default || color-neutrals-neutral-70*/ 
+  --default---color-neutrals-neutral-70: var(--color-gray-70, #525252);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-70*/ 
+  --alt-utility---color-neutrals-neutral-70: var(--color-gray-70, #525252);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-70*/ 
+  --alt-success---color-neutrals-neutral-70: var(--color-gray-70, #525252);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-70*/ 
+  --alt-error---color-neutrals-neutral-70: var(--color-gray-70, #525252);
+  /* 3-global-styles || default || color-neutrals-neutral-60*/ 
+  --default---color-neutrals-neutral-60: var(--color-gray-60, #666666);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-60*/ 
+  --alt-utility---color-neutrals-neutral-60: var(--color-gray-60, #666666);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-60*/ 
+  --alt-success---color-neutrals-neutral-60: var(--color-gray-60, #666666);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-60*/ 
+  --alt-error---color-neutrals-neutral-60: var(--color-gray-60, #666666);
+  /* 3-global-styles || default || color-neutrals-neutral-50*/ 
+  --default---color-neutrals-neutral-50: var(--color-gray-50, #999999);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-50*/ 
+  --alt-utility---color-neutrals-neutral-50: var(--color-gray-50, #999999);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-50*/ 
+  --alt-success---color-neutrals-neutral-50: var(--color-gray-50, #999999);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-50*/ 
+  --alt-error---color-neutrals-neutral-50: var(--color-gray-50, #999999);
+  /* 3-global-styles || default || color-neutrals-neutral-40*/ 
+  --default---color-neutrals-neutral-40: var(--color-gray-40, #b3b3b3);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-40*/ 
+  --alt-utility---color-neutrals-neutral-40: var(--color-gray-40, #b3b3b3);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-40*/ 
+  --alt-success---color-neutrals-neutral-40: var(--color-gray-40, #b3b3b3);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-40*/ 
+  --alt-error---color-neutrals-neutral-40: var(--color-gray-40, #b3b3b3);
+  /* 3-global-styles || default || color-neutrals-neutral-30*/ 
+  --default---color-neutrals-neutral-30: var(--color-gray-30, #c9c9c9);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-30*/ 
+  --alt-utility---color-neutrals-neutral-30: var(--color-gray-30, #c9c9c9);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-30*/ 
+  --alt-success---color-neutrals-neutral-30: var(--color-gray-30, #c9c9c9);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-30*/ 
+  --alt-error---color-neutrals-neutral-30: var(--color-gray-30, #c9c9c9);
+  /* 3-global-styles || default || color-neutrals-neutral-20*/ 
+  --default---color-neutrals-neutral-20: var(--color-gray-20, #e0e0e0);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-20*/ 
+  --alt-utility---color-neutrals-neutral-20: var(--color-gray-20, #e0e0e0);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-20*/ 
+  --alt-success---color-neutrals-neutral-20: var(--color-gray-20, #e0e0e0);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-20*/ 
+  --alt-error---color-neutrals-neutral-20: var(--color-gray-20, #e0e0e0);
+  /* 3-global-styles || default || color-neutrals-neutral-10*/ 
+  --default---color-neutrals-neutral-10: var(--color-gray-10, #f0f0f0);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-10*/ 
+  --alt-utility---color-neutrals-neutral-10: var(--color-gray-10, #f0f0f0);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-10*/ 
+  --alt-success---color-neutrals-neutral-10: var(--color-gray-10, #f0f0f0);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-10*/ 
+  --alt-error---color-neutrals-neutral-10: var(--color-gray-10, #f0f0f0);
+  /* 3-global-styles || default || color-neutrals-neutral-white*/ 
+  --default---color-neutrals-neutral-white: var(--color-gray-white, #ffffff);
+  /* 3-global-styles || alt-utility || color-neutrals-neutral-white*/ 
+  --alt-utility---color-neutrals-neutral-white: var(--color-gray-white, #ffffff);
+  /* 3-global-styles || alt-success || color-neutrals-neutral-white*/ 
+  --alt-success---color-neutrals-neutral-white: var(--color-gray-white, #ffffff);
+  /* 3-global-styles || alt-error || color-neutrals-neutral-white*/ 
+  --alt-error---color-neutrals-neutral-white: var(--color-gray-white, #ffffff);
+  /* 3-global-styles || Default || [nativeValue]*/
+  --default---color-neutrals-neutral-white-95: #fffffff2;
+  /* 3-global-styles || Alt Utility || [nativeValue]*/
+  --alt-utility---color-neutrals-neutral-white-95: #fffffff2;
+  /* 3-global-styles || Alt Success || [nativeValue]*/
+  --alt-success---color-neutrals-neutral-white-95: #fffffff2;
+  /* 3-global-styles || Alt Error || [nativeValue]*/
+  --alt-error---color-neutrals-neutral-white-95: #fffffff2;
+  /* 3-global-styles || Default || [nativeValue]*/
+  --default---color-neutrals-neutral-white-30: #ffffff4d;
+  /* 3-global-styles || Alt Utility || [nativeValue]*/
+  --alt-utility---color-neutrals-neutral-white-30: #ffffff4d;
+  /* 3-global-styles || Alt Success || [nativeValue]*/
+  --alt-success---color-neutrals-neutral-white-30: #ffffff4d;
+  /* 3-global-styles || Alt Error || [nativeValue]*/
+  --alt-error---color-neutrals-neutral-white-30: #ffffff4d;
+  /* 3-global-styles || Default || [nativeValue]*/
+  --default---color-neutrals-neutral-white-15: #ffffff26;
+  /* 3-global-styles || Alt Utility || [nativeValue]*/
+  --alt-utility---color-neutrals-neutral-white-15: #ffffff26;
+  /* 3-global-styles || Alt Success || [nativeValue]*/
+  --alt-success---color-neutrals-neutral-white-15: #ffffff26;
+  /* 3-global-styles || Alt Error || [nativeValue]*/
+  --alt-error---color-neutrals-neutral-white-15: #ffffff26;
+  /* 3-global-styles || default || color-pfizer-pfizer-blue-90*/ 
+  --default---color-pfizer-pfizer-blue-90: var(--color-blue-90-pfizer, #00004e);
+  /* 3-global-styles || alt-utility || color-pfizer-pfizer-blue-90*/ 
+  --alt-utility---color-pfizer-pfizer-blue-90: var(--color-blue-90-pfizer, #00004e);
+  /* 3-global-styles || alt-success || color-pfizer-pfizer-blue-90*/ 
+  --alt-success---color-pfizer-pfizer-blue-90: var(--color-blue-90-pfizer, #00004e);
+  /* 3-global-styles || alt-error || color-pfizer-pfizer-blue-90*/ 
+  --alt-error---color-pfizer-pfizer-blue-90: var(--color-blue-90-pfizer, #00004e);
+  /* 3-global-styles || default || color-pfizer-pfizer-blue-80*/ 
+  --default---color-pfizer-pfizer-blue-80: var(--color-blue-80, #00009d);
+  /* 3-global-styles || alt-utility || color-pfizer-pfizer-blue-80*/ 
+  --alt-utility---color-pfizer-pfizer-blue-80: var(--color-blue-80, #00009d);
+  /* 3-global-styles || alt-success || color-pfizer-pfizer-blue-80*/ 
+  --alt-success---color-pfizer-pfizer-blue-80: var(--color-blue-80, #00009d);
+  /* 3-global-styles || alt-error || color-pfizer-pfizer-blue-80*/ 
+  --alt-error---color-pfizer-pfizer-blue-80: var(--color-blue-80, #00009d);
+  /* 3-global-styles || default || color-pfizer-pfizer-blue-70*/ 
+  --default---color-pfizer-pfizer-blue-70: var(--color-blue-70, #0000c9);
+  /* 3-global-styles || alt-utility || color-pfizer-pfizer-blue-70*/ 
+  --alt-utility---color-pfizer-pfizer-blue-70: var(--color-blue-70, #0000c9);
+  /* 3-global-styles || alt-success || color-pfizer-pfizer-blue-70*/ 
+  --alt-success---color-pfizer-pfizer-blue-70: var(--color-blue-70, #0000c9);
+  /* 3-global-styles || alt-error || color-pfizer-pfizer-blue-70*/ 
+  --alt-error---color-pfizer-pfizer-blue-70: var(--color-blue-70, #0000c9);
+  /* 3-global-styles || default || color-pfizer-pfizer-cyan-50*/ 
+  --default---color-pfizer-pfizer-cyan-50: var(--color-cyan-50, #0095ff);
+  /* 3-global-styles || alt-utility || color-pfizer-pfizer-cyan-50*/ 
+  --alt-utility---color-pfizer-pfizer-cyan-50: var(--color-cyan-50, #0095ff);
+  /* 3-global-styles || alt-success || color-pfizer-pfizer-cyan-50*/ 
+  --alt-success---color-pfizer-pfizer-cyan-50: var(--color-cyan-50, #0095ff);
+  /* 3-global-styles || alt-error || color-pfizer-pfizer-cyan-50*/ 
+  --alt-error---color-pfizer-pfizer-cyan-50: var(--color-cyan-50, #0095ff);
+  /* 3-global-styles || default || color-pfizer-pfizer-cyan-30*/ 
+  --default---color-pfizer-pfizer-cyan-30: var(--color-cyan-30, #68d1ff);
+  /* 3-global-styles || alt-utility || color-pfizer-pfizer-cyan-30*/ 
+  --alt-utility---color-pfizer-pfizer-cyan-30: var(--color-cyan-30, #68d1ff);
+  /* 3-global-styles || alt-success || color-pfizer-pfizer-cyan-30*/ 
+  --alt-success---color-pfizer-pfizer-cyan-30: var(--color-cyan-30, #68d1ff);
+  /* 3-global-styles || alt-error || color-pfizer-pfizer-cyan-30*/ 
+  --alt-error---color-pfizer-pfizer-cyan-30: var(--color-cyan-30, #68d1ff);
+  /* 3-global-styles || default || color-pfizer-pfizer-cyan-10*/ 
+  --default---color-pfizer-pfizer-cyan-10: var(--color-cyan-10, #e0f5ff);
+  /* 3-global-styles || alt-utility || color-pfizer-pfizer-cyan-10*/ 
+  --alt-utility---color-pfizer-pfizer-cyan-10: var(--color-cyan-10, #e0f5ff);
+  /* 3-global-styles || alt-success || color-pfizer-pfizer-cyan-10*/ 
+  --alt-success---color-pfizer-pfizer-cyan-10: var(--color-cyan-10, #e0f5ff);
+  /* 3-global-styles || alt-error || color-pfizer-pfizer-cyan-10*/ 
+  --alt-error---color-pfizer-pfizer-cyan-10: var(--color-cyan-10, #e0f5ff);
+  /* 3-global-styles || default || color-success-success-darker*/ 
+  --default---color-success-success-darker: var(--color-green-80, #063f00);
+  /* 3-global-styles || alt-utility || color-success-success-darker*/ 
+  --alt-utility---color-success-success-darker: var(--color-teal-80, #063f00);
+  /* 3-global-styles || alt-success || color-success-success-darker*/ 
+  --alt-success---color-success-success-darker: var(--color-teal-80, #063f00);
+  /* 3-global-styles || alt-error || color-success-success-darker*/ 
+  --alt-error---color-success-success-darker: var(--color-green-80, #063f00);
+  /* 3-global-styles || default || color-success-success-dark*/ 
+  --default---color-success-success-dark: var(--color-green-70, #075900);
+  /* 3-global-styles || alt-utility || color-success-success-dark*/ 
+  --alt-utility---color-success-success-dark: var(--color-teal-70, #075900);
+  /* 3-global-styles || alt-success || color-success-success-dark*/ 
+  --alt-success---color-success-success-dark: var(--color-teal-70, #075900);
+  /* 3-global-styles || alt-error || color-success-success-dark*/ 
+  --alt-error---color-success-success-dark: var(--color-green-70, #075900);
+  /* 3-global-styles || default || color-success-success-seed*/ 
+  --default---color-success-success-seed: var(--color-green-60, #097900);
+  /* 3-global-styles || alt-utility || color-success-success-seed*/ 
+  --alt-utility---color-success-success-seed: var(--color-teal-60, #097900);
+  /* 3-global-styles || alt-success || color-success-success-seed*/ 
+  --alt-success---color-success-success-seed: var(--color-teal-60, #097900);
+  /* 3-global-styles || alt-error || color-success-success-seed*/ 
+  --alt-error---color-success-success-seed: var(--color-green-60, #097900);
+  /* 3-global-styles || default || color-success-success-light*/ 
+  --default---color-success-success-light: var(--color-green-40, #4dcc3f);
+  /* 3-global-styles || alt-utility || color-success-success-light*/ 
+  --alt-utility---color-success-success-light: var(--color-teal-40, #4dcc3f);
+  /* 3-global-styles || alt-success || color-success-success-light*/ 
+  --alt-success---color-success-success-light: var(--color-teal-40, #4dcc3f);
+  /* 3-global-styles || alt-error || color-success-success-light*/ 
+  --alt-error---color-success-success-light: var(--color-green-40, #4dcc3f);
+  /* 3-global-styles || default || color-success-success-lighter*/ 
+  --default---color-success-success-lighter: var(--color-green-10, #e1f4df);
+  /* 3-global-styles || alt-utility || color-success-success-lighter*/ 
+  --alt-utility---color-success-success-lighter: var(--color-teal-10, #e1f4df);
+  /* 3-global-styles || alt-success || color-success-success-lighter*/ 
+  --alt-success---color-success-success-lighter: var(--color-teal-10, #e1f4df);
+  /* 3-global-styles || alt-error || color-success-success-lighter*/ 
+  --alt-error---color-success-success-lighter: var(--color-green-10, #e1f4df);
+  /* 3-global-styles || default || color-error-error-darker*/ 
+  --default---color-error-error-darker: var(--color-red-80, #6c001a);
+  /* 3-global-styles || alt-utility || color-error-error-darker*/ 
+  --alt-utility---color-error-error-darker: var(--color-orange-80, #6c001a);
+  /* 3-global-styles || alt-success || color-error-error-darker*/ 
+  --alt-success---color-error-error-darker: var(--color-red-80, #6c001a);
+  /* 3-global-styles || alt-error || color-error-error-darker*/ 
+  --alt-error---color-error-error-darker: var(--color-orange-80, #6c001a);
+  /* 3-global-styles || default || color-error-error-dark*/ 
+  --default---color-error-error-dark: var(--color-red-70, #990025);
+  /* 3-global-styles || alt-utility || color-error-error-dark*/ 
+  --alt-utility---color-error-error-dark: var(--color-orange-70, #990025);
+  /* 3-global-styles || alt-success || color-error-error-dark*/ 
+  --alt-success---color-error-error-dark: var(--color-red-70, #990025);
+  /* 3-global-styles || alt-error || color-error-error-dark*/ 
+  --alt-error---color-error-error-dark: var(--color-orange-70, #990025);
+  /* 3-global-styles || default || color-error-error-seed*/ 
+  --default---color-error-error-seed: var(--color-red-60, #c00727);
+  /* 3-global-styles || alt-utility || color-error-error-seed*/ 
+  --alt-utility---color-error-error-seed: var(--color-orange-60, #c00727);
+  /* 3-global-styles || alt-success || color-error-error-seed*/ 
+  --alt-success---color-error-error-seed: var(--color-red-60, #c00727);
+  /* 3-global-styles || alt-error || color-error-error-seed*/ 
+  --alt-error---color-error-error-seed: var(--color-orange-60, #c00727);
+  /* 3-global-styles || default || color-error-error-light*/ 
+  --default---color-error-error-light: var(--color-red-40, #ff6969);
+  /* 3-global-styles || alt-utility || color-error-error-light*/ 
+  --alt-utility---color-error-error-light: var(--color-orange-40, #ff6969);
+  /* 3-global-styles || alt-success || color-error-error-light*/ 
+  --alt-success---color-error-error-light: var(--color-red-40, #ff6969);
+  /* 3-global-styles || alt-error || color-error-error-light*/ 
+  --alt-error---color-error-error-light: var(--color-orange-40, #ff6969);
+  /* 3-global-styles || default || color-error-error-lighter*/ 
+  --default---color-error-error-lighter: var(--color-red-10, #ffe9e9);
+  /* 3-global-styles || alt-utility || color-error-error-lighter*/ 
+  --alt-utility---color-error-error-lighter: var(--color-orange-10, #ffe9e9);
+  /* 3-global-styles || alt-success || color-error-error-lighter*/ 
+  --alt-success---color-error-error-lighter: var(--color-red-10, #ffe9e9);
+  /* 3-global-styles || alt-error || color-error-error-lighter*/ 
+  --alt-error---color-error-error-lighter: var(--color-orange-10, #ffe9e9); 
+ }

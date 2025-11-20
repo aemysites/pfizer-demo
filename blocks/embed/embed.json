@@ -1,0 +1,18 @@
+{
+  "embed": {
+    "type": "embed",
+    "description": "This is an embed block description",
+    "schema": {
+      "classes": ["autoplay"],
+      "embedUrl": {
+        "selector": ":scope a",
+        "target": "href"
+      },
+      "poster": {
+        "selector": ":scope picture",
+        "target": "outerHTML",
+        "optional": true
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<div class="core-quote-inside block-inside">
+  <div class="quote-slide">
+    {{ #picture }}
+    <div class="picture">
+      {{ picture }}
+    </div>
+    {{ /picture }}
+    <div class="quote-slide-overlay">
+      <div>
+        <span class="icon icon-lib-quote"></span>
+        <div class="quote">
+          {{ quote }}
+        </div>
+      </div>
+      <div class="patient-info">
+        {{ #patientPicture }}
+        <div class="patient-picture">
+          {{ patientPicture }}
+        </div>
+        {{ /patientPicture }}
+        <div>
+          <div class="patient-name">
+            {{ patientName }}
+          </div>
+          <div class="patient-description">
+            {{ patientDescription }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

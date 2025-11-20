@@ -1,0 +1,49 @@
+// DEMO OR POC related to documention or demo //////////////////////////////
+
+body .library-metadata-wrapper .metadata-link-wrapper {
+  font-size: 80%;
+  padding-top: 10px;
+}
+
+body .library-metadata-wrapper .library-metadata {
+  background-color: #f2f0f6;
+  padding: 12px 8px;
+  opacity: 0.85;
+  font-family: monospace;
+  margin: 10px 0 27px;
+  font-size: 20px;
+  border: 1px dotted #97aeb5;
+  line-height: 120%;
+}
+
+body .library-metadata-wrapper .library-metadata a:any-link {
+  font-weight: bold;
+}
+
+body .library-metadata-wrapper .library-metadata > div > div:first-child {
+  display: none;
+}
+
+// get even
+body .library-metadata-wrapper .library-metadata > div:nth-child(2) {
+  font-size: 80%;
+  padding-top: 10px;
+}
+
+body .library-metadata-wrapper .library-metadata ul {
+  padding: 1.5rem;
+  padding-top: 0;
+  margin: 0;
+}
+
+.button-examples {
+  &.max-600 .button-container {
+    max-width: 600px;
+    padding: 10px;
+    border: solid 1px var(--lib-core--color-surface-variant);
+
+    a.button {
+      margin: 5px 0;
+    }
+  }
+}

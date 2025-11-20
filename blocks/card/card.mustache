@@ -1,0 +1,42 @@
+<div
+  class="core-card-inside block-inside {{#isCarouselCard}}section-carousel-card{{/isCarouselCard}} {{#dynamicDisclaimerPosition}}core-card-dynamic-carousel{{/dynamicDisclaimerPosition}}"
+>
+  <div class="core-card-card core-card-content">
+    {{! the cardIdentifier can be: image | icon | number | eyebrow }}
+    {{#cardIdentifier}}
+    <div class="core-card-top">
+      {{ cardIdentifier }}
+    </div>
+    {{/cardIdentifier}}
+
+    <div class="core-card-bottom standard-block-content-spacing core-card-bottom-stretch">
+      <div>
+        {{ heading }}
+        <p>{{ body }}</p>
+      </div>
+      {{ #ctaHref }}
+      <p class="button-container" data-button-icon="{{ variantButtonIcon }}">
+        <a href="{{ ctaHref }}" title="{{ ctaLink }}" class="button secondary {{#variantButtonIcon}}button-icon{{/variantButtonIcon}}">
+          {{#variantButtonIcon}}
+          <span class="icon icon-lib-chevron-right"></span>
+          {{/variantButtonIcon}}
+          {{^variantButtonIcon}}
+          <span> {{ ctaLink }} </span>
+          {{/variantButtonIcon}}
+        </a>
+      </p>
+      {{ /ctaHref }}
+      {{ #ctas }}
+      {{ . }}
+      {{ /ctas }}
+    </div>
+  </div>
+
+  {{#dynamicDisclaimerPosition}}
+  {{#disclaimer}}
+  <div class="core-card-disclaimer-field atoms-disclaimer">
+    {{ disclaimer }}
+  </div>
+  {{/disclaimer}}
+  {{/dynamicDisclaimerPosition}}
+</div>

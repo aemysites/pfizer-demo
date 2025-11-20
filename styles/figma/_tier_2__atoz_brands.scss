@@ -1,0 +1,352 @@
+// Generated on Fri, 21 Feb 2025 15:37:40 GMT
+
+// ::  T I E R - T W O is - "2. A-Z Brands"  ::::::::::::::::::::::::::::::: 
+
+// 2-a-brands || brandex || typography-a-primary
+$typography-a-primary: var(--font-family-diatype-extended, 'Pfizer Diatype Extended');
+// 2-a-brands || test-pfizer || typography-a-primary
+$typography-a-primary: var(--font-family-tomorrow, 'Pfizer Diatype Extended');
+// 2-a-brands || abrysvo || typography-a-primary
+$typography-a-primary: var(--font-family-diatype-rounded, 'Pfizer Diatype Extended');
+// 2-a-brands || brandex || typography-a-secondary
+$typography-a-secondary: var(--font-family-diatype-regular, 'Pfizer Diatype');
+// 2-a-brands || test-pfizer || typography-a-secondary
+$typography-a-secondary: var(--font-family-diatype-regular, 'Pfizer Diatype');
+// 2-a-brands || abrysvo || typography-a-secondary
+$typography-a-secondary: var(--font-family-diatype-regular, 'Pfizer Diatype');
+// 2-a-brands || brandex || color-core-core-darker
+$color-core-core-darker: var(--color-purple-90, #321a56);
+// 2-a-brands || test-pfizer || color-core-core-darker
+$color-core-core-darker: var(--color-blue-90-pfizer, #321a56);
+// 2-a-brands || abrysvo || color-core-core-darker
+$color-core-core-darker: var(--color-teal-90, #321a56);
+// 2-a-brands || brandex || color-core-core-dark
+$color-core-core-dark: var(--color-purple-80, #441c82);
+// 2-a-brands || test-pfizer || color-core-core-dark
+$color-core-core-dark: var(--color-blue-80, #441c82);
+// 2-a-brands || abrysvo || color-core-core-dark
+$color-core-core-dark: var(--color-teal-80, #441c82);
+// 2-a-brands || brandex || color-core-core-seed
+$color-core-core-seed: var(--color-purple-70, #5a21b0);
+// 2-a-brands || test-pfizer || color-core-core-seed
+$color-core-core-seed: var(--color-blue-70, #5a21b0);
+// 2-a-brands || abrysvo || color-core-core-seed
+$color-core-core-seed: var(--color-teal-70, #5a21b0);
+// 2-a-brands || brandex || color-core-core-light
+$color-core-core-light: var(--color-purple-40, #a68aff);
+// 2-a-brands || test-pfizer || color-core-core-light
+$color-core-core-light: var(--color-blue-40, #a68aff);
+// 2-a-brands || abrysvo || color-core-core-light
+$color-core-core-light: var(--color-teal-50, #a68aff);
+// 2-a-brands || brandex || color-core-core-lighter
+$color-core-core-lighter: var(--color-purple-10, #f3e9ff);
+// 2-a-brands || test-pfizer || color-core-core-lighter
+$color-core-core-lighter: var(--color-blue-10, #f3e9ff);
+// 2-a-brands || abrysvo || color-core-core-lighter
+$color-core-core-lighter: var(--color-teal-10, #f3e9ff);
+// 2-a-brands || [Brandex] || [nativeValue]
+$brandex---color-core-core-seed-60: var(#5a21b099);
+// 2-a-brands || [Test: Pfizer] || [nativeValue]
+$test-pfizer---color-core-core-seed-60: var(#5a21b099);
+// 2-a-brands || Abrysvo || [nativeValue]
+$abrysvo---color-core-core-seed-60: var(#5a21b099);
+// 2-a-brands || brandex || color-accent-accent-darker
+$color-accent-accent-darker: var(--color-teal-80, #003e3e);
+// 2-a-brands || test-pfizer || color-accent-accent-darker
+$color-accent-accent-darker: var(--color-cyan-90, #003e3e);
+// 2-a-brands || abrysvo || color-accent-accent-darker
+$color-accent-accent-darker: var(--color-cyan-100, #003e3e);
+// 2-a-brands || brandex || color-extended-extended-darker
+$color-extended-extended-darker: var(--color-teal-80, #003e3e);
+// 2-a-brands || test-pfizer || color-extended-extended-darker
+$color-extended-extended-darker: var(--color-cyan-90, #003e3e);
+// 2-a-brands || abrysvo || color-extended-extended-darker
+$color-extended-extended-darker: var(--color-yellow-50, #003e3e);
+// 2-a-brands || brandex || color-accent-accent-dark
+$color-accent-accent-dark: var(--color-teal-70, #005b54);
+// 2-a-brands || test-pfizer || color-accent-accent-dark
+$color-accent-accent-dark: var(--color-cyan-70, #005b54);
+// 2-a-brands || abrysvo || color-accent-accent-dark
+$color-accent-accent-dark: var(--color-cyan-90, #005b54);
+// 2-a-brands || brandex || color-extended-extended-dark
+$color-extended-extended-dark: var(--color-teal-70, #005b54);
+// 2-a-brands || test-pfizer || color-extended-extended-dark
+$color-extended-extended-dark: var(--color-cyan-70, #005b54);
+// 2-a-brands || abrysvo || color-extended-extended-dark
+$color-extended-extended-dark: var(--color-yellow-40, #005b54);
+// 2-a-brands || brandex || color-accent-accent-seed
+$color-accent-accent-seed: var(--color-teal-60, #007c70);
+// 2-a-brands || test-pfizer || color-accent-accent-seed
+$color-accent-accent-seed: var(--color-cyan-60, #007c70);
+// 2-a-brands || abrysvo || color-accent-accent-seed
+$color-accent-accent-seed: var(--color-cyan-80, #007c70);
+// 2-a-brands || brandex || color-accent-accent-light
+$color-accent-accent-light: var(--color-teal-40, #29ccb4);
+// 2-a-brands || test-pfizer || color-accent-accent-light
+$color-accent-accent-light: var(--color-cyan-30, #29ccb4);
+// 2-a-brands || abrysvo || color-accent-accent-light
+$color-accent-accent-light: var(--color-cyan-20, #29ccb4);
+// 2-a-brands || brandex || color-accent-accent-lighter
+$color-accent-accent-lighter: var(--color-teal-10, #d9f9f5);
+// 2-a-brands || test-pfizer || color-accent-accent-lighter
+$color-accent-accent-lighter: var(--color-cyan-10, #d9f9f5);
+// 2-a-brands || abrysvo || color-accent-accent-lighter
+$color-accent-accent-lighter: var(--color-cyan-10, #d9f9f5);
+// 2-a-brands || brandex || color-extended-extended-seed
+$color-extended-extended-seed: var(--color-teal-60, #007c70);
+// 2-a-brands || test-pfizer || color-extended-extended-seed
+$color-extended-extended-seed: var(--color-cyan-60, #007c70);
+// 2-a-brands || abrysvo || color-extended-extended-seed
+$color-extended-extended-seed: var(--color-yellow-30, #007c70);
+// 2-a-brands || brandex || color-extended-extended-light
+$color-extended-extended-light: var(--color-teal-40, #29ccb4);
+// 2-a-brands || test-pfizer || color-extended-extended-light
+$color-extended-extended-light: var(--color-cyan-30, #29ccb4);
+// 2-a-brands || abrysvo || color-extended-extended-light
+$color-extended-extended-light: var(--color-yellow-20, #29ccb4);
+// 2-a-brands || brandex || color-extended-extended-lighter
+$color-extended-extended-lighter: var(--color-teal-10, #d9f9f5);
+// 2-a-brands || test-pfizer || color-extended-extended-lighter
+$color-extended-extended-lighter: var(--color-cyan-10, #d9f9f5);
+// 2-a-brands || abrysvo || color-extended-extended-lighter
+$color-extended-extended-lighter: var(--color-yellow-10, #d9f9f5);
+// 2-a-brands || [Brandex] || [nativeValue]
+$brandex---color-extended-extended-seed-60: var(#007c7099);
+// 2-a-brands || [Test: Pfizer] || [nativeValue]
+$test-pfizer---color-extended-extended-seed-60: var(#007c7099);
+// 2-a-brands || Abrysvo || [nativeValue]
+$abrysvo---color-extended-extended-seed-60: var(#007c7099);
+// 2-a-brands || [Brandex] || [nativeValue]
+$brandex---color-accent-accent-seed-60: var(#007c7099);
+// 2-a-brands || [Test: Pfizer] || [nativeValue]
+$test-pfizer---color-accent-accent-seed-60: var(#007c7099);
+// 2-a-brands || Abrysvo || [nativeValue]
+$abrysvo---color-accent-accent-seed-60: var(#007c7099);
+// 2-a-brands || brandex || color-button-primary-default-foreground-default
+$color-button-primary-default-foreground-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-primary-default-foreground-default
+$color-button-primary-default-foreground-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-primary-default-foreground-default
+$color-button-primary-default-foreground-default: var(--color-neutrals-neutral-80, #ffffff);
+// 2-a-brands || brandex || color-button-primary-default-surface-default
+$color-button-primary-default-surface-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || test-pfizer || color-button-primary-default-surface-default
+$color-button-primary-default-surface-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || abrysvo || color-button-primary-default-surface-default
+$color-button-primary-default-surface-default: var(--color-extended-extended-seed, #5a21b0);
+// 2-a-brands || brandex || color-button-primary-reversed-foreground-default
+$color-button-primary-reversed-foreground-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || test-pfizer || color-button-primary-reversed-foreground-default
+$color-button-primary-reversed-foreground-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || abrysvo || color-button-primary-reversed-foreground-default
+$color-button-primary-reversed-foreground-default: var(--color-neutrals-neutral-80, #5a21b0);
+// 2-a-brands || brandex || color-button-primary-reversed-surface-default
+$color-button-primary-reversed-surface-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-primary-reversed-surface-default
+$color-button-primary-reversed-surface-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-primary-reversed-surface-default
+$color-button-primary-reversed-surface-default: var(--color-extended-extended-seed, #ffffff);
+// 2-a-brands || brandex || color-button-primary-default-surface-hover
+$color-button-primary-default-surface-hover: var(--color-core-core-dark, #441c82);
+// 2-a-brands || test-pfizer || color-button-primary-default-surface-hover
+$color-button-primary-default-surface-hover: var(--color-core-core-dark, #441c82);
+// 2-a-brands || abrysvo || color-button-primary-default-surface-hover
+$color-button-primary-default-surface-hover: var(--color-extended-extended-light, #441c82);
+// 2-a-brands || brandex || color-button-primary-reversed-surface-hover
+$color-button-primary-reversed-surface-hover: var(--color-neutrals-neutral-20, #e0e0e0);
+// 2-a-brands || test-pfizer || color-button-primary-reversed-surface-hover
+$color-button-primary-reversed-surface-hover: var(--color-neutrals-neutral-20, #e0e0e0);
+// 2-a-brands || abrysvo || color-button-primary-reversed-surface-hover
+$color-button-primary-reversed-surface-hover: var(--color-extended-extended-light, #e0e0e0);
+// 2-a-brands || brandex || color-button-primary-reversed-focused-border-branded
+$color-button-primary-reversed-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || test-pfizer || color-button-primary-reversed-focused-border-branded
+$color-button-primary-reversed-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || abrysvo || color-button-primary-reversed-focused-border-branded
+$color-button-primary-reversed-focused-border-branded: var(--color-neutrals-neutral-90, #321a56);
+// 2-a-brands || brandex || color-button-primary-reversed-focused-border-white
+$color-button-primary-reversed-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-primary-reversed-focused-border-white
+$color-button-primary-reversed-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-primary-reversed-focused-border-white
+$color-button-primary-reversed-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || brandex || color-button-primary-reversed-foreground-disabled
+$color-button-primary-reversed-foreground-disabled: var(--color-neutrals-neutral-60, #666666);
+// 2-a-brands || test-pfizer || color-button-primary-reversed-foreground-disabled
+$color-button-primary-reversed-foreground-disabled: var(--color-neutrals-neutral-60, #666666);
+// 2-a-brands || abrysvo || color-button-primary-reversed-foreground-disabled
+$color-button-primary-reversed-foreground-disabled: var(--color-neutrals-neutral-60, #666666);
+// 2-a-brands || brandex || color-button-primary-reversed-surface-disabled
+$color-button-primary-reversed-surface-disabled: var(--color-neutrals-neutral-30, #c9c9c9);
+// 2-a-brands || test-pfizer || color-button-primary-reversed-surface-disabled
+$color-button-primary-reversed-surface-disabled: var(--color-neutrals-neutral-30, #c9c9c9);
+// 2-a-brands || abrysvo || color-button-primary-reversed-surface-disabled
+$color-button-primary-reversed-surface-disabled: var(--color-neutrals-neutral-30, #c9c9c9);
+// 2-a-brands || brandex || color-button-primary-default-focused-border-branded
+$color-button-primary-default-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || test-pfizer || color-button-primary-default-focused-border-branded
+$color-button-primary-default-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || abrysvo || color-button-primary-default-focused-border-branded
+$color-button-primary-default-focused-border-branded: var(--color-neutrals-neutral-90, #321a56);
+// 2-a-brands || brandex || color-button-primary-default-focused-border-white
+$color-button-primary-default-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-primary-default-focused-border-white
+$color-button-primary-default-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-primary-default-focused-border-white
+$color-button-primary-default-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || brandex || color-button-primary-default-foreground-disabled
+$color-button-primary-default-foreground-disabled: var(--color-neutrals-neutral-60, #666666);
+// 2-a-brands || test-pfizer || color-button-primary-default-foreground-disabled
+$color-button-primary-default-foreground-disabled: var(--color-neutrals-neutral-60, #666666);
+// 2-a-brands || abrysvo || color-button-primary-default-foreground-disabled
+$color-button-primary-default-foreground-disabled: var(--color-neutrals-neutral-60, #666666);
+// 2-a-brands || brandex || color-button-primary-default-surface-disabled
+$color-button-primary-default-surface-disabled: var(--color-neutrals-neutral-30, #c9c9c9);
+// 2-a-brands || test-pfizer || color-button-primary-default-surface-disabled
+$color-button-primary-default-surface-disabled: var(--color-neutrals-neutral-30, #c9c9c9);
+// 2-a-brands || abrysvo || color-button-primary-default-surface-disabled
+$color-button-primary-default-surface-disabled: var(--color-neutrals-neutral-30, #c9c9c9);
+// 2-a-brands || brandex || color-button-secondary-default-foreground-default
+$color-button-secondary-default-foreground-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || test-pfizer || color-button-secondary-default-foreground-default
+$color-button-secondary-default-foreground-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || abrysvo || color-button-secondary-default-foreground-default
+$color-button-secondary-default-foreground-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || brandex || color-button-secondary-default-border-default
+$color-button-secondary-default-border-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || test-pfizer || color-button-secondary-default-border-default
+$color-button-secondary-default-border-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || abrysvo || color-button-secondary-default-border-default
+$color-button-secondary-default-border-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || brandex || color-button-secondary-default-foreground-hover
+$color-button-secondary-default-foreground-hover: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-secondary-default-foreground-hover
+$color-button-secondary-default-foreground-hover: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-secondary-default-foreground-hover
+$color-button-secondary-default-foreground-hover: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || brandex || color-button-secondary-default-surface-hover
+$color-button-secondary-default-surface-hover: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || test-pfizer || color-button-secondary-default-surface-hover
+$color-button-secondary-default-surface-hover: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || abrysvo || color-button-secondary-default-surface-hover
+$color-button-secondary-default-surface-hover: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || brandex || color-button-secondary-reversed-foreground-default
+$color-button-secondary-reversed-foreground-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-secondary-reversed-foreground-default
+$color-button-secondary-reversed-foreground-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-secondary-reversed-foreground-default
+$color-button-secondary-reversed-foreground-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || brandex || color-button-secondary-reversed-border-default
+$color-button-secondary-reversed-border-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-secondary-reversed-border-default
+$color-button-secondary-reversed-border-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-secondary-reversed-border-default
+$color-button-secondary-reversed-border-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || brandex || color-button-secondary-reversed-foreground-hover
+$color-button-secondary-reversed-foreground-hover: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || test-pfizer || color-button-secondary-reversed-foreground-hover
+$color-button-secondary-reversed-foreground-hover: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || abrysvo || color-button-secondary-reversed-foreground-hover
+$color-button-secondary-reversed-foreground-hover: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || brandex || color-button-secondary-reversed-surface-hover
+$color-button-secondary-reversed-surface-hover: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-secondary-reversed-surface-hover
+$color-button-secondary-reversed-surface-hover: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-secondary-reversed-surface-hover
+$color-button-secondary-reversed-surface-hover: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || brandex || color-button-secondary-reversed-focused-border-branded
+$color-button-secondary-reversed-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || test-pfizer || color-button-secondary-reversed-focused-border-branded
+$color-button-secondary-reversed-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || abrysvo || color-button-secondary-reversed-focused-border-branded
+$color-button-secondary-reversed-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || brandex || color-button-secondary-reversed-focused-border-white
+$color-button-secondary-reversed-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-secondary-reversed-focused-border-white
+$color-button-secondary-reversed-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-secondary-reversed-focused-border-white
+$color-button-secondary-reversed-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || brandex || color-button-secondary-reversed-disabled
+$color-button-secondary-reversed-disabled: var(--color-neutrals-neutral-50, #999999);
+// 2-a-brands || test-pfizer || color-button-secondary-reversed-disabled
+$color-button-secondary-reversed-disabled: var(--color-neutrals-neutral-50, #999999);
+// 2-a-brands || abrysvo || color-button-secondary-reversed-disabled
+$color-button-secondary-reversed-disabled: var(--color-neutrals-neutral-50, #999999);
+// 2-a-brands || brandex || color-button-secondary-default-focused-border-branded
+$color-button-secondary-default-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || test-pfizer || color-button-secondary-default-focused-border-branded
+$color-button-secondary-default-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || abrysvo || color-button-secondary-default-focused-border-branded
+$color-button-secondary-default-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || brandex || color-button-secondary-default-focused-border-white
+$color-button-secondary-default-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-secondary-default-focused-border-white
+$color-button-secondary-default-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-secondary-default-focused-border-white
+$color-button-secondary-default-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || brandex || color-button-secondary-default-disabled
+$color-button-secondary-default-disabled: var(--color-neutrals-neutral-50, #999999);
+// 2-a-brands || test-pfizer || color-button-secondary-default-disabled
+$color-button-secondary-default-disabled: var(--color-neutrals-neutral-50, #999999);
+// 2-a-brands || abrysvo || color-button-secondary-default-disabled
+$color-button-secondary-default-disabled: var(--color-neutrals-neutral-50, #999999);
+// 2-a-brands || brandex || color-button-tertiary-default-default
+$color-button-tertiary-default-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || test-pfizer || color-button-tertiary-default-default
+$color-button-tertiary-default-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || abrysvo || color-button-tertiary-default-default
+$color-button-tertiary-default-default: var(--color-core-core-seed, #5a21b0);
+// 2-a-brands || brandex || color-button-tertiary-reversed-default
+$color-button-tertiary-reversed-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-tertiary-reversed-default
+$color-button-tertiary-reversed-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-tertiary-reversed-default
+$color-button-tertiary-reversed-default: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || brandex || color-button-tertiary-reversed-hover
+$color-button-tertiary-reversed-hover: var(--color-neutrals-neutral-30, #c9c9c9);
+// 2-a-brands || test-pfizer || color-button-tertiary-reversed-hover
+$color-button-tertiary-reversed-hover: var(--color-neutrals-neutral-30, #c9c9c9);
+// 2-a-brands || abrysvo || color-button-tertiary-reversed-hover
+$color-button-tertiary-reversed-hover: var(--color-neutrals-neutral-30, #c9c9c9);
+// 2-a-brands || brandex || color-button-tertiary-reversed-focused-border-branded
+$color-button-tertiary-reversed-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || test-pfizer || color-button-tertiary-reversed-focused-border-branded
+$color-button-tertiary-reversed-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || abrysvo || color-button-tertiary-reversed-focused-border-branded
+$color-button-tertiary-reversed-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || brandex || color-button-tertiary-reversed-focused-border-white
+$color-button-tertiary-reversed-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-tertiary-reversed-focused-border-white
+$color-button-tertiary-reversed-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-tertiary-reversed-focused-border-white
+$color-button-tertiary-reversed-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || brandex || color-button-tertiary-reversed-disabled
+$color-button-tertiary-reversed-disabled: var(--color-neutrals-neutral-50, #999999);
+// 2-a-brands || test-pfizer || color-button-tertiary-reversed-disabled
+$color-button-tertiary-reversed-disabled: var(--color-neutrals-neutral-50, #999999);
+// 2-a-brands || abrysvo || color-button-tertiary-reversed-disabled
+$color-button-tertiary-reversed-disabled: var(--color-neutrals-neutral-50, #999999);
+// 2-a-brands || brandex || color-button-tertiary-default-hover
+$color-button-tertiary-default-hover: var(--color-core-core-darker, #321a56);
+// 2-a-brands || test-pfizer || color-button-tertiary-default-hover
+$color-button-tertiary-default-hover: var(--color-core-core-darker, #321a56);
+// 2-a-brands || abrysvo || color-button-tertiary-default-hover
+$color-button-tertiary-default-hover: var(--color-core-core-darker, #321a56);
+// 2-a-brands || brandex || color-button-tertiary-default-focused-border-branded
+$color-button-tertiary-default-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || test-pfizer || color-button-tertiary-default-focused-border-branded
+$color-button-tertiary-default-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || abrysvo || color-button-tertiary-default-focused-border-branded
+$color-button-tertiary-default-focused-border-branded: var(--color-core-core-darker, #321a56);
+// 2-a-brands || brandex || color-button-tertiary-default-focused-border-white
+$color-button-tertiary-default-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || test-pfizer || color-button-tertiary-default-focused-border-white
+$color-button-tertiary-default-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || abrysvo || color-button-tertiary-default-focused-border-white
+$color-button-tertiary-default-focused-border-white: var(--color-neutrals-neutral-white, #ffffff);
+// 2-a-brands || brandex || color-button-tertiary-default-disbled
+$color-button-tertiary-default-disbled: var(--color-neutrals-neutral-50, #999999);
+// 2-a-brands || test-pfizer || color-button-tertiary-default-disbled
+$color-button-tertiary-default-disbled: var(--color-neutrals-neutral-50, #999999);
+// 2-a-brands || abrysvo || color-button-tertiary-default-disbled
+$color-button-tertiary-default-disbled: var(--color-neutrals-neutral-50, #999999);

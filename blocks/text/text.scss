@@ -1,0 +1,23 @@
+// text.scss
+
+@import '../../styles/figma/figma-mixin';
+
+.core-text {
+  box-sizing: border-box;
+
+  .atoms-content .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-16);
+    margin-bottom: 0;
+
+    @include breakpointMediumUp {
+      flex-direction: row;
+      gap: var(--size-24);
+    }
+  }
+
+  .atoms-content .button-container br {
+    display: none;
+  }
+}

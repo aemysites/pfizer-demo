@@ -1,0 +1,50 @@
+.core-gateway-splitter {
+  margin-left: calc(var(--layout-side-gutters) * -1);
+  margin-right: calc(var(--layout-side-gutters) * -1);
+}
+
+.core-gateway-splitter .core-grid-parent {
+  gap: var(--size-32);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.core-gateway-splitter .core-text {
+  margin-bottom: var(--size-40);
+}
+
+.core-gateway-splitter .atoms-content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.core-gateway-splitter.core-gateway-splitter-tinted-45 {
+  background: linear-gradient(180deg, #fff 35%, var(--surface-color-branded-core-tinted) 35%);
+}
+
+.core-gateway-splitter.core-gateway-splitter-core-45 {
+  background: linear-gradient(180deg, #fff 35%, var(--surface-color-branded-core-seed) 35%);
+}
+
+.core-gateway-splitter.core-gateway-splitter-tinted {
+  background: var(--surface-color-branded-core-tinted);
+}
+
+@media (min-width: 1024px) {
+  .core-gateway-splitter {
+    /* Tablet styles here */
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .core-gateway-splitter .core-grid-parent {
+    gap: var(--size-24);
+  }
+
+  .core-gateway-splitter.core-gateway-splitter-tinted-45 {
+    background: linear-gradient(180deg, #fff 45%, var(--surface-color-branded-core-tinted) 45%);
+  }
+
+  .core-gateway-splitter.core-gateway-splitter-core-45 {
+    background: linear-gradient(180deg, #fff 45%, var(--surface-color-branded-core-seed) 45%);
+  }
+}

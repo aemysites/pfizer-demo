@@ -1,0 +1,30 @@
+// icons.scss
+
+span.icon {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+span.icon svg {
+  height: 100%;
+  width: 100%;
+}
+
+span.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span.icon[data-position='first'] svg {
+  margin-left: 0;
+}
+
+span.icon[data-position='only'] svg {
+  margin: 0;
+}
+
+span.icon[data-position='last'] svg {
+  margin-right: 0;
+}

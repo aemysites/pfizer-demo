@@ -1,0 +1,9 @@
+{
+  "card-grid-container": {
+    "name": "card-grid-container",
+    "description": "This is a Card Grid Container block.",
+    "schema": {
+      "classes": ["no-gutter-block"]
+    }
+  }
+}

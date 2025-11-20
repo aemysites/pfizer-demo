@@ -1,0 +1,1444 @@
+@import '../../styles/figma/figma-mixin';
+
+.core-form {
+  display: block;
+  width: 100%;
+  max-width: 1260px;
+
+  .consent-container {
+    color: var(--text-color-global-neutral-primary);
+    font: var(--lib-core--label-l-font);
+    margin-bottom: var(--size-16);
+  }
+
+  .core-form-field-wrapper.variant-checkbox-scrollable {
+    padding: var(--size-32) 0 0 0;
+    margin-bottom: 0;
+
+    @include breakpointMediumUp {
+      padding: var(--size-24) 0 0 0;
+    }
+
+    div.checkbox-wrapper {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .scrollable-text-container {
+    border-radius: var(--corner-round-s);
+    border: 1px solid var(--color-border-global-neutral-on-light-primary);
+    background: var(--surface-primary-neutral-default);
+    overflow-y: scroll;
+    height: 320px;
+    padding: var(--size-16);
+
+    @include breakpointMediumUp {
+      height: 320px;
+      padding: var(--size-24);
+    }
+
+    > p {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.core-form {
+  /* colors */
+  --core-form--field-color: var(--lib-core--form--field-color, var(--text-color-neutral-primary));
+  --core-form--field-border-color: var(--lib-core--form--field-border-color, var(--shape-color-neutral-darker));
+  --core-form--field-selected-color: var(--lib-core--form--field-selected-color, var(--shape-color-brand-core));
+  --core-form--field-error-color: var(--lib-core--form--field-error-color, var(--shape-color-utility-error));
+  --core-form--field-error-border-color: var(--lib-core--form--field-error-border-color, var(--shape-color-utility-error));
+  --core-form--field-warn-color: var(--lib-core--form--field-warn-color, var(--shape-color-utility-caution));
+  --core-form--field-warn-border-color: var(--lib-core--form--field-warn-border-color, var(--shape-color-utility-caution));
+  --core-form--field-success-color: var(--lib-core--form--field-success-color, var(--shape-color-utility-success));
+  --core-form--field-success-border-color: var(--lib-core--form--field-success-border-color, var(--shape-color-utility-success));
+  --core-form--field-disabled-color: var(--lib-core--form--field-disabled-color, var(--button-color-filled-core-surface-disabled));
+  --core-form--field-disabled-border-color: var(--lib-core--form--field-disabled-border-color, var(--shape-color-neutral-light));
+  --core-form--field-label-color: var(--lib-core--form--field-label-color, var(--text-color-neutral-tertiary));
+  --core-form--field-outline-color: var(--lib-core-form--field-outline-color, var(--core-form--button-color-outline-core-hover));
+  --core-form--textarea-background-color: var(--lib-core-form--textarea-background-color, var(--surface-color-neutral-secondary));
+  --core-form--textarea-selected-background-color: var(--lib-core-form--textarea-selected-background-color, var(--surface-color-branded-core-tinted));
+  --core-form--textarea-error-background-color: var(--lib-core-form--textarea-error-background-color, var(--surface-color-utility-error-tinted));
+  --core-form--textarea-success-background-color: var(--lib-core-form--textarea-success-background-color, var(--surface-color-utility-success-tinted));
+  --core-form--dropdown-select-option-color: var(--lib-core-form--dropdown-select-option-color, var(--surface-color-branded-core-seed));
+  --core-form--background-color: var(--lib-core-form--core-form--background-color, transparent);
+  --core-form--text-color-neutral-primary: var(--text-color-neutral-primary);
+  --core-form--box-color-checkbox-input-default: var(--lib-core--form--checkbox-border-color-checkbox-input-default, var(--core--box-color-checkbox-input-default));
+  --core-form--box-color-checkbox-input-hover: var(--lib-core--form--checkbox-border-color-checkbox-input-hover, var(--color-shape-branded-core-darker));
+  --core-form--box-color-checkbox-input-focused: var(--lib-core--form--box-color-checkbox-input-focused, var(--color-shape-branded-core-darker));
+  --core-form--box-color-checkbox-input-invalid: var(--lib-core--form--box-color-checkbox-input-invalid, var(--color-surface-global-error));
+  --core-form--box-color-checkbox-input-disabled: var(--lib-core--form--box-color-checkbox-input-disabled, var(--button-color-tertiary-core-disbled));
+  --core-form--step-title-color: var(--lib-core-form--step-title-color, var(--color-surface-branded-core-seed));
+
+  /* section */
+  --core-form--section-row-gap: 4px;
+  --core-form--input-row-gap: 12px;
+  --core-form--foundationsize16: var(--lib-core--form--foundationsize16, var(--size-16));
+  --core-form--foundationsize48: var(--lib-core--form--foundationsize48, var(--size-48));
+  --core-form--button-color-filled-core-surface-hover: var(--text-color-neutral-primary);
+  --core-form--input-line-height: 1px;
+
+  // radio
+  --core-form--outer-circle-color-radio-input-default: var(--lib-core--form--outer-circle-color-radio-input-default, var(--core-form-color--outer-circle-radio-input-default));
+  --core-form--outer-circle-color-radio-input-hover: var(--lib-core--form--outer-circle-color-radio-input-hover, var(--core-form-color--outer-circle-radio-input-hover));
+  --core-form--inner-circle-color-radio-input-checked: var(--lib-core--form--inner-circle-color-radio-input-checked, var(--core-form-color--inner-circle-radio-input-checked));
+  --core-form--outer-circle-color-radio-input-focused: var(--lib-core--form--outer-circle-color-radio-input-focused, var(--core-form-color--outer-circle-radio-input-default));
+  --core-form--inner-circle-color-radio-input-focused: var(--lib-core--form--inner-circle-color-radio-input-focused, var(--core-form-color--outer-circle-radio-input-default));
+  --core-form--outer-circle-color-radio-input-invalid: var(--lib-core--form--outer-circle-color-radio-input-invalid, var(--core-form-color--outer-circle-radio-input-invalid));
+  --core-form--inner-circle-color-radio-input-invalid: var(--lib-core--form--inner-circle-color-radio-input-invalid, var(--core-form-color--inner-circle-radio-input-invalid));
+
+  /* fonts */
+  --core-form--input-font: var(--lib-core--body-m-font);
+  --core-form--label-font: var(--lib-core--body-m-font);
+  --core-form--label-line-height: 14.4px;
+  --core-form--small-font: var(--lib-core--body-xs-font);
+
+  button {
+    border: none;
+  }
+
+  button.primary {
+    width: 100%;
+    min-width: 200px;
+
+    @include breakpointMediumUp {
+      width: fit-content;
+    }
+  }
+
+  --core-form--field-input-padding-top: 5px;
+  --core-form--field-checkbox-size: var(--lib-core--spacing-5x);
+  --core-form--field-checkbox-check-size: 18px;
+  --core-form--field-radio-size: var(--lib-core--spacing-5x);
+
+  /* local */
+  --textarea-background: var(--core-form--textarea-background-color);
+}
+
+@mixin focused() {
+  box-shadow: 0 0 0 2px var(--core-form--field-outline-color);
+  border-radius: var(--core-form--foundationcorner-radiuscorner-round-s);
+}
+
+/********** START dark mode - note, in order to toggle dark mode, the "reversed" class only needs
+be applied or removed to the "body" element, and nowhere else. **********/
+
+.core-form.reversed {
+  --core-form--button-color-filled-core-surface-hover: var(--lib-core--form--button-color-filled-core-surface-hover--reversed, var(--button-color-outline-core-reversed-hover));
+  --core-form--background-color-form: var(--lib-core--form--background-color-form--reversed, #1e1e1e);
+  --core-form--text-color-neutral-primary: var(--lib-core--form--text-color-neutral-primary--reversed, var(--text-color-global-neutral-white));
+  --core-form--button-color-outline-core-hover: var(--lib-core--form--button-color-outline-core-hover--reversed, #e0e0e0);
+  --core-form--text-color-utility-error: var(--lib-core--form--text-color-utility-error--reversed, #fff);
+  --core-form--outer-circle-color-radio-input-default: var(--lib-core--form--outer-circle-color-radio-input-default--reversed, #fff);
+  --core-form--outer-circle-color-radio-input-hover: var(--lib-core--form--outer-circle-color-radio-input-hover--reversed, #e0e0e0);
+  --core-form--inner-circle-color-radio-input-checked: var(--lib-core--form--inner-circle-color-radio-input-checked--reversed, #fff);
+  --core-form--outer-circle-color-radio-input-focused: var(--lib-core--form--outer-circle-color-radio-input-focused--reversed, #e0e0e0);
+  --core-form--inner-circle-color-radio-input-focused: var(--lib-core--form--inner-circle-color-radio-input-focused--reversed, #e0e0e0);
+  --core-form--outer-circle-color-radio-input-invalid: var(--lib-core--form--outer-circle-color-radio-input-invalid--reversed, #fff);
+  --core-form--inner-circle-color-radio-input-invalid: var(--lib-core--form--inner-circle-color-radio-input-invalid--reversed, #e0e0e0);
+  --core-form--button-color-outline-core-disabled: var(--lib-core--form--button-color-outline-core-disabled--reversed, #999);
+  --core-form--label-radio-input-disabled: var(--lib-core--form--label-radio-input-disabled--reversed, #999);
+  --core-form--foundationcorner-radiuscorner-round-s: var(--lib-core--form--foundationcorner-radiuscorner-round-s--reversed, 5px);
+  --core-form--foundationsize16: var(--lib-core--form--foundationsize16--reversed, var(--size-16));
+  --core-form--foundationsize48: var(--lib-core--form--foundationsize48--reversed, var(--size-48));
+  --core-form--box-color-checkbox-input-default: var(--lib-core--form--box-color-checkbox-input-default--reversed, var(--button-color-filled-core-focused-border-white));
+  --core-form--box-color-checkbox-input-hover: var(--lib-core--form--box-color-checkbox-input-hover--reversed, var(--button-color-outline-core-reversed-hover));
+  --core-form--box-color-checkbox-input-focused: var(--lib-core--form--box-color-checkbox-input-focused--reversed, var(--button-color-filled-core-focused-border-white));
+  --core-form--box-color-checkbox-input-invalid: var(--lib-core--form--box-color-checkbox-input-invalid--reversed, #fff);
+  --core-form--box-color-checkbox-input-disabled: var(--lib-core--form--box-color-checkbox-input-disabled--reversed, #999);
+  --core-form--dropdown-select-option-color: var(--lib-core-form--dropdown-select-option-color, #fff);
+
+  // reversed colors
+  --core-form--field-color: var(--lib-core--form--field-color--reversed, var(--text-color-global-neutral-white));
+  --core-form--field-border-color: var(--lib-core--form--field-border-color--reversed, var(--shape-color-neutral-lighter));
+  --core-form--field-selected-color: var(--lib-core--form--field-selected-color--reversed, var(--shape-color-neutral-lighter));
+  --core-form--field-error-color: var(--lib-core--form--field-error-color--reversed, var(--text-color-global-neutral-white));
+  --core-form--field-error-border-color: var(--lib-core--form--field-error-border-color--reversed, var(--shape-color-utility-error));
+  --core-form--field-warn-color: var(--lib-core--form--field-warn-color--reversed, var(--text-color-global-neutral-white));
+  --core-form--field-warn-border-color: var(--lib-core--form--field-warn-border-color--reversed, var(--shape-color-utility-caution));
+  --core-form--field-success-color: var(--lib-core--form--field-success-color--reversed, var(--text-color-global-neutral-white));
+  --core-form--field-success-border-color: var(--lib-core--form--field-success-border-color--reversed, var(--shape-color-utility-success));
+  --core-form--field-disabled-color: var(--lib-core--form--field-disabled-color, var(--text-color-neutral-tertiary));
+  --core-form--field-disabled-border-color: var(--lib-core--form--field-disabled-border-color, var(--shape-color-neutral-regular));
+  --core-form--field-label-color: var(--lib-core--form--field-label-color--reversed, var(--text-color-global-neutral-white));
+  --core-form--field-outline-color: var(--lib-core-form--field-outline-color--reversed, var(--shape-color-neutral-lighter));
+  --core-form--textarea-background-color: var(--lib-core-form--textarea-background-color--reversed, #0003);
+  --core-form--textarea-selected-background-color: var(--lib-core-form--textarea-selected-background-color--reversed, #0003);
+  --core-form--textarea-error-background-color: var(--lib-core-form--textarea-error-background-color--reversed, #0003);
+  --core-form--textarea-success-background-color: var(--lib-core-form--textarea-success-background-color--reversed, #0003);
+
+  /* Extra border for toggles while in reversed mode only */
+  .variant-checkbox-toggle-horizontal,
+  .variant-checkbox-toggle-vertical {
+    .checkbox-wrapper {
+      .toggle-label {
+        border-radius: 100px;
+        border: 1px solid var(--button-color-outline-core-reversed-default, #fff);
+
+        &:focus::before {
+          top: -6px;
+          left: -6px;
+          width: 52px;
+          height: var(--size-32, 32px);
+        }
+      }
+    }
+  }
+}
+
+/* html required character */
+.core-form {
+  &.reversed .required {
+    color: var(--core-form--field-error-color);
+  }
+
+  .required {
+    color: var(--core-form--field-error-color);
+  }
+}
+
+/* Extra icon visible in reversed mode only */
+.core-form.reversed .core-form-radio-wrapper .radio-wrapper input[type='radio'].is-invalid,
+.core-form.reversed .checkbox-wrapper input[type='checkbox'].is-invalid {
+  + label::after {
+    width: 18px;
+    height: 18px;
+    background-image: url('/lib/icons/error.svg');
+    background-repeat: no-repeat;
+    content: '';
+    background-size: cover;
+    filter: invert(1);
+    display: inline-flex;
+    margin-left: 4px;
+  }
+}
+
+.core-form.reversed {
+  background-color: var(--core-form--background-color-form);
+}
+
+.core-form.reversed .variant-checkbox-scrollable .checkbox-wrapper input[type='checkbox']::before,
+.core-form.reversed .variant-checkbox-default .checkbox-wrapper input[type='checkbox']::before {
+  background-image: url('/lib/icons/mat-check-black.svg');
+}
+
+/********** END dark mode - note, in order to enable dark mode, the "reversed" class only needs
+be applied or removed to the "body" element, and nowhere else. **********/
+
+.core-form-container {
+  background-color: var(--core-form--background-color-form);
+}
+
+.core-form {
+  h3 {
+    margin: 0;
+    font: var(--lib-core--title-m-font);
+
+    @include breakpointMediumUp {
+      font: var(--lib-core--title-l-font);
+    }
+  }
+
+  h3 + p {
+    font: var(--lib-core--body-xs-font);
+    margin-top: var(--size-16);
+    margin-bottom: var(--size-16);
+  }
+
+  /*********** START Toggle Input ***********/
+  .variant-checkbox-toggle-horizontal,
+  .variant-checkbox-toggle-vertical {
+    display: flex;
+
+    .checkbox-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-self: stretch;
+      width: 320px;
+
+      input:disabled {
+        ~ label {
+          background: var(--button-color-filled-core-foreground-disabled, #666);
+
+          .toggle-knob {
+            background: var(--button-color-filled-core-surface-disabled, #c9c9c9);
+          }
+        }
+
+        ~ .on-or-off-text {
+          /* Your styles here */
+          color: var(--core-form--button-color-outline-core-disabled, #999);
+        }
+      }
+
+      > label {
+        &.disabled-label {
+          color: var(--button-color-outline-core-disabled, #999);
+        }
+
+        color: var(--core-form--text-color-neutral-primary);
+
+        /* Global/Body/Body M */
+        font: var(--core-form--body-m-font, var(--lib-core--body-m-font));
+      }
+
+      .toggle-wrapper {
+        display: flex;
+        align-items: center;
+        gap: var(--foundation-size-8, 8px);
+        align-self: stretch;
+
+        .on-or-off-text {
+          color: var(--core-form--text-color-neutral-primary);
+
+          /* Global/Body/Body XS */
+          font: var(--core-form--body-xs-font, var(--lib-core--body-xs-font));
+        }
+      }
+
+      .toggle-checkbox {
+        display: none; // Hide the default checkbox
+      }
+
+      .toggle-label {
+        border-radius: 100px;
+        background: var(--core-form--text-color-neutral-tertiary);
+        display: flex;
+        width: 38px;
+        height: var(--size-18, 18px);
+        padding: 3px;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+
+        &:focus::before {
+          content: '';
+          width: 48px;
+          height: var(--size-28, 28px);
+          position: absolute;
+          top: -4px;
+          left: -4px;
+          border-radius: 100px;
+          border: var(--size-2, 2px) solid var(--core-form--button-color-filled-core-surface-hover);
+        }
+      }
+
+      .toggle-checkbox:checked + .toggle-label {
+        background: var(--shape-color-utility-success, #097900);
+      }
+
+      .toggle-knob {
+        border-radius: 100px;
+        background: var(--surface-color-neutral-primary, #fff);
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        transition: transform 0.3s;
+      }
+
+      .toggle-checkbox:checked + .toggle-label .toggle-knob {
+        transform: translateX(20px); // Adjust this value based on the width of the toggle
+      }
+    }
+  }
+
+  .variant-checkbox-toggle-vertical {
+    .checkbox-wrapper {
+      position: relative;
+
+      > label {
+        color: var(--core-form--field-label-color);
+        font-size: var(--size-12);
+        position: absolute;
+        top: -22px;
+      }
+    }
+  }
+
+  /*********** END Toggle Input ***********/
+
+  /*********** START Radio Input ***********/
+  .core-form-radio-wrapper,
+  .core-form-radio-wrapper div label {
+    color: var(--core-form--text-color-neutral-primary);
+    font: var(--core-form--body-m-font, var(--lib-core--body-m-font));
+  }
+
+  div.radio-wrapper {
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    border-radius: var(--corner-round-s);
+    width: max-content;
+    max-width: 100%;
+    padding: 8px 10px;
+    margin-left: -10px;
+    gap: var(--core-form--foundationsize16);
+
+    @include breakpointMediumUp {
+      gap: var(--core-form--foundationsize48);
+    }
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+
+  .radio-wrapper:focus-within {
+    box-shadow: 0 0 0 2px var(--core-form--button-color-outline-core-hover);
+    border-radius: var(--core-form--foundationcorner-radiuscorner-round-s);
+
+    &.is-invalid {
+      box-shadow: none;
+    }
+  }
+
+  /* Default state for the main label */
+  .core-form-radio-wrapper > label {
+    height: 24px;
+  }
+
+  /* Default state for the label for the input */
+  .core-form-radio-wrapper .radio-wrapper label {
+    height: 19px;
+    display: inline-flex !important;
+  }
+
+  /* Default state for the input */
+  .core-form-radio-wrapper .radio-wrapper input[type='radio'] {
+    height: 24px;
+    width: 24px;
+    display: inline-flex !important;
+    border: 3px solid var(--core-form--outer-circle-color-radio-input-default); // no direct mapping given in figma design at this time, so made my own
+  }
+
+  /* Hover state for the input */
+  .core-form-radio-wrapper .radio-wrapper input[type='radio']:hover {
+    border: 3px solid var(--core-form--outer-circle-color-radio-input-hover); // no direct mapping given in figma design at this time, so made my own
+  }
+
+  /* Selected state for the input */
+  .core-form-radio-wrapper .radio-wrapper input[type='radio']:checked {
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.6);
+      background-color: var(--core-form--inner-circle-color-radio-input-checked); // no direct mapping given in figma design at this time, so made my own
+    }
+  }
+
+  /* State when the input loses the check */
+  .core-form-radio-wrapper .radio-wrapper input[type='radio']:not(:checked) {
+    &::before {
+      /* Start: Prevents the dot from a blip, color change, and laggy disappearance by hiding it in place */
+      background-color: var(--core-form--inner-circle-color-radio-input-checked); // This color/mapping should match the above when it's checked as it briefly appears
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+
+      /* End: Prevents the dot from a blip and laggy disappearance by hiding it in place */
+    }
+  }
+
+  /* Focused state for the input */
+  .core-form-radio-wrapper .radio-wrapper input[type='radio']:focus {
+    border-color: var(--core-form--outer-circle-color-radio-input-focused); // no direct mapping given in figma design at this time, so made my own
+
+    &::before {
+      background-color: var(--core-form--inner-circle-color-radio-input-focused); // no direct mapping given in figma design at this time, so made my own
+    }
+  }
+
+  /* Error state for the input */
+  .core-form-radio-wrapper .radio-wrapper input[type='radio'].is-invalid {
+    /* styles for the input when there is an error */
+    border: 3px solid var(--core-form--outer-circle-color-radio-input-invalid); // no direct mapping given in figma design at this time, so made my own
+
+    &::before,
+    &::after {
+      background-color: var(--core-form--inner-circle-color-radio-input-invalid); // should match the above border color when we get the mappings, so made my own
+    }
+
+    + label {
+      color: var(--core-form--text-color-utility-error);
+    }
+  }
+
+  /* Disabled state for the input */
+  .core-form-radio-wrapper .radio-wrapper input[type='radio']:disabled {
+    border: 3px solid var(--core-form--button-color-outline-core-disabled);
+
+    + label {
+      color: var(--core-form--label-radio-input-disabled); // no direct mapping given in figma design at this time, so made my own
+    }
+
+    &::before,
+    &::after {
+      background-color: var(--core-form--button-color-outline-core-disabled);
+    }
+  }
+
+  /*********** END Radio Input ***********/
+
+  /*********** START Checkbox Input ***********/
+  .variant-checkbox-scrollable.core-form-checkbox-wrapper .checkbox-wrapper,
+  .variant-checkbox-default.core-form-checkbox-wrapper .checkbox-wrapper,
+  .variant-checkbox-default.core-form-checkboxes-wrapper .checkbox-wrapper {
+    border-radius: var(--corner-round-s);
+    width: max-content;
+    max-width: 100%;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+
+    // TODO: proper var for 10px?
+    margin-left: -10px;
+    padding: var(--size-8) 10px;
+    gap: var(--core-form--foundationsize16);
+
+    &:focus-within {
+      box-shadow: 0 0 0 2px var(--core-form--button-color-outline-core-hover);
+      border-radius: var(--core-form--foundationcorner-radiuscorner-round-s);
+
+      &.is-invalid {
+        box-shadow: none;
+      }
+    }
+
+    label {
+      display: inline-flex;
+      color: var(--core-form--text-color-neutral-primary);
+      font: var(--core-form--body-m-font, var(--lib-core--body-m-font));
+    }
+
+    /* Base state */
+    input[type='checkbox'] {
+      height: var(--lib-core--spacing-6x);
+      width: var(--lib-core--spacing-6x);
+      display: inline-flex;
+
+      // border: 3px solid var(--core-form--button-color-filled-core-surface-hover);
+
+      border: 3px solid var(--core-form--box-color-checkbox-input-default);
+    }
+
+    /* Hover state */
+    input[type='checkbox']:hover:not(:focus, :disabled) {
+      border-color: var(--core-form--box-color-checkbox-input-hover);
+
+      &:checked {
+        background-color: var(--core-form--box-color-checkbox-input-default);
+        border: 3px solid var(--core-form--box-color-checkbox-input-default);
+      }
+    }
+
+    /* Focused state */
+    input[type='checkbox']:focus {
+      border-color: var(--core-form--box-color-checkbox-input-focused);
+
+      &:checked {
+        background-color: var(--core-form--box-color-checkbox-input-default);
+      }
+
+      &::before {
+        background-color: var(--core-form--box-color-checkbox-input-focused);
+      }
+    }
+
+    /* Invalid state */
+    input[type='checkbox'].is-invalid {
+      border-color: var(--core-form--box-color-checkbox-input-invalid);
+
+      &:checked {
+        background-color: var(--core-form--box-color-checkbox-input-invalid);
+      }
+
+      &::before {
+        background-color: var(--core-form--box-color-checkbox-input-invalid);
+      }
+
+      + label {
+        color: var(--core-form--box-color-checkbox-input-invalid);
+      }
+    }
+
+    /* Disabled state */
+    input[type='checkbox']:disabled {
+      border-color: var(--core-form--box-color-checkbox-input-disabled);
+      cursor: not-allowed;
+
+      &:checked {
+        background-color: var(--core-form--box-color-checkbox-input-disabled);
+      }
+
+      + label {
+        color: var(--core-form--box-color-checkbox-input-disabled);
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  /*********** END Checkbox Input ***********/
+
+  .form-success {
+    padding: var(--lib-core--spacing-16x) 0;
+  }
+
+  /* form section */
+  div.core-form-section {
+    display: flex;
+    flex-flow: column;
+    gap: var(--core-form--section-row-gap);
+    font-size: var(--form-default-font-size);
+    align-items: self-start;
+
+    .core-form-field-wrapper {
+      padding-top: var(--core-form--label-line-height);
+      position: relative;
+      width: 100%;
+      min-height: var(--size-24);
+      box-sizing: border-box;
+    }
+  }
+
+  .core-form-section-inline {
+    padding-top: var(--core-form--label-line-height);
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  // variant "core-form-dividers" will add border-bottom to the section
+  &.core-form-dividers form .core-form-container > .core-form-section {
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  // fallback for column-two or column-2
+  &.column-two form .core-form-section,
+  &.column-2 form .core-form-section {
+    --core-form--section-column-gap: 24px;
+
+    flex-flow: wrap;
+    max-width: unset;
+
+    > div.core-form-field-wrapper {
+      @media (min-width: 768px) {
+        flex: 0 0 calc((100% - var(--core-form--section-column-gap)) / 2);
+
+        input[type='text'],
+        input[type='password'],
+        input[type='number'],
+        input[type='date'],
+        input[type='time'],
+        input[type='email'] {
+          height: 19px;
+        }
+      }
+    }
+
+    .core-form-field-wrapper {
+      box-sizing: border-box;
+    }
+  }
+
+  /* submit and cancel buttons container - buttons themselves are handled by primary secondary */
+
+  .core-form-actions {
+    margin-top: var(--lib-core--form--actions-margin-top, var(--lib-core--spacing-16x));
+  }
+
+  /* label & support text */
+  .core-form-field-wrapper {
+    position: relative;
+    padding: 16px 0;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+
+    & > label {
+      position: absolute;
+      pointer-events: none;
+      transition: all 0.3s;
+      top: 0;
+      font: var(--core-form--label-font);
+      line-height: var(--core-form--label-line-height);
+      color: var(--core-form--field-label-color);
+
+      // add to label to indicate required field
+      &.required::after {
+        content: '*';
+        color: var(--core-form--field-error-color);
+        position: relative;
+        left: 2px;
+        font-weight: 400;
+      }
+    }
+
+    // relative labels
+    &.field-label-position-relative > label {
+      position: relative;
+      top: inherit;
+      font: var(--lib-core--body-l-font);
+      color: var(--core-form--text-color-neutral-primary);
+      margin-bottom: var(--size-24);
+      display: inline-block;
+      width: 100%;
+    }
+
+    &.core-form-textarea-wrapper {
+      padding-top: var(--size-8) !important;
+
+      label {
+        position: unset;
+        font: var(--core-form--small-font);
+        background-color: var(--textarea-background);
+        display: block;
+        padding: var(--size-8);
+      }
+
+      --conunter-width: 50px;
+
+      small {
+        padding-right: var(--conunter-width);
+        margin: 0;
+      }
+
+      .counter-wrapper {
+        margin-top: var(--size-8);
+        min-height: var(--core-form--small-line-height);
+        position: relative;
+      }
+
+      .counter {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: var(--conunter-width);
+        text-align: right;
+        padding: 0;
+      }
+
+      .icon-lib-input-clear {
+        display: none;
+      }
+    }
+  }
+
+  .core-form-text-wrapper,
+  .core-form-email-wrapper,
+  .core-form-date-wrapper,
+  .core-form-time-wrapper,
+  .core-form-password-wrapper,
+  .core-form-select-wrapper {
+    padding: 16px 8px 16px 4px;
+
+    label {
+      font: var(--lib-core--body-xs-font);
+      top: calc(var(--core-form--label-line-height) + var(--core-form--field-input-padding-top));
+    }
+
+    &:focus-within,
+    &.has-value {
+      label {
+        font: var(--lib-core--body-xs-font);
+        top: 0;
+      }
+    }
+  }
+
+  .core-form-select-wrapper {
+    label {
+      top: 0;
+    }
+
+    .js-select {
+      margin-top: 5px;
+    }
+
+    .icon.icon-lib-mat-error-round {
+      display: none;
+    }
+  }
+
+  .core-form-field-wrapper .small,
+  .core-form-field-wrapper small {
+    font: var(--core-form--small-font);
+    color: var(--core-form--field-label-color);
+    display: block;
+    margin-top: 8px;
+
+    &.error-message {
+      display: none;
+    }
+  }
+
+  /* inputs */
+
+  input,
+  textarea,
+  select {
+    font: var(--core-form--input-font);
+    color: var(--core-form--field-color);
+    display: block;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid var(--core-form--field-border-color);
+    border-radius: 0;
+    padding: var(--core-form--field-input-padding-top) 0 8px;
+    background-color: transparent;
+    transition:
+      border-color 0.2s,
+      background-color 0.2s,
+      box-shadow 0.2s;
+
+    &:focus,
+    &:hover:not(:disabled) {
+      outline: none;
+      border-color: var(--core-form--field-selected-color);
+    }
+  }
+
+  // target the wrappers for focused when triggered from JS
+  .field-wrapper.child-input-focused {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--button-color-tertiary-text-hover-focused),
+      0 0 0 calc(4px + 12px) rgb(0 0 0 / 0%);
+    border-radius: var(--corner-round-xs);
+  }
+
+  select[multiple] {
+    padding-top: 0;
+    margin-top: var(--core-form--field-input-padding-top);
+  }
+
+  textarea {
+    padding: 0 var(--size-8);
+    padding-right: 36px;
+    background-color: var(--textarea-background);
+    min-height: 127px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    resize: none;
+  }
+
+  /* invalid */
+
+  .core-form-field-wrapper.has-value {
+    &.is-invalid.is-validated,
+    &.is-invalid.is-validated:hover {
+      &.is-dirty input,
+      &.is-dirty select,
+      &.is-dirty textarea,
+      &.variant-checkbox-scrollable input[type='checkbox'],
+      &.variant-checkbox-default input[type='checkbox'] {
+        border-color: var(--core-form--field-error-border-color);
+      }
+    }
+
+    /* valid */
+
+    &.is-dirty:not(.is-invalid).has-value.is-validated,
+    &.is-dirty:not(.is-invalid).has-value.is-validated:hover {
+      input,
+      select,
+      textarea {
+        border-color: var(--core-form--field-success-border-color);
+      }
+    }
+  }
+
+  .core-form-field-wrapper {
+    border-color: var(--core-form--field-border-color);
+
+    &.is-invalid {
+      input,
+      select,
+      textarea {
+        border-color: var(--core-form--field-error-color);
+      }
+    }
+  }
+
+  /* disabled */
+
+  .core-form-text-wrapper,
+  .core-form-email-wrapper,
+  .core-form-password-wrapper,
+  .core-form-textarea-wrapper,
+  .core-form-select-wrapper {
+    &.is-disabled {
+      pointer-events: none;
+
+      label,
+      input,
+      select,
+      textarea,
+      small,
+      .small {
+        color: var(--core-form--field-disabled-color) !important;
+      }
+
+      input,
+      select,
+      textarea {
+        border-color: var(--core-form--field-disabled-border-color) !important;
+      }
+
+      .icon {
+        color: var(--core-form--field-disabled-border-color) !important;
+      }
+    }
+  }
+
+  /* placeholder */
+
+  .core-form-field-wrapper {
+    input::placeholder,
+    textarea::placeholder,
+    select::placeholder {
+      opacity: 0;
+    }
+  }
+
+  /* hidden inputs */
+  .core-form-hidden-wrapper {
+    display: none;
+  }
+
+  /* radio & checkbox */
+
+  .variant-checkbox-scrollable,
+  .variant-checkbox-default {
+    .checkbox-wrapper {
+      --input-size: var(--core-form--field-checkbox-size);
+    }
+
+    .checkbox-wrapper.checkbox-wrapper-long {
+      align-items: start;
+    }
+
+    .checkbox-wrapper.checkbox-wrapper-long input[type='checkbox'] {
+      margin-top: calc(var(--lib-core--spacing-1x) / 2);
+    }
+
+    input[type='checkbox'] {
+      &::before {
+        width: var(--core-form--field-checkbox-check-size);
+        height: var(--core-form--field-checkbox-check-size);
+        background-image: url('/lib/icons/mat-check-white.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &:checked {
+        background-color: var(--core-form--field-selected-color);
+
+        &:focus {
+          background-color: var(--core-form--box-color-checkbox-input-focused);
+        }
+
+        &:hover {
+          background-color: var(--core-form--box-color-checkbox-input-hover);
+        }
+
+        &::before {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+
+  .radio-wrapper {
+    --input-size: var(--core-form--field-radio-size);
+  }
+
+  .variant-checkbox-scrollable .checkbox-wrapper,
+  .variant-checkbox-default .checkbox-wrapper,
+  .radio-wrapper {
+    display: grid;
+    grid-template-columns: var(--input-size) 1fr;
+    align-items: center;
+    gap: var(--lib-core--spacing-3x);
+
+    label {
+      font: var(--core-form--input-font);
+      color: var(--core-form--field-label-color);
+      cursor: pointer;
+    }
+
+    &.is-disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    &.is-invalid.is-dirty.is-validated {
+      input {
+        border-color: var(--core-form--field-error-color);
+      }
+
+      small {
+        color: var(--core-form--field-error-color);
+        display: block;
+      }
+    }
+  }
+
+  // variant for radio field "variant-radio-horizontal":
+  .core-form-radio-wrapper.variant-radio-horizontal {
+    > label {
+      width: 100%;
+    }
+
+    > .radio-wrapper {
+      display: inline-flex;
+      max-width: inherit;
+      width: auto;
+
+      &:not(:last-child) {
+        margin-right: var(--size-64);
+      }
+    }
+  }
+
+  .variant-checkbox-scrollable input[type='checkbox'],
+  .variant-checkbox-default input[type='checkbox'],
+  input[type='radio'] {
+    display: grid;
+    position: relative;
+    place-content: center;
+    appearance: none;
+    width: var(--input-size);
+    height: var(--input-size);
+    margin: 0;
+    border: 2px solid var(--core-form--field-border-color);
+    border-radius: 4px;
+    padding: 0;
+    background-color: inherit;
+    cursor: pointer;
+    box-shadow: none !important;
+
+    // margin-top: calc((var(--core-form--input-line-height) - var(--input-size)) / (-2));
+
+    &:hover,
+    &:focus {
+      border-color: var(--core-form--field-selected-color);
+      box-shadow: none;
+    }
+
+    &::before {
+      content: '';
+      transform: scale(0);
+      transition: 0.2s transform;
+      transform-origin: center;
+      position: relative;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: var(--core-form--field-selected-color);
+      position: absolute;
+      z-index: 3;
+      opacity: 0;
+      pointer-events: none;
+      border-radius: 4px;
+      transition: opacity 0.3s;
+    }
+
+    &:checked {
+      border-color: var(--core-form--field-selected-color);
+    }
+  }
+
+  input[type='radio'] {
+    border-radius: 50%;
+
+    &::before {
+      width: var(--core-form--field-radio-size);
+      height: var(--core-form--field-radio-size);
+      border-radius: 50%;
+      background-color: var(--core-form--field-selected-color);
+    }
+
+    &:checked::before {
+      transform: scale(0.5);
+    }
+  }
+
+  .core-form-field-wrapper.is-invalid.is-validated .is-dirty input:invalid {
+    border-color: var(--core-form--field-error-border-color);
+  }
+
+  .core-form-field-wrapper.is-invalid.is-dirty.is-validated small,
+  .core-form-field-wrapper.is-invalid.is-dirty.is-validated .presented-option {
+    color: var(--core-form--field-error-color);
+    display: block;
+  }
+
+  .core-form-select-wrapper.is-invalid.is-dirty.is-validated {
+    .icon {
+      display: none;
+    }
+
+    .icon.icon-lib-mat-error-round {
+      display: block;
+    }
+  }
+
+  /* select */
+
+  .core-form-select-wrapper {
+    position: relative;
+  }
+
+  /* icons */
+
+  & .combo-input .icon {
+    position: relative;
+    display: inline;
+    fill: var(--core-form--dropdown-select-option-color);
+    top: 0;
+    right: 0;
+
+    --svg-size: 16px;
+
+    width: var(--svg-size);
+    height: var(--svg-size);
+
+    & svg {
+      display: inline;
+    }
+  }
+
+  .icon {
+    --svg-size: 20px;
+
+    width: var(--svg-size);
+    height: var(--svg-size);
+    display: none;
+    right: 12px;
+    top: calc(var(--core-form--label-line-height) + var(--core-form--field-input-padding-top) + (var(--core-form--input-line-height) - var(--svg-size)) / 2 - 1px);
+    position: absolute;
+    z-index: 5;
+
+    svg {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .core-form-textarea-wrapper {
+    padding: var(--size-8);
+
+    &:focus-within {
+      @include focused;
+    }
+  }
+
+  .core-form-select-multiple-wrapper .icon {
+    right: 30px;
+    bottom: calc(var(--size-8) * 3 + var(--core-form--small-line-height));
+    top: unset;
+  }
+
+  .core-form-textarea-wrapper .textarea-container {
+    position: relative;
+
+    .icon {
+      right: 25px;
+      bottom: 8px;
+      top: unset;
+    }
+  }
+
+  .icon-lib-input-clear {
+    color: var(--core-form--field-selected-color);
+    cursor: pointer;
+    display: block;
+    visibility: hidden;
+    z-index: 10;
+
+    // delay visibility to prevent form validation from hiding the icon
+    transition:
+      visibility 0.5s,
+      z-index 0s 3s,
+      opacity 0.5s;
+  }
+
+  .icon-lib-mat-add {
+    color: var(--core-form--field-border-color);
+  }
+
+  .icon-lib-mat-error-round {
+    color: var(--core-form--field-error-color);
+
+    --svg-size: 20px;
+
+    width: var(--svg-size);
+    height: var(--svg-size);
+    margin-top: 4px;
+  }
+
+  .icon-lib-mat-warning {
+    color: var(--core-form--field-warn-color);
+  }
+
+  .icon-lib-mat-check-circle {
+    color: var(--core-form--field-success-color);
+  }
+
+  // hiding placeholder characters overlapped by label
+  .core-form-date-wrapper,
+  .core-form-time-wrapper {
+    &:not(.has-value, .child-input-focused) input {
+      color: transparent;
+    }
+  }
+
+  input:not([type='checkbox'], [type='radio'], [type='date'], [type='time']) {
+    padding-right: 30px;
+    width: calc(100% - 30px);
+  }
+
+  select {
+    appearance: none;
+  }
+
+  select:not([multiple]) {
+    padding-right: 70px;
+    width: calc(100% - 70px);
+  }
+
+  .core-form-text-wrapper,
+  .core-form-email-wrapper,
+  .core-form-password-wrapper,
+  .core-form-select-wrapper,
+  .core-form-select-multiple-wrapper,
+  .core-form-textarea-wrapper,
+  .form-textarea-wrapper {
+    &.has-value {
+      .icon-lib-input-clear {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &.is-dirty.is-invalid.is-validated {
+      .icon-lib-mat-error-round {
+        display: block;
+      }
+
+      .icon-lib-input-clear {
+        visibility: hidden;
+        opacity: 0;
+        z-index: 3;
+      }
+    }
+
+    &.is-dirty:not(.is-invalid).has-value.is-validated {
+      .icon-lib-mat-check-circle {
+        display: block;
+      }
+
+      .icon-lib-input-clear {
+        visibility: hidden;
+        opacity: 0;
+        z-index: 3;
+      }
+    }
+  }
+
+  .core-form-textarea-wrapper {
+    &.is-dirty.is-invalid.is-validated {
+      --textarea-background: var(--core-form--textarea-error-background-color);
+
+      small {
+        color: var(--core-form--field-error-color);
+      }
+    }
+
+    &.is-dirty:not(.is-invalid).has-value.is-validated {
+      --textarea-background: var(--core-form--textarea-success-background-color);
+
+      small {
+        color: var(--core-form--field-success-color);
+      }
+    }
+
+    &:focus-within {
+      --textarea-background: var(--core-form--textarea-selected-background-color);
+    }
+  }
+
+  & .combo-menu {
+    width: 100%;
+
+    & .combo-option {
+      font: var(--lib-core--body-m-font);
+      padding: var(--size-8);
+
+      &:not(:last-child) {
+        margin-bottom: var(--size-4);
+      }
+    }
+  }
+
+  // ////////////////////////////////////////////////////////////////////////////
+  // MultiStep updates /////////////////////////////////////////////////////////
+  // ////////////////////////////////////////////////////////////////////////////
+
+  &.core-form-multistep {
+    div.core-form-section .core-form-field-wrapper {
+      margin-bottom: var(--core-form--input-row-gap);
+    }
+
+    .core-form-section-multistep {
+      box-shadow: 0 0 32px 0 rgb(0 0 0 / 8%);
+      background-color: var(--color-surface-global-neutral-white-abs);
+      margin: 0;
+      padding: 24px;
+
+      &[data-section-is-active='true'] {
+        padding-bottom: 48px;
+      }
+
+      > .section-multistep-label {
+        padding: 0 52px 0 0;
+        display: block;
+        color: var(--core-form--step-title-color);
+        font: var(--lib-core--body-m-font);
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+
+        + .core-form-field-wrapper {
+          margin-top: calc(48px - var(--core-form--section-row-gap));
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: -24px;
+            left: 0;
+            width: 100%;
+            border-top: 1px solid var(--border-color-neutral-dark);
+          }
+        }
+      }
+
+      > div.core-form-field-wrapper {
+        padding: 15px 0;
+      }
+
+      &:not([data-section-is-active='true']) > div.core-form-field-wrapper {
+        display: none;
+      }
+
+      .section-multistep-label span.icon {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        right: 0;
+        display: none;
+        color: var(--core-form--field-success-color);
+      }
+
+      &.is-valid .section-multistep-label span.icon {
+        display: block;
+      }
+    }
+
+    @include breakpointMediumUp {
+      .core-form-section-multistep {
+        padding: 32px 104px;
+
+        &[data-section-is-active='true'] {
+          padding-bottom: 56px;
+        }
+
+        > .section-multistep-label {
+          font: var(--lib-core--body-l-font);
+
+          span.icon {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+    }
+
+    // temp style as we complete multi-step forms
+    .core-form-section-multistep.multistep-fields-have-errors {
+      border: 2px dotted red !important;
+      box-shadow: 0 0 14px 0 #dbbbbb;
+    }
+  }
+
+  &.core-form-multistep {
+    position: relative;
+
+    div.core-form-section-multistep {
+      box-sizing: border-box;
+      width: 100%;
+
+      &:nth-of-type(1) {
+        border-top-left-radius: var(--corner-round-xl);
+        border-top-right-radius: var(--corner-round-xl);
+      }
+
+      &:last-of-type {
+        border-bottom-left-radius: var(--corner-round-xl);
+        border-bottom-right-radius: var(--corner-round-xl);
+      }
+    }
+  }
+
+  & .combo-input {
+    gap: var(--size-8);
+
+    &.icon-lib-mat-error-round {
+      color: var(--core-form--field-error-color);
+    }
+
+    & p {
+      font: var(--lib-core--body-m-font);
+      color: var(--core-form--dropdown-select-option-color);
+      margin: 0;
+    }
+
+    &:focus {
+      border-color: transparent;
+    }
+  }
+}
+
+/* HTML */
+.core-form {
+  &.reversed .core-form-html-wrapper {
+    * {
+      color: var(--surface-primary-neutral-default);
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
