@@ -1,9 +1,0 @@
-{
-  "progressbar": {
-    "name": "Progress Bar",
-    "description": "This is a progress bar block.",
-    "schema": {
-      "classes": []
-    }
-  }
-}

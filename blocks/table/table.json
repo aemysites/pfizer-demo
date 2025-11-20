@@ -1,9 +1,0 @@
-{
-  "table": {
-    "name": "Table",
-    "description": "This is a table block.",
-    "schema": {
-      "classes": []
-    }
-  }
-}

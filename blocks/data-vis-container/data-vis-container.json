@@ -1,9 +1,0 @@
-{
-  "data-vis-container": {
-    "name": "data-vis-container",
-    "description": "This is a Data Visualtization Container block.",
-    "schema": {
-      "classes": ["editorial", "four-up", "right"]
-    }
-  }
-}

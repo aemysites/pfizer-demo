@@ -1,8 +1,0 @@
-{
-  "overlay-host": {
-    "description": "This is the OverlayHost block description",
-    "schema": {
-      "classes": []
-    }
-  }
-}

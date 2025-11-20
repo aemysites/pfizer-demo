@@ -1,9 +1,0 @@
-{
-  "table-container": {
-    "name": "Table Container",
-    "description": "This is a table section container.",
-    "schema": {
-      "classes": ["brand", "brand-30"]
-    }
-  }
-}

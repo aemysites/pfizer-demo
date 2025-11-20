@@ -1,9 +1,0 @@
-{
-  "grid": {
-    "name": "grid",
-    "description": "This is a Grid block.",
-    "schema": {
-        "classes": ["grid-2", "grid-3", "grid-4"]
-    }
-  }
-}

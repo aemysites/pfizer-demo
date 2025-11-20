@@ -1,9 +1,0 @@
-{
-  "gateway-splitter": {
-    "name": "gateway-splitter",
-    "description": "This is a Gateway Splitter block.",
-    "schema": {
-      "classes": ["core-45", "tinted", "tinted-45"]
-    }
-  }
-}
