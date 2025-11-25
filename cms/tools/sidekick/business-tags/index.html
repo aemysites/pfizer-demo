@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Labels for Analytics tracking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link href="./vendor/select2.css" rel="stylesheet" />
+    <link href="./vendor/select2.customSelectionAdapter.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="./analytics-labels.css">
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/select2.js"></script>
+    <script src="./vendor/select2.customSelectionAdapter.min.js"></script>
+    <script src="./analytics-loader.js" type="module"></script>
+</head>
+<body>
+    <main>
+        <div class="panel-loader">
+            <div>
+                <div class="loader">
+                    <div class="loading"></div>
+                </div>
+                <div class="panel-loader-bg"></div>
+            </div>
+        </div>
+        <div id="error-container" class="error-container"></div>
+        <div id="summary-container" class="summary-container">
+            <div class="action-container">
+                <h1>Analytics Labels</h1>
+                <div class="actions form-buttons">
+                    <button id="form-toggle" class="form-toggle action-buttons primary">Edit</button>
+                </div>
+            </div>
+            <div class="container-content">
+                <table id="summary-table" class="summary-table"></table>
+            </div>
+        </div>
+
+        <div id="form-container" class="form-container">
+            <form id="labels-form" class="labels-form">
+                <div class="action-container">
+                    <h1>Edit Analytics Labels</h1>
+                    <div class="actions form-buttons">
+                        <button id="summary-button" type="button" class="summary-button action-buttons secondary">Back to Summary</button>
+                        <button id="submit-button" type="submit" class="submit-button action-buttons primary">Save</button>
+                    </div>
+                </div>
+
+                <div class="container-content">
+                    <h2>
+                        Edit business tags
+                    </h2>
+                </div>
+
+                <div class="container-content">
+                    <div id="toggle-container" class="toggle-container">
+                        <ul id="toggle-list" class="toggle-list">
+                            <li>
+                                <span>Site Level</span>
+                            </li>
+                            <li>
+                                <span>Page Level</span>
+                            </li>
+                        </ul>
+                        <span class="selected-url"></span>
+                    </div>
+                    <div id="labels-container" class="labels-container"></div>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+.hlx-dialog button,
+.hlx-dialog input[type="button"],
+.hlx-dialog input[type="submit"] {
+    background-color: #272791;
+    /* border: solid 1px #272791; */
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    /* text-transform: uppercase; */
+    font-weight: normal;
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+}
+
+.hlx-dialog button:disabled {
+    opacity: 50%;
+    cursor: default;
+}
+.move-to-review {
+    display:flex;
+}
+
+.move-to-review .status-message {
+    font-size: 13px;
+    color: #999;
+    padding: 0;
+    font-style: italic;
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.move-to-review .status-message a {
+    color: var(--hlx-dialog-row-link-color);
+}
+
+.move-to-review button.submitted {
+    background-color: var(--review-submitted-background-color);
+    color: var(--review-submitted-color);
+    border-color: var(--review-submitted-background-color);
+}
+
+.move-to-review button.submitted:disabled {
+    background-color: var(--review-submitted-background-color);
+    cursor: default;
+}
+
+.move-to-review button.ready {
+    background-color: var(--review-open-background-color);
+    color: var(--review-open-color);
+    border-color: var(--review-open-background-color);
+}
+
+.move-to-review button.ready:disabled {
+    background-color: var(--review-open-background-disabled-color);
+}
+
+.hlx-dialog button.secondary {
+    color: #999;
+    background: transparent;
+    border: solid 1px #999;
+}
+
+.hlx-dialog .button-group {
+    display: flex;
+}
+
+.hlx-dialog button:focus {
+    outline: 1px solid rgb(68, 68, 194, 0.6);
+}
+
+button#hlx-submit {
+    background-color: var(--review-open-background-color);
+    color: var(--review-open-color);
+}
+
+button#hlx-approve {
+    background-color: var(--review-submitted-background-color);
+    color: var(--review-submitted-color);
+}
+
+button#hlx-reject {
+    border-color: var(--review-submitted-background-color);
+    color: var(--review-submitted-background-color);
+}
+
+@media (prefers-color-scheme: dark) {
+
+    .hlx-sk button.loading::after,
+    .hlx-dialog button.loading::after {
+        border-left-color: var(--review-button-spinner-dark-color);
+        border-top-color: var(--review-button-spinner-dark-color);
+    }
+  }

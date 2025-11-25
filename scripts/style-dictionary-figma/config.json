@@ -1,0 +1,33 @@
+{
+  "source": ["build/tokens_generated/**/*.json"],
+  "platforms": {
+    "CSS": {
+      "buildPath": "../../lib/styles/figma/",
+      "prefix": "",
+      "transformGroup": "css",
+      "files": [
+        {
+          "destination": "variables.css",
+          "format": "css/variables",
+          "options": {
+            "outputReferences": true
+          }
+        }
+      ]
+    },
+    "scss": {
+      "transformGroup": "scss",
+      "prefix": "sd",
+      "buildPath": "../../lib/styles/figma/",
+      "files": [
+        {
+          "destination": "_variables.scss",
+          "format": "scss/variables",
+          "options": {
+            "outputReferences": true
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "default": {
+    "figma": {
+      "label": "Figma",
+      "url": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.2.0"
+    },
+    "zeroHeight": {
+      "label": "Zero Height",
+      "url": "https://zeroheight.com/4b770a7b6/p/0440f9-components/b/14913f"
+    }
+  },
+
+  "accordion": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=24077-5500&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/01c5eb-accordion-list"
+  },
+  "alert": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=241-4791&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/532ee3-alert/b/32e1a2"
+  },
+  "announcement": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=453-9190&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/034c33-announcement/b/32e1a2"
+  },
+  "banner": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=241-4812&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/991d31-banner/b/32e1a2"
+  },
+  "basic": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=13119-46496&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/37306e-basic-block/b/32e1a2"
+  },
+  "buttons": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=241-5333&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/606e58-button/b/32e1a2"
+  },
+
+  "cards": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=2-2243&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/92c49f-primary-card/b/32e1a2"
+  },
+  "card-image": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=241-5903&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/90dd10-image-card/b/32e1a2"
+  },
+  "card-image---emphasized": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=241-5903&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/90dd10-image-card/t/8295ea"
+  },
+  "card-image-large": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=241-5903&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/90dd10-image-card/t/8295ea"
+  },
+  "card-image-large---emphasized": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=241-5903&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/90dd10-image-card/t/8295ea"
+  },
+  "card-icon": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=12120-51054&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/367af0-icon-card/b/32e1a2"
+  },
+  "card-number": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=12120-51092&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/0446f9-numbered-card/b/32e1a2 "
+  },
+
+  "footer": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=240-4973&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/0582e3-footer/b/32e1a2"
+  },
+  "forms": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=241-5060&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/507229-checkbox/b/32e1a2"
+  },
+  "grids": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=7498-3769&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/146927-layouts--grids/b/696943"
+  },
+  "headings": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=445-7403&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/237ef2-typography/b/563314"
+  },
+  "hero": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=241-5249&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/9585e6-hero/b/32e1a2"
+  },
+  "isi": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=241-4883&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/03a0c5-important-safety-information-isi/b/70c0eb"
+  },
+  "menu": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=31-4105&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/853138-navigation/b/32e1a2"
+  },
+  "overlay": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=11-2391&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://pfizerhelix.zeroheight.com/styleguide/s/106014/p/54de83-overlay"
+  },
+
+  "page-break": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=437-7279&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/534964-page-break/b/32e1a2"
+  },
+  "page-break-image-right": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=851-12025&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+  "page-break-inset": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=851-13293&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+  "page-break-inset-image-right": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=851-13297&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+
+  "pullquote": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=241-5291&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/3210cb-pull-quote/b/32e1a2"
+  },
+  "references": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=1622-14067&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/20ec3a-references/b/32e1a2"
+  },
+
+  "slideshow": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=1139-17297&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/91c534-slideshow/b/32e1a2"
+  },
+  "slideshow-left-aligned": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=1139-17277&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+  "slideshow-50-50-columns": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=1139-17307&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+  "slideshow-50-50-columns-left-aligned": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=1139-17287&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+  "slideshow-full": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=2290-11773&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+  "slideshow-full-left-aligned": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=2290-11608&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+  "slideshow-full-50-50-columns": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=2290-11894&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+  "slideshow-full-50-50-columns-left-aligned": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=2290-11884&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+
+  "tabs": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=240-5057&mode=design&t=sA6IS32Cd0Yu0VnE-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/666c5f-tabs/b/32e1a2"
+  },
+  "tabs-horizontal": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=476-7662&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+  "tabs-vertical": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=476-7849&mode=design&t=G6i0yVMeKPYUsgAD-4"
+  },
+
+  "video": {
+    "figma": "https://www.figma.com/file/wZN8avOhOusOz3baIzdVZp/Meraki-Design-System-0.3.0?type=design&node-id=24077-4034&mode=design&t=G6i0yVMeKPYUsgAD-4",
+    "zeroHeight": "https://zeroheight.com/4b770a7b6/p/10abd0-video/b/32e1a2"
+  }
+}

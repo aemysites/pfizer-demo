@@ -1,7 +1,0 @@
-{
-  "demo-only": {
-    "name": "demo-only block",
-    "description": "just a demo block to help with global styles",
-    "schema": {}
-  }
-}

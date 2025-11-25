@@ -1,0 +1,32 @@
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.tooltip::after {
+  content: 'ⓘ';
+  color: #000484;
+  padding-left: 8px;
+}
+
+.tooltip:hover .tooltip-content {
+  visibility: visible;
+}
+
+.tooltip-content {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  max-width: 272px;
+  width: max-content;
+  margin-top: 8px;
+  font-weight: 400;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  background-color: #262c34;
+  text-wrap: pretty;
+  color: #ffffff;
+  z-index: 100;
+}

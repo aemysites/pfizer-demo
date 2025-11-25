@@ -1,0 +1,34 @@
+
+.action-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  width: 100%;
+  z-index: 100;
+  background: white;
+  height: var(--action-height);
+  top: 0;
+  left: 0;
+}
+
+.action-buttons {
+  padding: 4px 8px;
+  font-size: 15px;
+  font-weight: 800;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid #dde1e6;
+  color: var(--action-color);
+  cursor: pointer;
+  background-color: white;
+}
+
+.primary {
+  border-color: var(--action-primary-color);
+  color: var(--action-primary-color);
+}
+
+button[disabled] {
+  opacity: 50%;
+  cursor: default;
+}

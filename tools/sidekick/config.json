@@ -1,5 +1,23 @@
 {
-  "project": "AEM XWalk Boilerplate",
-  "editUrlLabel": "AEM Editor",
-  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open"
+  "project": "Pfizer Block Library",
+  "plugins": [
+    {
+      "id": "library",
+      "title": "Library",
+      "environments": ["edit"],
+      "url": "https://libraryv2adobepfizer-main-page.web.pfizer/tools/sidekick/library.html",
+      "includePaths": ["**.docx**"]
+    },
+    {
+      "id": "business-tags",
+      "title": "Business Tags",
+      "environments": [ "edit" ],
+      "url": "/cms/tools/sidekick/business-tags/index.html",
+      "passConfig": true,
+      "passReferrer": true,
+      "isPalette": true,
+      "paletteRect": "left: 50%; top: 50%; transform: translate(-50%, -50%); width: 90%; height: 90%; box-shadow: 0 0 30px 30px rgba(0,0,0,0.20);",
+      "includePaths": [ "**.docx**" ]
+    }
+  ]
 }

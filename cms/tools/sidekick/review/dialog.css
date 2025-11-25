@@ -1,0 +1,211 @@
+/* DIALOG HEAD */
+
+.dialog-head  {
+    padding-bottom: 20px;
+    border-bottom:solid 1px #333;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dialog-head h1 {
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+    color: var(--hlx-dialog-text-color);
+    font-weight: 600;
+}
+
+.hlx-dialog button.hlx-close-button {
+    border: none;
+    font-size: 24px;
+    color: var(--hlx-dialog-row-link-color);
+    background: transparent;
+    margin: 0;
+    font-weight: 600;
+    padding: 0;
+    font-family: 'Gill Sans', Arial, sans-serif;
+}
+
+.hlx-dialog button.hlx-close-button:focus {
+    outline: none;
+}
+
+/* DIALOG BODY */
+
+.dialog-body {
+    padding: 20px 0;
+    flex: 1;
+    overflow: auto;
+    position: relative;
+}
+
+.dialog-body h3 {
+    margin: 0px;
+    padding: 0;
+    font-weight: normal;
+    color: var(--hlx-dialog-text-color);
+}
+
+.dialog-body p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0px;
+    color: var(--hlx-dialog-text-color);
+}
+
+.dialog-body ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.dialog-body li {
+    padding: 10px 0;
+}
+
+.dialog-body a {
+    text-decoration: none;
+    color: var(--hlx-dialog-row-link-color);
+    cursor: pointer;
+}
+
+.hlx-dialog a:focus {
+    outline: none;
+    text-decoration: underline;
+}
+
+.dialog-body p + div {
+    margin-top: 20px;
+}
+
+.hlx-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hlx-row input[type=checkbox] {
+    width: 1.5em;
+    height: 1.5em;
+    background: #efefef;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    appearance: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input[type='checkbox']:checked {
+    background: #272791;
+}
+
+.review-actions {
+    display: flex;
+    margin: 20px 0;
+}
+
+
+.dialog-body a.action {
+    font-weight: bold;
+}
+
+.review-actions a {
+    position: relative;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    display: block;
+    padding-left: 20px;
+}
+
+.review-actions a:before {
+    content: "+";
+    font-size: 24px;
+    position: absolute;
+    line-height: 1;
+    top: 0px;
+    left: 0;
+}
+
+.add-page-panel {
+    display: none;
+    width: 100%;
+}
+
+.add-page-panel form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.add-page-panel textarea,
+.add-page-panel input[type="text"] {
+    flex: 1;
+    font-size: 16px;
+    padding: 10px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+}
+
+.add-page-panel textarea.error,
+.add-page-panel input[type="text"].error,
+.add-page-input-message.error {
+    color: orangered;
+    border-color: orangered;
+}
+
+.add-page-panel textarea {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #333;
+    font-weight: 300;
+    resize: none;
+    height: 75px;
+}
+
+.hlx-dialog .add-page-panel button[type="submit"],
+.hlx-dialog .add-page-panel button[type="button"] {
+    background: none;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 5px 10px;
+    color: var(--hlx-dialog-row-link-color);
+    position: relative;
+    font-family: 'Gill Sans', Arial, sans-serif;
+}
+
+.hlx-dialog .add-page-panel button[type="button"] {
+    color: #999;
+}
+
+.hlx-dialog .add-page-panel input:focus,
+.hlx-dialog .add-page-panel input:focus-visible,
+.hlx-dialog .add-page-panel button:focus,
+.hlx-dialog .add-page-panel button:focus-visible {
+    outline: none;
+}
+
+/* DIALOG FOOTER */
+
+.dialog-footer {
+    position: relative;
+}
+
+.dialog-footer .prefooter {
+    padding: 20px 0;
+}
+
+.dialog-footer .footer {
+    border-top:solid 1px #999;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-page-input-message {
+    font-size: 13px;
+    font-style: italic;
+    color: #666;
+}

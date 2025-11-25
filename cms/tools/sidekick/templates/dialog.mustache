@@ -1,0 +1,103 @@
+<div class="dialog">
+    <div class="dialog-head">
+        <form method="dialog">
+            <button class="hlx-close-button">X</button>
+        </form>
+        <h1>
+            {{ #statusOpen }}
+                Prepare for review 
+            {{ /statusOpen }}
+            {{ ^statusOpen }}
+                Submitted for review (locked)
+            {{ /statusOpen }}
+        </h1>
+    </div>
+
+    <div class="dialog-body">
+
+        {{ ^authorized }}
+            <p style="font-size: 16;">Please Log-in</p>
+        {{ /authorized }}
+
+        {{ #authorized }}
+
+            {{ #hasPages }}
+                {{ #statusOpen }}
+                    <p>The pages listed below are ready for review.</p>
+                {{ /statusOpen }}
+                <div class="review-panel">
+                    <ul>
+                        {{ #pages }}
+                            <li class="hlx-row">
+                                <div>
+                                    <a href="{{ viewpath }}" target="_blank">{{ domain }}{{ path }}</a>
+                                </div>
+                                {{ #statusOpen }}
+                                    <div>
+                                        <a class="action remove-page" data-path="{{ path }}">Remove</a>
+                                    </div>
+                                {{ /statusOpen }}
+                            </li>
+                        {{ /pages }}
+                    </ul>
+                </div>
+            {{ /hasPages }}
+
+            {{ ^hasPages }}
+                <p>There are no pages currently ready for review.</p>
+            {{ /hasPages }}
+
+            {{ #statusOpen }}
+            <div class="review-actions">
+                <a class="show-addpage action">Add Pages</a>
+                <div class="add-page-panel">
+                    <form name="addpageform" id="addpageform">
+                        <textarea name="newpage" class="add-page-input" placeholder="Enter page paths"></textarea>
+                        <button type="submit" name="submit" class="add-page">Add Pages</button>
+                        <button type="button" name="cancel" class="cancel-add-page">X</button>
+                    </form>
+                    <div class="add-page-input-message">Enter each page url on a separate line above.</div>
+                </div>
+            </div>
+            {{ /statusOpen }}
+
+        {{ /authorized }}
+
+        <div class="loader"></div>
+    </div>
+
+    <div class="dialog-footer">
+        {{ #statusSubmit }}
+        <div class="prefooter">
+            <label for="accept_approval" class="approval-label">
+                <input type="checkbox" name="accept" value="true" id="accept_approval">You are about to push changes to production, please confirm you have received final approval from your MLR.
+            </label>
+        </div>
+        {{ /statusSubmit }}
+
+        <div class="footer">
+            {{ #statusOpen }}
+                <div></div>
+                <button
+                    id="hlx-submit"
+                    {{ ^authorized }}disabled{{ /authorized }}
+                    {{ ^hasPages }}disabled{{ /hasPages }}
+                >
+                    Submit for Review 
+                </button>
+            {{ /statusOpen }}
+
+
+            {{ ^statusOpen}}
+                <button id="hlx-reject" class="secondary">
+                    Reject Review
+                </button>
+                <button id="hlx-approve" disabled>
+                    Approve and Publish
+                </button>
+            {{ /statusOpen }}
+        </div>
+
+        <div class="loader"></div>
+    </div>
+</div>

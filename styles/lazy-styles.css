@@ -1,1 +1,3 @@
-/* lazy loaded css */
+@import url("/lib/styles/lazy-styles.css");
+
+/* below the fold CSS goes here */

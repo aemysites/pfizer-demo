@@ -1,0 +1,53 @@
+<main>
+    <div class="panel-loader">
+        <div>
+            <div class="loader">
+                <div class="loading"></div>
+            </div>
+            <div class="panel-loader-bg"></div>
+        </div>
+    </div>
+    <div id="error-container" class="error-container"></div>
+    <div id="summary-container" class="summary-container">
+        <div class="container-content">
+            <div class="action-container">
+                <h1>Business Tags</h1>
+                <div class="actions form-buttons">
+                    <button id="form-toggle" class="form-toggle action-buttons primary">Edit</button>
+                </div>
+            </div>
+            <table id="summary-table" class="summary-table">
+            </table>
+        </div>
+    </div>
+    <div id="form-container" class="form-container">
+        <form id="labels-form" class="labels-form">
+            <div class="action-container">
+                <h1>Edit Analytics Labels</h1>
+                <div class="actions form-buttons">
+                    <button id="summary-button" type="button" class="summary-button action-buttons secondary">Cancel</button>
+                    <button id="submit-button" type="submit" class="submit-button action-buttons primary">Save Selections</button>
+                </div>
+            </div>
+            <div class="container-content">
+                <h2>
+                    Edit business tags
+                </h2>
+            </div>
+            <div class="container-content">
+                <div id="toggle-container" class="toggle-container">
+                    <ul id="toggle-list" class="toggle-list">
+                        <li>
+                            <span>Site Level</span>
+                        </li>
+                        <li>
+                            <span>Page Level</span>
+                        </li>
+                    </ul>
+                    <span class="selected-url"></span>
+                </div>
+                <div id="labels-container" class="labels-container"></div>
+            </div>
+        </form>
+    </div>
+</main>
