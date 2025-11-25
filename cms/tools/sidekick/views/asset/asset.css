@@ -1,0 +1,8 @@
+.hlx-sk-view img { 
+  max-width: 100%;
+  background-color: white;
+}
+
+.hlx-sk-view a {
+  color: var(--hlx-sk-color);
+}

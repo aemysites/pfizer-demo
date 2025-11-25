@@ -1,9 +1,0 @@
-{
-  "content-container": {
-    "name": "content-container",
-    "description": "This is a Content Container block.",
-    "schema": {
-      "classes": ["grid", "no-gutter-block"]
-    }
-  }
-}

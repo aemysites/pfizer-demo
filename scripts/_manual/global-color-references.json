@@ -1,0 +1,698 @@
+[
+  {
+    "block": "accordion",
+    "references": [
+      {
+        "name": ".core-accordion",
+        "selector": "--core-accordion--border-color:  var(--lib-core--accordion--border-color, var(--lib-core--color-secondary))"
+      },
+      {
+        "name": ".core-accordion",
+        "selector": "--core-accordion--arrow-icon-color:  var(--lib-core--accordion--arrow-icon-color, var(--lib-core--color-outline))"
+      },
+      {
+        "name": ".core-accordion details",
+        "selector": "color: var(--lib-core--color-on-background)"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-background",
+      "--lib-core--color-outline",
+      "--lib-core--color-secondary"
+    ]
+  },
+  {
+    "block": "alert",
+    "references": [
+      {
+        "name": ".core-alert",
+        "selector": "--core-alert--background-color:  var(--lib-core--alert--background-color, var(--lib-core--color-primary-container))"
+      },
+      {
+        "name": ".core-alert",
+        "selector": "--core-alert--color:  var(--lib-core--alert--color, var(--lib-core--color-on-primary-container))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-primary-container",
+      "--lib-core--color-primary-container"
+    ]
+  },
+  {
+    "block": "announcement",
+    "references": [
+      {
+        "name": ".core-announcement",
+        "selector": "--core-announcement--color:  var(--lib-core--announcement--color, var(--lib-core--color-on-surface))"
+      },
+      {
+        "name": ".core-announcement",
+        "selector": "--core-announcement--background:  var(--lib-core--announcement--background-color, var(--lib-core--color-secondary-container))"
+      },
+      {
+        "name": ".core-announcement",
+        "selector": "--core-announcement--icon-color:  var(--lib-core--announcement--icon-color, var(--lib-core--color-on-secondary-container))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-secondary-container",
+      "--lib-core--color-on-surface",
+      "--lib-core--color-secondary-container"
+    ]
+  },
+  {
+    "block": "banner",
+    "references": [
+      {
+        "name": ".core-banner",
+        "selector": "background-color: var(--lib-core--banner--background-color, var(--lib-core--color-primary-container))"
+      },
+      {
+        "name": ".core-banner",
+        "selector": "color: var(--lib-core--banner--color, var(--lib-core--color-on-primary-container))"
+      },
+      {
+        "name": ".core-banner .close-container a.close-link",
+        "selector": "color: var(--lib-core--banner--close-link-color, var(--lib-core--color-on-primary-container))"
+      },
+      {
+        "name": ".core-banner .core-banner-content .button-container a",
+        "selector": "color: var(--lib-core--banner--button-container-color, var(--lib-core--color-primary))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-primary-container",
+      "--lib-core--color-primary",
+      "--lib-core--color-primary-container"
+    ]
+  },
+  {
+    "block": "basic",
+    "references": [
+      {
+        "name": ".core-basic .core-basic-content h2,.core-basic .core-basic-content h3",
+        "selector": "color: var(--lib-core--color-on-background)"
+      },
+      {
+        "name": ".core-basic .core-basic-content p",
+        "selector": "color: var(--lib-core--color-on-background)"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-background"
+    ]
+  },
+  {
+    "block": "cards",
+    "references": [
+      {
+        "name": ".core-cards",
+        "selector": "--cards-background-color:  var(--lib-core--cards--body-background-color, var(--lib-core--color-system-surface-surface-1))"
+      },
+      {
+        "name": ".core-cards",
+        "selector": "--cards-icon-variant-background-color:  var(--lib-core--cards--icon-variant-background-color, var(--lib-core--color-system-surface-surface-3))"
+      },
+      {
+        "name": ".core-cards",
+        "selector": "--cards-heading-color:  var(--lib-core--cards--heading-color, var(--lib-core--color-on-background))"
+      },
+      {
+        "name": ".core-cards",
+        "selector": "--cards-icon-variant-heading-color:  var(--lib-core--cards--icon-variant-heading-color, var(--lib-core--color-on-surface))"
+      },
+      {
+        "name": ".core-cards",
+        "selector": "--cards-number-variant-heading-color:  var(--lib-core--cards--number-variant-heading-color, var(--lib-core--color-on-primary-container))"
+      },
+      {
+        "name": ".core-cards",
+        "selector": "--cards-text-color:  var(--lib-core--cards--text-color, var(--lib-core--color-on-surface))"
+      },
+      {
+        "name": ".core-cards",
+        "selector": "--cards-kicker-color:  var(--lib-core--cards--kicker-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-cards.image",
+        "selector": "--cards-background-color:  var(--lib-core--cards--body-background-color, var(--lib-core--color-surface-variant))"
+      },
+      {
+        "name": ".core-cards.image.inverted",
+        "selector": "--cards-background-color:  var(--lib-core--cards--body-background-color, var(--lib-core--color-secondary))"
+      },
+      {
+        "name": ".core-cards.image.inverted",
+        "selector": "--cards-heading-color:  var(--lib-core--cards--accent-color, var(--lib-core--color-on-secondary))"
+      },
+      {
+        "name": ".core-cards.image.inverted",
+        "selector": "--cards-text-color:  var(--lib-core--cards--text-color, var(--lib-core--color-on-secondary))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-background",
+      "--lib-core--color-on-primary-container",
+      "--lib-core--color-on-secondary",
+      "--lib-core--color-on-surface",
+      "--lib-core--color-on-surface-variant",
+      "--lib-core--color-secondary",
+      "--lib-core--color-surface-variant",
+      "--lib-core--color-system-surface-surface-1",
+      "--lib-core--color-system-surface-surface-3"
+    ]
+  },
+  {
+    "block": "colors",
+    "references": [],
+    "colors": []
+  },
+  {
+    "block": "demo-only",
+    "references": [],
+    "colors": []
+  },
+  {
+    "block": "footer",
+    "references": [
+      {
+        "name": ".core-footer",
+        "selector": "background-color: var(--lib-core--footer--background-color, var(--lib-core--color-surface-variant))"
+      },
+      {
+        "name": ".core-footer",
+        "selector": "color: var(--lib-core--footer--color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-footer .footer-navigation>ul>li>ul>li",
+        "selector": "color: var(--lib-core--footer--list-item-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-footer .footer-navigation>ul>li>ul",
+        "selector": "color: var(--lib-core--footer--sublist-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-footer .footer-utility-links",
+        "selector": "border-top: 4px solid var(--lib-core--footer--menu-border-color, var(--lib-core--color-primary))"
+      },
+      {
+        "name": ".core-footer .footer-copyright",
+        "selector": "color: var(--lib-core--footer--copyright-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-footer .footer-social p,.core-footer .footer-social p strong",
+        "selector": "color: var(--lib-core--social-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-footer .footer-social a svg",
+        "selector": "color: var(--lib-core--footer--social-color, var(--lib-core--color-primary))"
+      },
+      {
+        "name": ".core-footer .footer-social a.button",
+        "selector": "border: 1px solid var(--lib-core--social-button-border, var(--lib-core--color-outline))"
+      },
+      {
+        "name": ".core-footer .core-footer-content.footer-navigation>ul>li",
+        "selector": "color: var(--lib-core--color-on-surface)"
+      },
+      {
+        "name": ".core-footer .footer-call-to-action a.button",
+        "selector": "color: var(--lib-core--color-on-primary)"
+      },
+      {
+        "name": ".core-footer .footer-utility-links ul",
+        "selector": "color: var(--lib-core--color-primary)"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-primary",
+      "--lib-core--color-on-surface",
+      "--lib-core--color-on-surface-variant",
+      "--lib-core--color-outline",
+      "--lib-core--color-primary",
+      "--lib-core--color-surface-variant"
+    ]
+  },
+  {
+    "block": "form",
+    "references": [],
+    "colors": []
+  },
+  {
+    "block": "header",
+    "references": [
+      {
+        "name": ".core-header",
+        "selector": "--lib-core--menu--nav-background-color:  var(--lib-core--color-background)"
+      },
+      {
+        "name": ".core-header .header-logo",
+        "selector": "border-bottom: 1px solid var(--lib-core--menu--nav-header-logo-border, var(--lib-core--color-outline-variant))"
+      },
+      {
+        "name": ".core-header .header-secondary-logo",
+        "selector": "border-bottom: 1px solid var(--lib-core--menu--nav-secondary-logo-border, var(--lib-core--color-outline-variant))"
+      },
+      {
+        "name": ".core-header .core-nav-sections",
+        "selector": "color: var(--lib-core--menu--nav-sections-font-size, var(--lib-core--color-on-surface))"
+      },
+      {
+        "name": ".core-header .core-nav-sections .core-nav-drop>strong",
+        "selector": "color: var(--lib-core--color-on-surface)"
+      },
+      {
+        "name": ".core-header .core-nav-sections ul li:hover strong",
+        "selector": "color: var(--lib-core--color-on-primary-container)"
+      },
+      {
+        "name": ".core-header .core-nav-sections ul li:active strong",
+        "selector": "color: var(--lib-core--color-primary)"
+      },
+      {
+        "name": ".core-header .core-nav-sections a[aria-current]",
+        "selector": "color: var(--lib-core--color-primary)"
+      },
+      {
+        "name": ".core-header .core-nav-drop>span::after",
+        "selector": "color: var(--lib-core--color-outline)"
+      },
+      {
+        "name": ".core-header .core-nav-drop[aria-expanded=\"true\"]",
+        "selector": "background-color: var(--lib-core--menu--nav-expanded-background-color, var(--lib-core--color-surface-variant))"
+      },
+      {
+        "name": ".core-header .core-nav-drop[aria-expanded=\"true\"]>span::after",
+        "selector": "color: var(--lib-core--color-outline)"
+      },
+      {
+        "name": ".core-header .core-nav-sections ul>li li",
+        "selector": "color: var(--lib-core--color-on-surface-variant)"
+      },
+      {
+        "name": ".core-header .core-nav-sections ul>li li a",
+        "selector": "color: var(--lib-core--color-on-surface-variant)"
+      },
+      {
+        "name": ".core-header .header-social p,.core-header .header-social strong",
+        "selector": "color: var(--lib-core-nav-social-text-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-header .header-indication select",
+        "selector": "border-bottom: 1px solid var(--lib-core--color-outline)"
+      },
+      {
+        "name": ".core-header .header-indication select option",
+        "selector": "color: var(--lib-core--color-on-background)"
+      },
+      {
+        "name": ".core-header .header-footer-links a",
+        "selector": "color: var(--lib-core-nav-footer-link-color, var(--lib-core--color-on-primary-container))"
+      },
+      {
+        "name": ".core-header .header-footer-logo",
+        "selector": "border-top: var(--lib-core--spacing-smallest) solid var(--lib-core-nav-footer-logo-top-border, var(--lib-core--color-outline-variant))"
+      },
+      {
+        "name": ".core-header .header-nav-wrapper-mobile,.core-header .core-nav-regulatory-links",
+        "selector": "background-color: var(--lib-core--menu--nav-background-color, var(--lib-core--color-background))"
+      },
+      {
+        "name": ".core-header .header-nav-wrapper-mobile,.core-header .core-nav-regulatory-links",
+        "selector": "border-bottom: 1px solid var(--lib-core--color-outline-variant)"
+      },
+      {
+        "name": ".core-header .core-nav-hamburger button svg",
+        "selector": "fill: var(--lib-core--color-primary)"
+      },
+      {
+        "name": ".core-header .open-menu::before,.core-header .close-menu::before",
+        "selector": "color: var(--lib-core--menu--nav-hamburguer-font-color, var(--lib-core--color-primary))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-background",
+      "--lib-core--color-on-background",
+      "--lib-core--color-on-primary-container",
+      "--lib-core--color-on-surface",
+      "--lib-core--color-on-surface-variant",
+      "--lib-core--color-outline",
+      "--lib-core--color-outline-variant",
+      "--lib-core--color-primary",
+      "--lib-core--color-surface-variant"
+    ]
+  },
+  {
+    "block": "hero",
+    "references": [
+      {
+        "name": ".core-hero",
+        "selector": "--core-hero--background-color:  var(--lib-core--hero--background-color, var(--lib-core--color-system-surface-surface-1))"
+      },
+      {
+        "name": ".core-hero",
+        "selector": "--core-hero--color:  var(--lib-core--hero--color, var(--lib-core--color-on-surface))"
+      },
+      {
+        "name": ".core-hero h1,.core-hero h2,.core-hero h3",
+        "selector": "color: var(--lib-core--hero--heading-color, var(--lib-core--color-primary))"
+      },
+      {
+        "name": ".core-hero .hero-body>div:first-child>p>strong",
+        "selector": "color: var(--lib-core--hero--kicker-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-hero .hero-body h1>strong",
+        "selector": "color: var(--lib-core--hero--header-strong-color, var(--lib-core--color-secondary))"
+      },
+      {
+        "name": ".core-hero .hero-body.two-cols p",
+        "selector": "color: var(--lib-core--hero--content-color, var(--lib-core--color-on-surface))"
+      },
+      {
+        "name": ".core-hero.graphic .hero-banner .hero-banner-overlay",
+        "selector": "background: linear-gradient(var(--lib-core--hero-graphic--overlay-color, var(--lib-core--color-on-background)),transparent)"
+      },
+      {
+        "name": ".core-hero.graphic .hero-banner .hero-banner-overlay",
+        "selector": "background: linear-gradient(transparent,var(--lib-core--hero-graphic--overlay-color, var(--lib-core--color-on-background)))"
+      },
+      {
+        "name": ".core-hero.graphic .hero-banner .hero-banner-caption",
+        "selector": "color: var(--lib-core--hero-graphic--caption-color, var(--lib-core--color-background))"
+      },
+      {
+        "name": ".core-hero.graphic .hero-footnote",
+        "selector": "color: var(--lib-core--hero-graphic--footnote-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-hero.graphic .hero-footnote,.core-hero.graphic .hero-footnote>sub",
+        "selector": "color: var(--lib-core--hero-graphic--footnote-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-hero.graphic .hero-banner .hero-banner-callout span.icon,.core-hero.graphic .hero-banner .hero-banner-callout svg",
+        "selector": "fill: var(--lib-core--hero-graphic--icon-fill, var(--lib-core--color-primary))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-background",
+      "--lib-core--color-on-background",
+      "--lib-core--color-on-surface",
+      "--lib-core--color-on-surface-variant",
+      "--lib-core--color-primary",
+      "--lib-core--color-secondary",
+      "--lib-core--color-system-surface-surface-1"
+    ]
+  },
+  {
+    "block": "icons",
+    "references": [
+      {
+        "name": ".core-icons .icon-wrapper-poc",
+        "selector": "background: var(--lib-core--color-outline-variant)"
+      },
+      {
+        "name": ".core-icons .icon-wrapper-poc:hover",
+        "selector": "background-color: var(--lib-core--color-system-surface-surface-5)"
+      },
+      {
+        "name": ".core-icons .icon-wrapper-poc:active",
+        "selector": "background-color: var(--lib-core--color-system-surface-surface-5)"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-outline-variant",
+      "--lib-core--color-system-surface-surface-5"
+    ]
+  },
+  {
+    "block": "isi",
+    "references": [
+      {
+        "name": ".core-isi",
+        "selector": "--core-isi--header-color:  var(--lib-core--persistent-isi--header-color, var(--lib-core--color-on-primary))"
+      },
+      {
+        "name": ".core-isi",
+        "selector": "--core-isi--header-background:  var(--lib-core--persistent-isi--header-background-color, var(--lib-core--color-primary))"
+      },
+      {
+        "name": ".core-isi",
+        "selector": "--core-isi--content-background:  var(--lib-core--persistent-isi--content-background-color, var(--lib-core--color-system-surface-surface-1))"
+      },
+      {
+        "name": ".core-isi",
+        "selector": "--core-isi--content-section-background:  var(--lib-core--persistent-isi--content-section-background-color, var(--lib-core--color-system-white))"
+      },
+      {
+        "name": ".core-isi",
+        "selector": "--core-isi--content-color:  var(--lib-core--persistent-isi--content-color, var(--lib-core--color-system-black))"
+      },
+      {
+        "name": ".core-isi .core-persistent-isi-container .core-isi-header button.toggle-isi svg",
+        "selector": "fill: var(--lib-core--color-on-primary-container)"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-primary",
+      "--lib-core--color-on-primary-container",
+      "--lib-core--color-primary",
+      "--lib-core--color-system-black",
+      "--lib-core--color-system-surface-surface-1",
+      "--lib-core--color-system-white"
+    ]
+  },
+  {
+    "block": "overlay",
+    "references": [
+      {
+        "name": ".core-overlay .icon svg",
+        "selector": "color: var(--lib-core--overlay--logo-color, var(--lib-core--color-primary))"
+      },
+      {
+        "name": ".core-overlay .core-overlay-content",
+        "selector": "color: var(--lib-core--overlay--content-color, var(--lib-core--color-on-surface))"
+      },
+      {
+        "name": ".core-overlay .core-overlay-content",
+        "selector": "background-color: var(--lib-core--overlay--content-background-color, var(--lib-core--color-surface))"
+      },
+      {
+        "name": ".core-overlay .core-overlay-header h1,.core-overlay .core-overlay-header h2,.core-overlay .core-overlay-header h3",
+        "selector": "color: var(--lib-core--overlay--heading-color, var(--lib-core--color-on-background))"
+      },
+      {
+        "name": ".core-overlay .core-overlay-close::before,.core-overlay .core-overlay-close::after",
+        "selector": "background-color: var(--lib-core--overlay--close-button-color, var(--lib-core--color-outline))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-background",
+      "--lib-core--color-on-surface",
+      "--lib-core--color-outline",
+      "--lib-core--color-primary",
+      "--lib-core--color-surface"
+    ]
+  },
+  {
+    "block": "page-break",
+    "references": [
+      {
+        "name": ".core-page-break",
+        "selector": "--core-page-break--background-color:  var(--lib-core--page-break--body-background-color, var(--lib-core--color-secondary))"
+      },
+      {
+        "name": ".core-page-break",
+        "selector": "--core-page-break--heading-color:  var(--lib-core--page-break--heading-content-color, var(--lib-core--color-on-secondary))"
+      },
+      {
+        "name": ".core-page-break",
+        "selector": "--core-page-break--content-color:  var(--lib-core--page-break--content-color, var(--lib-core--color-on-secondary))"
+      },
+      {
+        "name": ".core-page-break",
+        "selector": "--core-page-break--text-color:  var(--lib-core--page-break--text-color, var(--lib-core--color-on-secondary))"
+      },
+      {
+        "name": ".core-page-break",
+        "selector": "--core-page-break--overlay-background:  var(--lib-core--page-break--overlay-background, var(--lib-core--color-secondary-container))"
+      },
+      {
+        "name": ".core-page-break",
+        "selector": "--core-page-break--overlay-title-color:  var(--lib-core--page-break--overlay-color, var(--lib-core--color-on-surface))"
+      },
+      {
+        "name": ".core-page-break",
+        "selector": "--core-page-break--overlay-subtitle-color:  var(--lib-core--page-break--overlay-color, var(--lib-core--color-on-surface-variant))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-secondary",
+      "--lib-core--color-on-surface",
+      "--lib-core--color-on-surface-variant",
+      "--lib-core--color-secondary",
+      "--lib-core--color-secondary-container"
+    ]
+  },
+  {
+    "block": "quote",
+    "references": [
+      {
+        "name": ".core-quote",
+        "selector": "--text-color:  var(--lib-core--quote--color, var(--lib-core--color-on-secondary-container))"
+      },
+      {
+        "name": ".core-quote",
+        "selector": "--quote-content-text-color:  var(--lib-core--quote--content-text-color, var(--lib-core--color-on-surface))"
+      },
+      {
+        "name": ".core-quote",
+        "selector": "--quote-content-text-color-second-text:  var(--lib-core--quote--content-text-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-quote",
+        "selector": "--quote-content-list-color:  var(--lib-core--quote--list-text-color, var(--lib-core--color-on-secondary-container))"
+      },
+      {
+        "name": ".core-quote",
+        "selector": "background-color: var(--lib-core--quote--background-color, var(--lib-core--color-secondary-container))"
+      },
+      {
+        "name": ".core-quote blockquote span.icon.icon-lib-opening-quotation,.core-quote blockquote span.icon.icon-lib-opening-quotation svg",
+        "selector": "fill: var(--lib-core--quote--icon-fill, var(--lib-core--color-primary))"
+      },
+      {
+        "name": ".core-quote.large .core-quote-img-container p",
+        "selector": "color: var(--lib-core--quote--image-title-color, var(--lib-core--color-on-surface))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-secondary-container",
+      "--lib-core--color-on-surface",
+      "--lib-core--color-on-surface-variant",
+      "--lib-core--color-primary",
+      "--lib-core--color-secondary-container"
+    ]
+  },
+  {
+    "block": "references",
+    "references": [
+      {
+        "name": ".core-references",
+        "selector": "background-color: var(--lib-core--references--background-color, var(--lib-core--color-system-surface-surface-5))"
+      },
+      {
+        "name": ".core-references h4",
+        "selector": "color: var(--lib-core--references--title-color, var(--lib-core--color-on-background))"
+      },
+      {
+        "name": ".core-references ol",
+        "selector": "color: var(--lib-core--references--text-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-references li::before",
+        "selector": "color: var(--lib-core--references--list-number-color, var(--lib-core--color-on-surface))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-background",
+      "--lib-core--color-on-surface",
+      "--lib-core--color-on-surface-variant",
+      "--lib-core--color-system-surface-surface-5"
+    ]
+  },
+  {
+    "block": "slideshow",
+    "references": [
+      {
+        "name": ".core-slideshow",
+        "selector": "--core-slideshow--background-color:  var(--lib-core--slideshow--background, var(--lib-core--color-primary))"
+      },
+      {
+        "name": ".core-slideshow",
+        "selector": "--core-slideshow--text-color:  var(--lib-core--slideshow--text-color, var(--lib-core--color-on-primary))"
+      },
+      {
+        "name": ".core-slideshow",
+        "selector": "--core-slideshow--link-color:  var(--lib-core--slideshow--link-color, var(--lib-core--color-on-primary))"
+      },
+      {
+        "name": ".core-slideshow",
+        "selector": "--core-slideshow--overlay-background:  var(--lib-core--slider--overlay-background, var(--lib-core--color-secondary-container))"
+      },
+      {
+        "name": ".core-slideshow",
+        "selector": "--core-slideshow--overlay-title-color:  var(--lib-core--slider--overlay-title-color, var(--lib-core--color-on-surface))"
+      },
+      {
+        "name": ".core-slideshow",
+        "selector": "--core-slideshow--overlay-subtitle-color:  var(--lib-core--slider--overlay-subtitle-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-slideshow.full ol li .core-slideshow-slide-scrim",
+        "selector": "background-color: var(--lib-core--color-system-black)"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-primary",
+      "--lib-core--color-on-surface",
+      "--lib-core--color-on-surface-variant",
+      "--lib-core--color-primary",
+      "--lib-core--color-secondary-container",
+      "--lib-core--color-system-black"
+    ]
+  },
+  {
+    "block": "tabs",
+    "references": [
+      {
+        "name": ".core-tabs",
+        "selector": "--active-background-color:  var(--lib-core--tabs-active-background-color, var(--lib-core--color-system-surface-surface-2))"
+      },
+      {
+        "name": ".core-tabs",
+        "selector": "--inactive-background-color:  var(--lib-core--tabs-inactive-background-color, var(--lib-core--color-system-surface-surface-5))"
+      },
+      {
+        "name": ".core-tabs",
+        "selector": "--button-border-color:  var(--lib-core--tabs-border-color, var(--lib-core--color-outline-variant))"
+      },
+      {
+        "name": ".core-tabs",
+        "selector": "--button-color:  var(--lib-core--tabs-button-color, var(--lib-core--color-on-surface-variant))"
+      },
+      {
+        "name": ".core-tabs",
+        "selector": "--button-selected:  var(--lib-core--tabs-button-selected, var(--lib-core--color-on-surface))"
+      },
+      {
+        "name": ".core-tabs .core-tabs-inside .tabs-panel p",
+        "selector": "color: var(--lib-core--tabs-content-body-color, var(--lib-core--color-on-surface))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-on-surface",
+      "--lib-core--color-on-surface-variant",
+      "--lib-core--color-outline-variant",
+      "--lib-core--color-system-surface-surface-2",
+      "--lib-core--color-system-surface-surface-5"
+    ]
+  },
+  {
+    "block": "unicorn",
+    "references": [],
+    "colors": []
+  },
+  {
+    "block": "video",
+    "references": [
+      {
+        "name": ".core-video",
+        "selector": "--core-video--controls-color:  var(--lib-core--video--controls-color, var(--lib-core--color-system-black))"
+      }
+    ],
+    "colors": [
+      "--lib-core--color-system-black"
+    ]
+  }
+]

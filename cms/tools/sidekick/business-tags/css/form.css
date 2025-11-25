@@ -1,0 +1,101 @@
+.form-container {
+    padding: 0 20px;
+    display: none;
+}
+
+.labels-container {
+    font-size: var(--medium-font);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.field-container {
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.field-container:nth-child(3n) .tooltip-content {
+    right: 50%;
+    left: unset;
+}
+
+.field-label {
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.field-container input[type="text"] {
+    width: 100%;
+    padding: 4px 8px;
+    font-size: 13px;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #747474;
+}
+
+.field-selected-options {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 0;
+    grid-area: options;
+}
+
+.field-selected-option {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--selection-bg);
+    padding: 2px 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid var(--selection-bg);
+    border-radius: 16px;
+    cursor: pointer;
+    color: #000000;
+    font-size: 12px;
+}
+
+.field-selected-option::before {
+    content: "×";
+    color: #3d46ea;
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.field-selected-option:hover {
+    color: #000;
+    border: 1px solid var(--selection-bg-over);
+}
+
+
+datalist {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.select2-container {
+    width: 100% !important;
+}

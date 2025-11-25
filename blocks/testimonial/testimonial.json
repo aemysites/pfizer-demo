@@ -1,9 +1,0 @@
-{
-  "testimonial": {
-    "name": "Testimonial",
-    "description": "This is a testimonial block.",
-    "schema": {
-      "classes": ["right", "large-image", "small-image", "text", "brand", "center"]
-    }
-  }
-}

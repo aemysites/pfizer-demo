@@ -1,9 +1,0 @@
-{
-  "find-a-doctor-block": {
-    "name": "find-a-doctor-block",
-    "description": "This is the find-a-doctor poc block.",
-    "schema": {
-      "contentAtoms": true
-    }       
-  }
-}

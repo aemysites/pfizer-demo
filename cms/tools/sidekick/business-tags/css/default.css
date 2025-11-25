@@ -1,0 +1,124 @@
+:root {
+    --padding: 5px;
+    --medium-font: 16px;
+    --small-font: small;
+    --highlight-color: #f1f4f8;
+    --highlight-text-color: rgb(118, 118, 118);
+    --highlight-border-color: steelblue;
+    --hover-color: lightgrey;
+    --hover-font-color: grey;
+    --error-color: red;
+    --border-radius: 10px;
+    --action-color: #6b7280;
+    --action-primary-color: #000484;
+    --action-off-bg: #f2f4f8;
+    --action-off-color: #7585a7;
+    --selection-bg: #ebecfc;
+    --selection-bg-over: #c2c2e9;
+    --action-height: 65px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body, main {
+    width: 100%;
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: white;
+    font-family: 'Pfizer Diatype', Arial, Helvetica, sans-serif;
+  }
+
+  h1 {
+    font-size: 15px;
+    color: #262c34;
+    font-weight: 800;
+  }
+
+  h2 {
+    font-size: 14px;
+    color: #6b7280;
+    padding-top: 24px;
+    margin-bottom: 24px;
+    margin-top: 0;
+    font-weight: 400;
+    border-top: 1px solid #c7c5d0;
+  }
+
+  .error-container {
+    margin-bottom: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .error-container > div {
+    color: #fff;
+    background-color: rgb(203, 60, 37);
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  .summary-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0 20px;
+  }
+
+  .container-content {
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .toggle-container {
+    margin-bottom: 20px;
+  }
+
+  .toggle-container ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    border-bottom: 1px solid #eeeeee;
+    margin: 0;
+  }
+
+  .toggle-container ul li {
+    display: flex;
+    border-radius: 4px 4px 0px 0px;
+    font-size: 14px;
+    padding: 4px 16px;
+    margin: 0 1px;
+    color: #747474;
+    background-color: #f1f4f8;
+    cursor: pointer;
+  }
+
+  .toggle-container ul li.active {
+    background-color: #ebecfc;
+    color: #3d46ea;
+    font-weight: 700;
+  }
+
+  .selected-url {
+    display: none;
+  }
+
+  .disabled {
+    pointer-events: none;
+  }

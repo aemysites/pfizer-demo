@@ -1,9 +1,0 @@
-{
-  "language-selector": {
-    "name": "language-selector",
-    "description": "This is a Language Selector block description",
-    "schema": {
-      "classes": []
-    }
-  }
-}

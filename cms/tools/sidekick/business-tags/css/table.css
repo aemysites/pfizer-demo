@@ -1,0 +1,78 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-spacing: 0;
+  margin-bottom: 1rem;
+  border: none;
+  text-align: left;
+}
+
+table td,
+table th {
+  padding: 12px;
+  vertical-align: top;
+  border-bottom: 1px solid #dde1e6;
+  font-size: 14px;
+  font-weight: 300;
+  border: solid 1px #dde1e6;
+  border-collapse: collapse;
+  color: #6b7280;
+}
+
+table td:first-child,
+table th:first-child {
+  width: 175px;
+}
+
+table thead th,
+table tr.header th,
+table tr.header td {
+  vertical-align: top;
+  border-bottom: 1px solid #dde1e6;
+  font-weight: 900;
+  font-size: 14px;
+  background-color: var(--highlight-color);
+  color: #6b7280;
+}
+
+table tr.header th:first-child {
+  vertical-align: middle;
+}
+
+table.empty-table td {
+  border: none;
+  padding: 50px;
+  text-align: center;
+  font-size: large;
+  font-weight: 300;
+}
+
+table tr:nth-child(even):nth-child(n+3) {
+  background-color: #f5f6fd;
+}
+
+table th:last-child .tooltip-content,
+table th:nth-last-child(2) .tooltip-content,
+table th:nth-last-child(3) .tooltip-content {
+  right: 50%;
+  left: unset;
+}
+
+table a {
+  color: #000484;
+  text-decoration: none;
+}
+
+tr.blank > td {
+  border: none;
+}
+
+.title-with-tooltip {
+  display: flex;
+  gap: 8px;
+}
+
+.title-with-tooltip .tooltip::after {
+  padding: 0;
+}

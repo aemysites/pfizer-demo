@@ -1,0 +1,16 @@
+{
+    "extends": "pfizer/adobe-config",
+    "plugins": [
+        {
+            "id": "library",
+            "title": "Library",
+            "environments": [
+                "edit"
+            ],
+            "url": "https://libraryfranklinpfizer-main-page.web.pfizer/tools/sidekick/library.html",
+            "includePaths": [
+                "**.docx**"
+            ]
+        }
+    ]
+}

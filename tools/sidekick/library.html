@@ -1,42 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="Description" content="AEM Sidekick Library" />
     <meta name="robots" content="noindex" />
     <base href="/" />
 
-    <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: sans-serif;
-            background-color: #ededed;
-            height: 100%;
-        }
+    <script>
+      // mark as window variable version v2 so we can ignore
+      window.blocks_version = '2';
 
-        helix-sidekick { display: none }
+      const pathname = window?.location?.pathname;
+      const filename = pathname ? pathname.split('/').pop() : '';
+      const isLibrary = filename === 'library.html';
+      if (isLibrary) {
+        console.log('Viewing sidekick block library path');
+        window.platform_block_sidekick = true;
+      }
+    </script>
+
+    <style>
+      :root {
+        --sk-block-table-background-color: #f4b083;
+        --sk-block-table-foreground-color: #000000;
+
+        --sk-metadata-table-background-color: #000000;
+        --sk-metadata-table-foreground-color: #c5e0b3;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #ededed;
+        height: 100%;
+      }
+
+      helix-sidekick {
+        display: none;
+      }
     </style>
     <title>Sidekick Library</title>
-</head>
+  </head>
 
-<body>
-<script
-        type="module"
-        src="https://www.aem.live/tools/sidekick/library/index.js"
-></script>
-<script>
-  const library = document.createElement('sidekick-library')
-  library.config = {
-    base: '/tools/sidekick/library.json',
-  }
+  <body>
+    <script type="module" src="/tools/franklin-sidekick-library/dist/index.js"></script>
 
-  document.body.prepend(library)
-</script>
-</body>
+    <script>
+      const library = document.createElement('sidekick-library');
+      const windowSearch = window?.location?.search;
+      library.config = {
+        base: '/tools/sidekick/library.json',
+        plugins: {
+          blocks: {
+            src: '/tools/franklin-sidekick-library/dist/plugins/blocks/blocks.js?1',
+            encodeImages: true,
+          },
+          icons: {
+            src: '/tools/sidekick/plugins/icons/icons.js?1',
+            windowContext: `${windowSearch}`,
+          },
+        },
+      };
+
+      document.body.prepend(library);
+    </script>
+
+    <div id="ticket-hub-form">
+      <ticket-hub>
+        <!-- latest is -- https://docs.platforms.pfizer/tickethub/docs/widget/ -->
+      </ticket-hub>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.5.13/dist/vue.global.min.js"></script>
+    <script src="https://ticket-hub-vue-cdn.digitalpfizer.com/v2/dist/tickethub-vue.umd.min.js.gz"></script>
+    <script>
+      const activateSidekickTickethub = localStorage.getItem('showTickethub');
+      // Register the tickethub web component.
+      if (activateSidekickTickethub) window['tickethub-vue'].registerComponent({ teamKey: '3BqEMoY5rhgAYtfS3KqdnOxlxE2PNtybHoktf8Zc' });
+    </script>
+  </body>
 </html>

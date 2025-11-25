@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      .hide-close {
+        position: absolute;
+        top: 6px;
+        right: 8px;
+        display: block;
+        width: 50px;
+        height: 58px;
+        background: #003fe2;
+        z-index: 999999999999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hide-close"></div>
+    <script>
+
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const ref = urlParams.get('ref');
+      const repo = urlParams.get('repo');
+
+      if (repo && ref) {
+        window.intercomSettings = {
+          api_base: "https://api-iam.intercom.io",
+          app_id: "czjlmbxa",
+          site_repo: repo,
+          site_ref: ref,
+          Platform: 'Franklin',
+          site_current_url: '',
+          site_current_doc: '',
+          site_sharepoint: ''
+
+        };
+      }
+    </script>
+    <script>
+      // We pre-filled your app ID in the widget URL:
+      // 'https://widget.intercom.io/widget/czjlmbxa'
+      (function () {
+        var w = window;
+        var ic = w.Intercom;
+        if (typeof ic === "function") {
+          ic('reattach_activator');
+          ic('update', w.intercomSettings);
+        }
+        else {
+          var d = document;
+          var i = function () {
+            i.c(arguments);
+          };
+          i.q = [];
+          i.c = function (args) {
+            i.q.push(args);
+          };
+          w.Intercom = i;
+          var l = function () {
+            var s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://widget.intercom.io/widget/czjlmbxa';
+            var x = d.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+          };
+          if (document.readyState === 'complete') {
+            l();
+          }
+          else if (w.attachEvent) {
+            w.attachEvent('onload', l);
+          }
+          else {
+            w.addEventListener('load', l, false);
+          }
+        }
+      })();
+    </script>
+    <script>
+      window.addEventListener('load', () => {
+
+        (async () => { // Hlx admin fetch to get user info
+          try {
+            const res = await fetch(
+              `https://admin.hlx.page/status/pfizer/${repo}/${ref}/`,
+              {credentials: 'include'}
+            );
+            if (res.status === 200) {
+              const body = await res.json();
+              if (body.profile) { // Update intercom if we got profile info
+                window.Intercom('update', {
+                  "name": body.profile.name,
+                  "email": body.profile.email,
+                  "user_id": body.profile.oid
+                });
+                console.log(body.profile);
+                window.Intercom('show');
+              }
+
+            }
+          } catch (e) {
+            console.log('error retrieving status', e);
+            window.Intercom('show');
+          }
+        })();
+
+
+      });
+    </script>
+  </body>
+
+</html>
