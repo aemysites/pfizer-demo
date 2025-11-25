@@ -1,2 +1,63 @@
 @import url("/lib/styles/tokens.css");
 @import url("/lib/styles/styles.css");
+
+/* Section divider variant - adds teal line under headings */
+.section.divider h1,
+.section.divider h2,
+.section.divider h3 {
+  padding-bottom: var(--size-16);
+  border-bottom: 3px solid var(--surface-color-branded-core-seed, #0097a9);
+}
+
+/* Icons/Logos grid layout - 5 per row */
+.section.icons .default-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px 32px;
+}
+
+.section.icons .default-content-wrapper p {
+  margin: 0;
+  width: calc((100% - 128px) / 5);  /* 5 per row with 4 gaps of 32px */
+  min-width: 180px;
+  height: 120px;  /* Fixed height for consistent rows */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section.icons .default-content-wrapper picture,
+.section.icons .default-content-wrapper img {
+  max-width: 100%;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Tablet - 3 per row */
+@media (max-width: 1024px) {
+  .section.icons .default-content-wrapper p {
+    width: calc((100% - 64px) / 3);  /* 3 per row */
+    min-width: 150px;
+  }
+}
+
+/* Mobile - 2 per row */
+@media (max-width: 600px) {
+  .section.icons .default-content-wrapper {
+    gap: 24px 16px;
+  }
+  
+  .section.icons .default-content-wrapper p {
+    width: calc((100% - 16px) / 2);  /* 2 per row */
+    min-width: 120px;
+  }
+  
+  .section.icons .default-content-wrapper picture,
+  .section.icons .default-content-wrapper img {
+    max-height: 70px;
+  }
+}

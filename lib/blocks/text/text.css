@@ -2,6 +2,25 @@
   box-sizing: border-box;
 }
 
+/* Middle alignment variant for text blocks */
+.section.middle .core-text {
+  text-align: center;
+}
+
+.section.middle .core-text .atoms-content {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section.middle .core-text .atoms-buttons {
+  justify-content: center;
+}
+
+.section.middle .core-text em {
+  font-weight: 700;
+}
+
 .core-text .atoms-content .button-container {
   display: flex;
   flex-direction: column;
