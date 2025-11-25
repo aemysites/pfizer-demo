@@ -240,7 +240,7 @@
 
 .core-card.image .core-card-top picture {
   width: 100%;
-  height: 200px;
+  aspect-ratio: 11/7;
   overflow: hidden;
 }
 
@@ -273,29 +273,8 @@
   .core-card.image .core-card-bottom {
     padding: var(--size-32);
   }
-
-  .core-card.image .core-card-top picture {
-    height: 260px;
-  }
 }
 
-@media (min-width: 0) and (max-width: 1023px) {
-  /* everything above mobile */
-  .core-card.image .core-card-top img {
-    min-height: 200px;
-  }
-}
-
-@media (max-width: 500px) {
-  /* Mobile styles here */
-  .core-card.image .core-card-top img {
-    min-height: 200px;
-  }
-}
-
-.core-card.image .core-card-top img {
-  aspect-ratio: unset;
-}
 
 .core-card.icon .core-card-top {
   padding-bottom: 0;
