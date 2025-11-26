@@ -3,6 +3,11 @@
     "name": "footer",
     "description": "This is an footer block",
     "schema": {
+      "disclaimer": {
+        "selector": ".section-disclaimer > div:last-of-type",
+        "target": "innerHTML",
+        "optional": true
+      },
       "linkItemCollection": {
         "classes": [],
         "type": "multiple",

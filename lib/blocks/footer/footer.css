@@ -382,3 +382,173 @@
     --lib-core--footer-desktop-layout-gap: var(--foundation-size-120, 120px);
   }
 }
+
+/* Disclaimer Section */
+.core-footer .core-footer-disclaimer {
+  width: 100%;
+  padding: var(--size-24, 24px) 0;
+  margin-bottom: var(--size-24, 24px);
+  border-bottom: 1px solid var(--border-color-neutral-light, #e0e0e0);
+  font: var(--lib-core--footer--text-font);
+  color: var(--lib-core--footer--text-color);
+  line-height: 1.5;
+}
+
+.core-footer .core-footer-disclaimer p {
+  margin: 0 0 var(--size-8, 8px) 0;
+}
+
+.core-footer .core-footer-disclaimer p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================= */
+/* Story Half Told - Simple Footer Styles */
+/* ============================================= */
+
+.core-footer-wrapper {
+  --sht-footer-bg: rgb(0, 161, 209);
+  --sht-footer-text: #fff;
+  
+  background-color: var(--sht-footer-bg) !important;
+}
+
+.core-footer-wrapper .core-footer.block {
+  background-color: var(--sht-footer-bg) !important;
+  padding: var(--size-32, 32px) var(--size-40, 40px);
+  border-top: none !important;
+}
+
+/* Target the inner .core-footer container */
+.core-footer-wrapper .core-footer.block .core-footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-8, 8px);
+  color: var(--sht-footer-text);
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-top: none !important;
+}
+
+/* Hide ALL section name labels (first div inside each section) */
+.core-footer-wrapper .core-footer.block .core-footer > div > div:first-child {
+  display: none !important;
+}
+
+/* Section content wrapper - make text white */
+.core-footer-wrapper .core-footer.block .core-footer > div > div:last-child {
+  color: var(--sht-footer-text) !important;
+}
+
+/* Disclaimer section styling */
+.core-footer-wrapper .core-footer.block .core-footer > div:first-child > div:last-child {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: var(--size-8, 8px);
+}
+
+/* Copyright section styling */
+.core-footer-wrapper .core-footer.block .core-footer > div:nth-child(2) > div:last-child {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: var(--size-24, 24px);
+}
+
+/* Navigation section container */
+.core-footer-wrapper .core-footer.block .core-footer > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--size-16, 16px);
+  position: relative;
+  padding-right: 200px;
+}
+
+/* Navigation links - style the ul */
+.core-footer-wrapper .core-footer.block .core-footer > div:last-child ul {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: var(--size-32, 32px);
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.core-footer-wrapper .core-footer.block .core-footer > div:last-child ul li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.core-footer-wrapper .core-footer.block .core-footer > div:last-child ul li::marker {
+  display: none;
+  content: none;
+}
+
+.core-footer-wrapper .core-footer.block .core-footer > div:last-child ul li a {
+  color: var(--sht-footer-text) !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+.core-footer-wrapper .core-footer.block .core-footer > div:last-child ul li a:hover {
+  opacity: 0.8;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+}
+
+/* "Brought to you by" text + Pfizer logo */
+.core-footer-wrapper .core-footer.block .core-footer > div:last-child::after {
+  content: 'Brought to you by';
+  display: flex;
+  align-items: center;
+  gap: var(--size-12, 12px);
+  color: var(--sht-footer-text);
+  font-size: 13px;
+  white-space: nowrap;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 85px;
+  background-image: url('/lib/icons/pfizer-white.svg');
+  background-size: 70px auto;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 1023px) {
+  .core-footer-wrapper .core-footer.block {
+    padding: var(--size-24, 24px);
+  }
+
+  .core-footer-wrapper .core-footer.block .core-footer > div:last-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--size-16, 16px);
+    padding-right: 0;
+  }
+
+  .core-footer-wrapper .core-footer.block .core-footer > div:last-child ul {
+    flex-wrap: wrap;
+    gap: var(--size-16, 16px) var(--size-24, 24px);
+  }
+
+  .core-footer-wrapper .core-footer.block .core-footer > div:last-child::after {
+    position: static;
+    transform: none;
+    margin-top: var(--size-24, 24px);
+    padding-right: 85px;
+  }
+}
+
+@media (max-width: 600px) {
+  .core-footer-wrapper .core-footer.block .core-footer > div:last-child ul {
+    flex-direction: column !important;
+    gap: var(--size-12, 12px);
+  }
+}
