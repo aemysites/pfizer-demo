@@ -552,3 +552,12 @@
     gap: var(--size-12, 12px);
   }
 }
+
+/* Hide ISI wrapper when empty or errored - Story Half Told theme */
+aside.core-isi-wrapper,
+.core-isi-wrapper,
+.layout-isi,
+aside[role="complementary"]:empty,
+aside:has(.core-isi):not(:has(.core-isi-content)) {
+  display: none !important;
+}
