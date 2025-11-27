@@ -2,23 +2,30 @@
   box-sizing: border-box;
 }
 
-/* Middle alignment variant for text blocks */
-.section.middle .core-text {
-  text-align: center;
+@media (min-width: 1024px) {
+  .core-text.col-10.block-padding-standard {
+    /* Tablet styles here */
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+  }
 }
 
-.section.middle .core-text .atoms-content {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+.core-text .atoms-eyebrow:last-child,
+.core-text .atoms-headline:last-child,
+.core-text .atoms-subheadline:last-child p,
+.core-text .atoms-content:last-child p,
+.core-text .atoms-content2:last-child p,
+.core-text .atoms-buttons:last-child,
+.core-text .atoms-disclaimer:last-child p,
+.core-text .atoms-disclaimer2:last-child p {
+  margin-bottom: 0;
 }
 
-.section.middle .core-text .atoms-buttons {
-  justify-content: center;
-}
-
-.section.middle .core-text em {
-  font-weight: 700;
+@media (min-width: 1024px) {
+  .core-text.editorial-width.block.core-text-editorial-width {
+    /* Tablet styles here */
+    padding: 40px 190px;
+  }
 }
 
 .core-text .atoms-content .button-container {
@@ -38,4 +45,17 @@
 
 .core-text .atoms-content .button-container br {
   display: none;
+}
+
+.core-text .atoms-buttons .button,
+.core-text .atoms-buttons a.button {
+  max-width: 348px;
+}
+
+@media (max-width: 1023px) {
+  .core-text .atoms-buttons .button,
+  .core-text .atoms-buttons a.button {
+    /* everything above mobile */
+    width: 100%;
+  }
 }
