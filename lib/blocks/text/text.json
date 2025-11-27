@@ -1,32 +1,9 @@
 {
   "text": {
-    "name": "text",
     "type": "text",
-    "description": "A versatile content block for displaying formatted text with support for different styling variants. Can be used for main content, disclaimers, embedded content sections, and additional information with standard block padding.",
-    "coreBlockData": {
-      "blockName": "core-text",
-      "isGlobalBlock": false,
-      "variants": [
-        "default",
-        "bottom-disclaimer",
-        "embedded-content",
-        "no-intro",
-        "table-additional-info",
-        "col-10"
-      ],
-      "positionInPage": "inline-content"
-    },
+    "description": "text block",
     "schema": {
-      "classes": [
-        "bottom-disclaimer",
-        "embedded-content",
-        "table-additional-info",
-        "no-intro",
-        "editorial-width",
-        "configurable-heading-levels",
-        "col-10",
-        "headline2-branded"
-      ],
+      "classes": ["bottom-disclaimer", "embedded-content", "table-additional-info"],
       "contentAtoms": true
     }
   }

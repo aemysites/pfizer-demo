@@ -3,37 +3,7 @@
 @import '../../styles/figma/figma-mixin';
 
 .core-text {
-  // Full-width column system
-  &.col-10.block-padding-standard {
-    @include breakpointMediumUp {
-      display: grid;
-      grid-template-columns: 10fr 2fr;
-    }
-  }
-
   box-sizing: border-box;
-
-  // Remove bottom margin for last atom in a group
-  .atoms-eyebrow:last-child,
-  .atoms-headline:last-child,
-  .atoms-subheadline:last-child p,
-  .atoms-content:last-child p,
-  .atoms-content2:last-child p,
-  .atoms-buttons:last-child,
-  .atoms-disclaimer:last-child p,
-  .atoms-disclaimer2:last-child p {
-    margin-bottom: 0;
-  }
-
-  &:not(.editorial-width.block.core-text-editorial-width) {
-    // max-width: 1063px;
-  }
-
-  &.editorial-width.block.core-text-editorial-width {
-    @include breakpointMediumUp {
-      padding: 40px 190px;
-    }
-  }
 
   .atoms-content .button-container {
     display: flex;
@@ -49,17 +19,5 @@
 
   .atoms-content .button-container br {
     display: none;
-  }
-
-  .atoms-buttons {
-    .button,
-    a.button {
-      max-width: 348px;
-
-      @include breakpointSmallDown {
-        width: 100%;
-      }
-    }
-
   }
 }
