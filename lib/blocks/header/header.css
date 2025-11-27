@@ -17,3 +17,137 @@
   width: 100%;
   height: auto;
 }
+
+/* Story Half Told - Simple Header Styles */
+.core-header-wrapper {
+  --sht-header-bg: rgb(0, 161, 209);
+  --sht-header-text: #fff;
+  
+  background-color: var(--sht-header-bg);
+}
+
+.core-header-wrapper .core-header.block {
+  background-color: var(--sht-header-bg);
+  padding: 0 var(--size-40, 40px);
+  height: auto;
+  min-height: 100px;
+}
+
+.core-header-wrapper .core-header.block > div {
+  width: 100%;
+  max-width: var(--layout-grid-width-max-container, 1440px);
+  margin: 0 auto;
+}
+
+.core-header-wrapper .core-header.block > div > .core-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--size-16, 16px) 0;
+  background-color: transparent;
+}
+
+/* Logo section */
+.core-header-wrapper .core-header.block > div > .core-header > div:first-child {
+  flex-shrink: 0;
+}
+
+.core-header-wrapper .core-header.block > div > .core-header > div:first-child a {
+  display: block;
+  text-decoration: none;
+}
+
+.core-header-wrapper .core-header.block > div > .core-header > div:first-child .icon {
+  display: block;
+  width: 160px;
+  height: 85px;
+  background-image: url('/lib/icons/pfizer.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+/* Hide any SVG that might be injected by the icon system */
+.core-header-wrapper .core-header.block > div > .core-header > div:first-child .icon svg {
+  display: none;
+}
+
+/* Navigation section */
+.core-header-wrapper .core-header.block > div > .core-header > div:last-child {
+  display: flex;
+  align-items: flex-end;
+  justify-content: left;
+  flex-grow: 1;
+  padding-bottom: var(--size-8, 8px);
+}
+
+.core-header-wrapper .core-header.block > div > .core-header > div:last-child > div > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--size-32, 32px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.core-header-wrapper .core-header.block > div > .core-header > div:last-child > div > ul > li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.core-header-wrapper .core-header.block > div > .core-header > div:last-child > div > ul > li > a {
+  color: var(--sht-header-text);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--lib-core--font-family-primary, 'Helvetica Neue', Arial, sans-serif);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.core-header-wrapper .core-header.block > div > .core-header > div:last-child > div > ul > li > a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 1023px) {
+  .core-header-wrapper .core-header.block {
+    padding: 0 var(--size-24, 24px);
+    min-height: 80px;
+  }
+
+  .core-header-wrapper .core-header.block > div > .core-header {
+    flex-direction: column;
+    gap: var(--size-16, 16px);
+    padding: var(--size-16, 16px) 0;
+  }
+
+  .core-header-wrapper .core-header.block > div > .core-header > div:first-child .icon {
+    width: 140px;
+    height: 80px;
+  }
+
+  .core-header-wrapper .core-header.block > div > .core-header > div:last-child > div > ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--size-16, 16px) var(--size-24, 24px);
+  }
+
+  .core-header-wrapper .core-header.block > div > .core-header > div:last-child > div > ul > li > a {
+    font-size: var(--size-12, 12px);
+  }
+}
+
+@media (max-width: 600px) {
+  .core-header-wrapper .core-header.block > div > .core-header > div:last-child > div > ul {
+    flex-direction: column;
+    gap: var(--size-12, 12px);
+  }
+}
