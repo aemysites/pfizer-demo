@@ -1,6 +1,10 @@
 @import url("/lib/styles/tokens.css");
 @import url("/lib/styles/styles.css");
 
+body {
+  --lib-core--header-height: 0 !important;
+}
+
 /* Section divider variant - adds teal line under headings */
 .section.divider h1,
 .section.divider h2,
